@@ -25,6 +25,7 @@
                                 <rect key="frame" x="114.5" y="318.5" width="146" height="30"/>
                                 <state key="normal" title="Play Viedo From Web"/>
                                 <connections>
+                                    <action selector="playClicked:" destination="QMd-6r-G6o" eventType="touchUpInside" id="7ZQ-V7-M6k"/>
                                     <segue destination="dPL-rc-ZH7" kind="presentation" id="mO4-9b-GSh"/>
                                 </connections>
                             </button>

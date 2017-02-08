@@ -12,11 +12,28 @@ import MobileCoreServices
 import AVKit
 import AVFoundation
 
+/**
+ TODO: 
+ cache video, replay
+ */
+
 class PlayVideoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //comment following section to use button & segue
+        if let url = URL(string: "http://www.ebookfrenzy.com/ios_book/movie/movie.mov") {
+            let player = AVPlayer(url: url)
+            let playerController = AVPlayerViewController()
+            
+            playerController.player = player
+            self.addChildViewController(playerController)
+            self.view.addSubview(playerController.view)
+            playerController.view.frame = self.view.frame
+            
+            player.play()
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -25,7 +42,9 @@ class PlayVideoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func playClicked(_ sender: UIButton) {
+        
+    }
     
     // MARK: - Navigation
 
@@ -38,6 +57,4 @@ class PlayVideoViewController: UIViewController {
             pvc.player = player
         }
     }
- 
-
 }
