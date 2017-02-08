@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E154a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QMd-6r-G6o">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Play Video View Controller-->
+        <scene sceneID="mnJ-4T-Yh2">
+            <objects>
+                <viewController storyboardIdentifier="PlayVideoViewController" id="QMd-6r-G6o" customClass="PlayVideoViewController" customModule="TopicDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MLk-33-Prn"/>
+                        <viewControllerLayoutGuide type="bottom" id="UG1-q9-NY1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1x8-uG-aEm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QY3-Kp-M87">
+                                <rect key="frame" x="114.5" y="318.5" width="146" height="30"/>
+                                <state key="normal" title="Play Viedo From Web"/>
+                                <connections>
+                                    <segue destination="dPL-rc-ZH7" kind="presentation" id="mO4-9b-GSh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QY3-Kp-M87" firstAttribute="centerY" secondItem="1x8-uG-aEm" secondAttribute="centerY" id="YVS-XD-gUh"/>
+                            <constraint firstItem="QY3-Kp-M87" firstAttribute="centerX" secondItem="1x8-uG-aEm" secondAttribute="centerX" id="uYj-Wo-4qS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUV-nZ-nWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.5" y="153.5"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="M7n-fd-6za">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="dPL-rc-ZH7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="REN-9b-BpG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="153"/>
+        </scene>
+    </scenes>
+</document>
