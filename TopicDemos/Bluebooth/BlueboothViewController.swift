@@ -54,6 +54,7 @@ extension BlueboothViewController: CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         cbPeripheral = peripheral
         print(peripheral.state == .connected ? "connected" : "not connected")
+        self.statusLabel.text = peripheral.state == .connected ? "connected" : "not connected"
         peripheral.discoverServices(nil)
     }
     

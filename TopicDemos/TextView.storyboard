@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,18 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfm-Ox-S6p">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfm-Ox-S6p">
+                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdS-U6-wwj">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1282"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="282"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LSX-rx-eVB">
-                                                <rect key="frame" x="56" y="0.0" width="300" height="1200"/>
+                                                <rect key="frame" x="10" y="0.0" width="365" height="200"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="1200" id="G2V-WB-hzQ"/>
-                                                    <constraint firstAttribute="width" constant="300" id="zP0-g4-3p6"/>
+                                                    <constraint firstAttribute="height" constant="200" id="G2V-WB-hzQ"/>
                                                 </constraints>
                                                 <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -42,31 +40,33 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="LSX-rx-eVB" firstAttribute="leading" secondItem="mdS-U6-wwj" secondAttribute="leading" constant="56" id="DSY-l9-HD4"/>
+                                            <constraint firstItem="LSX-rx-eVB" firstAttribute="leading" secondItem="mdS-U6-wwj" secondAttribute="leading" constant="10" id="DSY-l9-HD4"/>
                                             <constraint firstAttribute="bottom" secondItem="LSX-rx-eVB" secondAttribute="bottom" constant="82" id="Xyw-xQ-XMp"/>
+                                            <constraint firstAttribute="trailing" secondItem="LSX-rx-eVB" secondAttribute="trailing" id="lfv-ks-snl"/>
                                             <constraint firstItem="LSX-rx-eVB" firstAttribute="top" secondItem="mdS-U6-wwj" secondAttribute="top" id="yzG-9r-gvc"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="mdS-U6-wwj" firstAttribute="leading" secondItem="xfm-Ox-S6p" secondAttribute="leadingMargin" constant="-8" id="Pst-0m-MuH"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="mdS-U6-wwj" secondAttribute="trailing" constant="-40" id="dcT-AI-gze"/>
-                                    <constraint firstAttribute="bottom" secondItem="mdS-U6-wwj" secondAttribute="bottom" id="fYl-CX-fqj"/>
-                                    <constraint firstItem="mdS-U6-wwj" firstAttribute="top" secondItem="xfm-Ox-S6p" secondAttribute="top" id="uDj-UV-Gkn"/>
+                                    <constraint firstItem="mdS-U6-wwj" firstAttribute="leading" secondItem="xfm-Ox-S6p" secondAttribute="leading" id="Q2f-Sl-OhR"/>
+                                    <constraint firstAttribute="bottom" secondItem="mdS-U6-wwj" secondAttribute="bottom" id="lyK-0h-pAp"/>
+                                    <constraint firstAttribute="trailing" secondItem="mdS-U6-wwj" secondAttribute="trailing" id="nmT-Rp-jh0"/>
+                                    <constraint firstItem="mdS-U6-wwj" firstAttribute="top" secondItem="xfm-Ox-S6p" secondAttribute="top" id="vgD-1o-8Ia"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xfm-Ox-S6p" firstAttribute="top" secondItem="mPo-w6-690" secondAttribute="topMargin" id="10F-Yn-CEZ"/>
-                            <constraint firstItem="xfm-Ox-S6p" firstAttribute="leading" secondItem="mPo-w6-690" secondAttribute="leading" id="8F2-2L-R3j"/>
-                            <constraint firstAttribute="trailing" secondItem="xfm-Ox-S6p" secondAttribute="trailing" id="Stu-fH-PbO"/>
+                            <constraint firstItem="J7c-o4-zVm" firstAttribute="top" secondItem="xfm-Ox-S6p" secondAttribute="bottom" id="CUJ-CF-bhI"/>
+                            <constraint firstAttribute="trailing" secondItem="xfm-Ox-S6p" secondAttribute="trailing" id="SfZ-gv-9LM"/>
+                            <constraint firstItem="xfm-Ox-S6p" firstAttribute="leading" secondItem="mPo-w6-690" secondAttribute="leading" id="ab3-LK-9qJ"/>
                             <constraint firstItem="mdS-U6-wwj" firstAttribute="width" secondItem="mPo-w6-690" secondAttribute="width" id="g5S-b1-SJ9"/>
-                            <constraint firstItem="J7c-o4-zVm" firstAttribute="top" secondItem="xfm-Ox-S6p" secondAttribute="bottom" id="lPu-Rs-xLd"/>
+                            <constraint firstItem="xfm-Ox-S6p" firstAttribute="top" secondItem="mPo-w6-690" secondAttribute="top" id="pK1-Ig-s44"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="heightConstaint" destination="G2V-WB-hzQ" id="qaI-zS-7rR"/>
+                        <outlet property="scrollView" destination="xfm-Ox-S6p" id="U0F-px-ecm"/>
                         <outlet property="textView" destination="LSX-rx-eVB" id="eeL-S2-RUM"/>
                         <outlet property="topConstraint" destination="yzG-9r-gvc" id="DML-Nl-UtZ"/>
                     </connections>
