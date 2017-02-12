@@ -29,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVPlayerViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ys9-Fh-OvL">
-                                                    <rect key="frame" x="8" y="24.5" width="359" height="21"/>
+                                                    <rect key="frame" x="8" y="25" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -51,7 +51,23 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kfw-4B-gLB" id="yS4-VW-0q6">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bluetooth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGI-q6-wDL">
+                                                    <rect key="frame" x="8" y="19" width="359" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XGI-q6-wDL" secondAttribute="trailing" id="5xL-ti-iba"/>
+                                                <constraint firstItem="XGI-q6-wDL" firstAttribute="centerY" secondItem="yS4-VW-0q6" secondAttribute="centerY" id="Ju7-T7-44X"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="XGI-q6-wDL" secondAttribute="leading" id="WkJ-wa-C1K"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="xtX-rR-zok" kind="show" id="e4g-ko-3Yl"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ehx-0k-Jh1">
                                         <rect key="frame" x="0.0" y="130" width="375" height="44"/>
@@ -59,7 +75,23 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ehx-0k-Jh1" id="Gm1-gO-THU">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dynamic Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtF-Z3-phu">
+                                                    <rect key="frame" x="8" y="14" width="359" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PtF-Z3-phu" firstAttribute="centerY" secondItem="Gm1-gO-THU" secondAttribute="centerY" id="SVT-6I-7j9"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="PtF-Z3-phu" secondAttribute="leading" id="rKk-Mf-2Gi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PtF-Z3-phu" secondAttribute="trailing" id="tNO-BO-cXQ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="0Mz-Ee-haJ" kind="show" id="CYP-SG-Jow"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -74,6 +106,14 @@
             </objects>
             <point key="canvasLocation" x="76" y="117.39130434782609"/>
         </scene>
+        <!--TextView-->
+        <scene sceneID="ZjE-uq-832">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TextView" id="0Mz-Ee-haJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qw5-Wc-a6t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="-41"/>
+        </scene>
         <!--Media-->
         <scene sceneID="cD0-nt-kcP">
             <objects>
@@ -81,6 +121,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2e-ta-vNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="727" y="-153"/>
+        </scene>
+        <!--Bluebooth-->
+        <scene sceneID="suz-Gr-WLJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Bluebooth" id="xtX-rR-zok" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zrx-2w-YOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="746" y="-113"/>
         </scene>
     </scenes>
 </document>

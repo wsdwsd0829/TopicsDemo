@@ -21,9 +21,10 @@ class PlayVideoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //"http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"  //steaming
+        //"http://www.ebookfrenzy.com/ios_book/movie/movie.mov"
         //comment following section to use button & segue
-        if let url = URL(string: "http://www.ebookfrenzy.com/ios_book/movie/movie.mov") {
+        if let url = URL(string: "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8") {
             let player = AVPlayer(url: url)
             let playerController = AVPlayerViewController()
             
@@ -52,7 +53,8 @@ class PlayVideoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if let pvc = segue.destination as? AVPlayerViewController, let url = URL(string: "http://www.ebookfrenzy.com/ios_book/movie/movie.mov") {
+        
+        if let pvc = segue.destination as? AVPlayerViewController, let url = URL(string: "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8") {
             let player = AVPlayer(url: url)
             pvc.player = player
         }

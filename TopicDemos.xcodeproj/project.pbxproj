@@ -18,6 +18,12 @@
 		0DA3057F1E4B9B250040CA45 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA3057E1E4B9B250040CA45 /* MobileCoreServices.framework */; };
 		0DA305811E4B9B2B0040CA45 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA305801E4B9B2B0040CA45 /* MediaPlayer.framework */; };
 		0DA305831E4B9B510040CA45 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA305821E4B9B510040CA45 /* CoreMedia.framework */; };
+		0DA305BE1E4EBF520040CA45 /* BlueboothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA305BD1E4EBF520040CA45 /* BlueboothViewController.swift */; };
+		0DA305C01E4EBF5C0040CA45 /* Bluebooth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA305BF1E4EBF5C0040CA45 /* Bluebooth.storyboard */; };
+		0DA305C21E4EC0010040CA45 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA305C11E4EC0010040CA45 /* QuartzCore.framework */; };
+		0DA305C41E4EC0060040CA45 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA305C31E4EC0060040CA45 /* CoreBluetooth.framework */; };
+		0DA305C71E4FF48D0040CA45 /* TextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA305C61E4FF48D0040CA45 /* TextView.storyboard */; };
+		0DA305C91E4FF4A20040CA45 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA305C81E4FF4A20040CA45 /* TextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		0DA3057E1E4B9B250040CA45 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0DA305801E4B9B2B0040CA45 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		0DA305821E4B9B510040CA45 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0DA305BD1E4EBF520040CA45 /* BlueboothViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlueboothViewController.swift; path = Bluebooth/BlueboothViewController.swift; sourceTree = "<group>"; };
+		0DA305BF1E4EBF5C0040CA45 /* Bluebooth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bluebooth.storyboard; sourceTree = "<group>"; };
+		0DA305C11E4EC0010040CA45 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0DA305C31E4EC0060040CA45 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		0DA305C61E4FF48D0040CA45 /* TextView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TextView.storyboard; sourceTree = "<group>"; };
+		0DA305C81E4FF4A20040CA45 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewController.swift; path = Layout/TextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA305C41E4EC0060040CA45 /* CoreBluetooth.framework in Frameworks */,
+				0DA305C21E4EC0010040CA45 /* QuartzCore.framework in Frameworks */,
 				0DA305831E4B9B510040CA45 /* CoreMedia.framework in Frameworks */,
 				0DA305811E4B9B2B0040CA45 /* MediaPlayer.framework in Frameworks */,
 				0DA3057F1E4B9B250040CA45 /* MobileCoreServices.framework in Frameworks */,
@@ -109,9 +123,10 @@
 		0DA305491E4B98980040CA45 /* TopicDemos */ = {
 			isa = PBXGroup;
 			children = (
+				0DA305C51E4FF47C0040CA45 /* Layout */,
+				0DA305BC1E4EBF300040CA45 /* Bluebooth */,
 				0DA3057A1E4B99C80040CA45 /* Media */,
 				0DA3054A1E4B98980040CA45 /* AppDelegate.swift */,
-				0DA3054E1E4B98980040CA45 /* Main.storyboard */,
 				0DA305511E4B98980040CA45 /* Assets.xcassets */,
 				0DA305531E4B98980040CA45 /* LaunchScreen.storyboard */,
 				0DA305561E4B98980040CA45 /* Info.plist */,
@@ -141,6 +156,7 @@
 		0DA3057A1E4B99C80040CA45 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				0DA3054E1E4B98980040CA45 /* Main.storyboard */,
 				0DA3057B1E4B99FE0040CA45 /* PlayVideoViewController.swift */,
 			);
 			name = Media;
@@ -149,11 +165,31 @@
 		0DA3057D1E4B9B250040CA45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0DA305C31E4EC0060040CA45 /* CoreBluetooth.framework */,
+				0DA305C11E4EC0010040CA45 /* QuartzCore.framework */,
 				0DA305821E4B9B510040CA45 /* CoreMedia.framework */,
 				0DA305801E4B9B2B0040CA45 /* MediaPlayer.framework */,
 				0DA3057E1E4B9B250040CA45 /* MobileCoreServices.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0DA305BC1E4EBF300040CA45 /* Bluebooth */ = {
+			isa = PBXGroup;
+			children = (
+				0DA305BD1E4EBF520040CA45 /* BlueboothViewController.swift */,
+				0DA305BF1E4EBF5C0040CA45 /* Bluebooth.storyboard */,
+			);
+			name = Bluebooth;
+			sourceTree = "<group>";
+		};
+		0DA305C51E4FF47C0040CA45 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				0DA305C61E4FF48D0040CA45 /* TextView.storyboard */,
+				0DA305C81E4FF4A20040CA45 /* TextViewController.swift */,
+			);
+			name = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +304,9 @@
 			files = (
 				0DA305551E4B98980040CA45 /* LaunchScreen.storyboard in Resources */,
 				0DA305521E4B98980040CA45 /* Assets.xcassets in Resources */,
+				0DA305C71E4FF48D0040CA45 /* TextView.storyboard in Resources */,
 				0DA305501E4B98980040CA45 /* Main.storyboard in Resources */,
+				0DA305C01E4EBF5C0040CA45 /* Bluebooth.storyboard in Resources */,
 				0DA305791E4B99660040CA45 /* Media.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,8 +332,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA305BE1E4EBF520040CA45 /* BlueboothViewController.swift in Sources */,
 				0DA3057C1E4B99FE0040CA45 /* PlayVideoViewController.swift in Sources */,
 				0DA3054B1E4B98980040CA45 /* AppDelegate.swift in Sources */,
+				0DA305C91E4FF4A20040CA45 /* TextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +586,7 @@
 				0DA305711E4B98980040CA45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DA305721E4B98980040CA45 /* Build configuration list for PBXNativeTarget "TopicDemosTests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +595,7 @@
 				0DA305741E4B98980040CA45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DA305751E4B98980040CA45 /* Build configuration list for PBXNativeTarget "TopicDemosUITests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +604,7 @@
 				0DA305771E4B98980040CA45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
