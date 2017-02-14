@@ -127,10 +127,10 @@
 				0DA305BC1E4EBF300040CA45 /* Bluebooth */,
 				0DA3057A1E4B99C80040CA45 /* Media */,
 				0DA3054A1E4B98980040CA45 /* AppDelegate.swift */,
+				0DA3054E1E4B98980040CA45 /* Main.storyboard */,
 				0DA305511E4B98980040CA45 /* Assets.xcassets */,
 				0DA305531E4B98980040CA45 /* LaunchScreen.storyboard */,
 				0DA305561E4B98980040CA45 /* Info.plist */,
-				0DA305781E4B99660040CA45 /* Media.storyboard */,
 			);
 			path = TopicDemos;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 		0DA3057A1E4B99C80040CA45 /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				0DA3054E1E4B98980040CA45 /* Main.storyboard */,
+				0DA305781E4B99660040CA45 /* Media.storyboard */,
 				0DA3057B1E4B99FE0040CA45 /* PlayVideoViewController.swift */,
 			);
 			name = Media;
