@@ -12,12 +12,15 @@ import Foundation
 
 class FirstPageInterfaceController: WKInterfaceController {
     @IBOutlet var label: WKInterfaceLabel!
-
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        self.becomeCurrentPage()
+        if let dict = context as? [String: String] {
+             label.setText(dict["key"])
+        }
         // Configure interface objects here.
     }
+    
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -29,7 +32,7 @@ class FirstPageInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     @IBAction func backClicked() {
-        
+       self.pop()
     }
     @IBAction func g1Clicked() {
         self.label.setText("g1")

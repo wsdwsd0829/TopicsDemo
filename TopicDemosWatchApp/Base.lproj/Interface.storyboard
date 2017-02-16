@@ -15,19 +15,20 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TopicDemosWatchApp" customModuleProvider="target">
                     <items>
                         <label alignment="left" text="Main Page" id="44G-HL-dgX"/>
-                        <button width="1" alignment="left" title="Next Page" id="rvM-dN-o1t"/>
+                        <button width="1" alignment="left" title="Next Page" id="rvM-dN-o1t">
+                            <connections>
+                                <action selector="nextPageClicked" destination="AgC-eL-Hgc" id="ZFj-fb-ery"/>
+                            </connections>
+                        </button>
                     </items>
-                    <connections>
-                        <segue destination="Cfa-ri-kU2" kind="relationship" relationship="nextPage" id="xLr-EK-yxL"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
-        <!--First Page Interface Controller-->
+        <!--FirstPageInterfaceController-->
         <scene sceneID="yhl-h7-Eyi">
             <objects>
-                <controller id="Cfa-ri-kU2" customClass="FirstPageInterfaceController" customModule="TopicDemosWatchApp_Extension">
+                <controller identifier="FirstPageInterfaceController" id="Cfa-ri-kU2" customClass="FirstPageInterfaceController" customModule="TopicDemosWatchApp_Extension">
                     <items>
                         <label alignment="left" text="First Page" id="hog-hs-ghA"/>
                         <button width="55" alignment="left" title="Back" id="pK6-pd-huR">

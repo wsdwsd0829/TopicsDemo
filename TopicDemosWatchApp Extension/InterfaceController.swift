@@ -14,9 +14,12 @@ class InterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        self.becomeCurrentPage()
-
         // Configure interface objects here.
+    }
+    
+    //when set segue in storyboard use this to set data context
+    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        return ["key" : "value"]
     }
     
     override func willActivate() {
@@ -29,4 +32,7 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func nextPageClicked() {
+        self.pushController(withName: "FirstPageInterfaceController", context: ["key":"value"])
+    }
 }
