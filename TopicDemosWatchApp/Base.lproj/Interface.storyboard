@@ -9,10 +9,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12026"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--InterfaceController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TopicDemosWatchApp" customModuleProvider="target">
+                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TopicDemosWatchApp" customModuleProvider="target">
                     <items>
                         <label alignment="left" text="Main Page" id="44G-HL-dgX"/>
                         <button width="1" alignment="left" title="Next Page" id="rvM-dN-o1t">
@@ -23,6 +23,11 @@
                         <button width="1" alignment="left" title="Modal Page" id="afd-wN-jeo">
                             <connections>
                                 <action selector="present" destination="AgC-eL-Hgc" id="kTN-HK-g3t"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Reload" id="tes-2x-iUn">
+                            <connections>
+                                <action selector="reload" destination="AgC-eL-Hgc" id="okR-c4-WHL"/>
                             </connections>
                         </button>
                     </items>

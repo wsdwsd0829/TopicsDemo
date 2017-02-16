@@ -44,4 +44,8 @@ class InterfaceController: WKInterfaceController {
     
     }
     
+    
+    @IBAction func reload() {
+        WKInterfaceController.reloadRootControllers(withNames: ["InterfaceController", "FirstPageInterfaceController", ], contexts: [["key": "reloadValue"], []])
+    }
 }
