@@ -143,6 +143,16 @@
                                         <outlet property="label" destination="mJ4-VN-u16" id="h4S-ZU-Fbe"/>
                                     </connections>
                                 </tableRow>
+                                <tableRow identifier="ImageRowType" id="yuQ-g7-ukk" customClass="ImageRowType" customModule="TopicDemosWatchApp_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="7gX-Kc-M4k">
+                                        <items>
+                                            <imageView width="100" height="100" alignment="left" id="LFM-jB-EqK"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="image" destination="LFM-jB-EqK" id="dPB-TK-zNi"/>
+                                    </connections>
+                                </tableRow>
                             </items>
                         </table>
                     </items>

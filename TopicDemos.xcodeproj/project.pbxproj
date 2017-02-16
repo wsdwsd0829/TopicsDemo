@@ -10,6 +10,8 @@
 		0D45FECA1E554A5000BF7C9C /* TableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FEC91E554A5000BF7C9C /* TableInterfaceController.swift */; };
 		0D45FECC1E554BF100BF7C9C /* MainRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FECB1E554BF100BF7C9C /* MainRowType.swift */; };
 		0D45FECE1E5551B300BF7C9C /* InfoRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FECD1E5551B300BF7C9C /* InfoRowType.swift */; };
+		0D45FED11E556D3E00BF7C9C /* ImageRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FED01E556D3E00BF7C9C /* ImageRowType.swift */; };
+		0D45FED31E55736500BF7C9C /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D45FED21E55736500BF7C9C /* placeholder.png */; };
 		0D6F87FF1E55372D007C0413 /* ModalInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */; };
 		0D806A081E541CF5007219F2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D806A061E541CF5007219F2 /* Interface.storyboard */; };
 		0D806A0A1E541CF5007219F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D806A091E541CF5007219F2 /* Assets.xcassets */; };
@@ -100,6 +102,8 @@
 		0D45FEC91E554A5000BF7C9C /* TableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableInterfaceController.swift; sourceTree = "<group>"; };
 		0D45FECB1E554BF100BF7C9C /* MainRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRowType.swift; sourceTree = "<group>"; };
 		0D45FECD1E5551B300BF7C9C /* InfoRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoRowType.swift; sourceTree = "<group>"; };
+		0D45FED01E556D3E00BF7C9C /* ImageRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRowType.swift; sourceTree = "<group>"; };
+		0D45FED21E55736500BF7C9C /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalInterfaceController.swift; sourceTree = "<group>"; };
 		0D806A041E541CF5007219F2 /* TopicDemosWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopicDemosWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D806A071E541CF5007219F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -179,6 +183,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D45FECF1E556D1500BF7C9C /* RowControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D45FECB1E554BF100BF7C9C /* MainRowType.swift */,
+				0D45FECD1E5551B300BF7C9C /* InfoRowType.swift */,
+				0D45FED01E556D3E00BF7C9C /* ImageRowType.swift */,
+			);
+			name = RowControllers;
+			sourceTree = "<group>";
+		};
 		0D806A051E541CF5007219F2 /* TopicDemosWatchApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +207,7 @@
 		0D806A141E541CF5007219F2 /* TopicDemosWatchApp Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0D45FED21E55736500BF7C9C /* placeholder.png */,
 				0D806A2D1E550ACD007219F2 /* TopicDemosWatchApp Extension.entitlements */,
 				0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */,
 				0D45FEC91E554A5000BF7C9C /* TableInterfaceController.swift */,
@@ -204,8 +219,7 @@
 				0D806A1F1E541CF5007219F2 /* Assets.xcassets */,
 				0D806A211E541CF5007219F2 /* Info.plist */,
 				0D806A151E541CF5007219F2 /* Supporting Files */,
-				0D45FECB1E554BF100BF7C9C /* MainRowType.swift */,
-				0D45FECD1E5551B300BF7C9C /* InfoRowType.swift */,
+				0D45FECF1E556D1500BF7C9C /* RowControllers */,
 			);
 			path = "TopicDemosWatchApp Extension";
 			sourceTree = "<group>";
@@ -499,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D806A201E541CF5007219F2 /* Assets.xcassets in Resources */,
+				0D45FED31E55736500BF7C9C /* placeholder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +555,7 @@
 				0D806A1C1E541CF5007219F2 /* NotificationController.swift in Sources */,
 				0D45FECA1E554A5000BF7C9C /* TableInterfaceController.swift in Sources */,
 				0D45FECE1E5551B300BF7C9C /* InfoRowType.swift in Sources */,
+				0D45FED11E556D3E00BF7C9C /* ImageRowType.swift in Sources */,
 				0D45FECC1E554BF100BF7C9C /* MainRowType.swift in Sources */,
 				0D806A1E1E541CF5007219F2 /* ComplicationController.swift in Sources */,
 				0D806A1A1E541CF5007219F2 /* ExtensionDelegate.swift in Sources */,

@@ -16,6 +16,9 @@
       "role" : "modular"
     },
     {
+      "filename" : "placeholder.imageset"
+    },
+    {
       "idiom" : "watch",
       "filename" : "Utilitarian.imageset",
       "role" : "utilitarian"
