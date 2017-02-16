@@ -100,6 +100,11 @@
                                 </button>
                             </items>
                         </group>
+                        <button width="1" alignment="left" title="Table" id="wZ9-Ka-xW8">
+                            <connections>
+                                <segue destination="Ysu-dV-gDy" kind="push" id="flV-hq-OxI"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="label" destination="hog-hs-ghA" id="XDZ-nP-jiD"/>
@@ -107,6 +112,46 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="495" y="345"/>
+        </scene>
+        <!--TableInterfaceController-->
+        <scene sceneID="yOc-VF-rah">
+            <objects>
+                <controller identifier="TableInterfaceController" id="Ysu-dV-gDy" customClass="TableInterfaceController" customModule="TopicDemosWatchApp_Extension">
+                    <items>
+                        <table alignment="left" id="95S-Os-4z2">
+                            <items>
+                                <tableRow identifier="InfoRowType" id="1mt-bo-9hi" customClass="InfoRowType" customModule="TopicDemosWatchApp_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="ID4-hE-vtc">
+                                        <items>
+                                            <label width="128" alignment="left" text="Label" numberOfLines="0" id="IRe-kD-ZMj"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="IRe-kD-ZMj" id="juU-QG-Q5f"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="MainRowType" id="PPp-VX-aMf" customClass="MainRowType" customModule="TopicDemosWatchApp_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" animationDuration="1" spacing="5" id="dxs-Ly-pYr">
+                                        <items>
+                                            <label width="65" alignment="left" text="xx" numberOfLines="0" id="mJ4-VN-u16"/>
+                                            <button width="76" height="18" alignment="left" title="Button" id="seh-ez-M3e"/>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="button" destination="seh-ez-M3e" id="NZt-jk-YtZ"/>
+                                        <outlet property="label" destination="mJ4-VN-u16" id="h4S-ZU-Fbe"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="95S-Os-4z2" id="gVu-CI-YVK"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="729" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
