@@ -30,6 +30,16 @@ class ModalInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    @IBAction func textInputClicked() {
+        let initial = ["a", "b", "a very long text test"]
+        presentTextInputController(withSuggestions: initial, allowedInputMode: .allowAnimatedEmoji) { (res) in
+            if let res = res as? [String] {
+                let display = res.joined(separator: ",")
+                self.label.setText(display)
+            }
+        }
+        
+    }
 
     @IBAction func dismissClicked() {
         dismiss()

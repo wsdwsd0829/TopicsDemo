@@ -51,6 +51,11 @@
                                 <action selector="dismissClicked" destination="Zkd-0M-I92" id="bAw-Tn-TvV"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Text Input" id="RTe-ju-ocP">
+                            <connections>
+                                <action selector="textInputClicked" destination="Zkd-0M-I92" id="BDf-eU-VEL"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="label" destination="Dah-Yd-INl" id="RjU-C1-Ah8"/>
