@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D6F87FF1E55372D007C0413 /* ModalInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */; };
 		0D806A081E541CF5007219F2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D806A061E541CF5007219F2 /* Interface.storyboard */; };
 		0D806A0A1E541CF5007219F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D806A091E541CF5007219F2 /* Assets.xcassets */; };
 		0D806A111E541CF5007219F2 /* TopicDemosWatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0D806A101E541CF5007219F2 /* TopicDemosWatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -93,6 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalInterfaceController.swift; sourceTree = "<group>"; };
 		0D806A041E541CF5007219F2 /* TopicDemosWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopicDemosWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D806A071E541CF5007219F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		0D806A091E541CF5007219F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				0D806A1F1E541CF5007219F2 /* Assets.xcassets */,
 				0D806A211E541CF5007219F2 /* Info.plist */,
 				0D806A151E541CF5007219F2 /* Supporting Files */,
+				0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */,
 			);
 			path = "TopicDemosWatchApp Extension";
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				0D806A1E1E541CF5007219F2 /* ComplicationController.swift in Sources */,
 				0D806A1A1E541CF5007219F2 /* ExtensionDelegate.swift in Sources */,
 				0D806A181E541CF5007219F2 /* InterfaceController.swift in Sources */,
+				0D6F87FF1E55372D007C0413 /* ModalInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,6 +879,7 @@
 				0D806A281E541CF5007219F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D806A2B1E541CF5007219F2 /* Build configuration list for PBXNativeTarget "TopicDemosWatchApp" */ = {
 			isa = XCConfigurationList;
@@ -883,6 +888,7 @@
 				0D806A261E541CF5007219F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DA305421E4B98980040CA45 /* Build configuration list for PBXProject "TopicDemos" */ = {
 			isa = XCConfigurationList;

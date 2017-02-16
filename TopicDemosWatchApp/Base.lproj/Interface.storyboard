@@ -20,15 +20,55 @@
                                 <action selector="nextPageClicked" destination="AgC-eL-Hgc" id="ZFj-fb-ery"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Modal Page" id="afd-wN-jeo">
+                            <connections>
+                                <action selector="present" destination="AgC-eL-Hgc" id="kTN-HK-g3t"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
-        <!--FirstPageInterfaceController-->
+        <!--Modal-->
+        <scene sceneID="ewe-lB-R6w">
+            <objects>
+                <controller identifier="ModalInterfaceController" title="Modal" id="Zkd-0M-I92" customClass="ModalInterfaceController" customModule="TopicDemosWatchApp_Extension">
+                    <items>
+                        <timer alignment="left" id="akL-9v-Tqj"/>
+                        <dateLabel alignment="left" id="pzb-UM-ztG">
+                            <dateFormatterStyle key="dateStyle" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" short="YES"/>
+                        </dateLabel>
+                        <label alignment="left" text="Label" id="Dah-Yd-INl"/>
+                        <button width="1" alignment="left" title="Dismiss" id="1pJ-Y5-oqX">
+                            <connections>
+                                <action selector="dismissClicked" destination="Zkd-0M-I92" id="bAw-Tn-TvV"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="label" destination="Dah-Yd-INl" id="RjU-C1-Ah8"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="485" y="65"/>
+        </scene>
+        <!--ModalInterfaceController2-->
+        <scene sceneID="4tC-gB-par">
+            <objects>
+                <controller identifier="ModalInterfaceController2" id="93p-oa-Pvb">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Modal Center Page 2 (Page Based Navigation With Long Text To Text Multiple Line)" numberOfLines="0" id="gAS-Lv-0Xb"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="707" y="65"/>
+        </scene>
+        <!--First Page-->
         <scene sceneID="yhl-h7-Eyi">
             <objects>
-                <controller identifier="FirstPageInterfaceController" id="Cfa-ri-kU2" customClass="FirstPageInterfaceController" customModule="TopicDemosWatchApp_Extension">
+                <controller identifier="FirstPageInterfaceController" title="First Page" id="Cfa-ri-kU2" customClass="FirstPageInterfaceController" customModule="TopicDemosWatchApp_Extension">
                     <items>
                         <label alignment="left" text="First Page" id="hog-hs-ghA"/>
                         <button width="55" alignment="left" title="Back" id="pK6-pd-huR">
@@ -72,14 +112,14 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="237" y="1084"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="TopicDemosWatchApp" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="485" y="1084"/>
         </scene>
     </scenes>
 </document>

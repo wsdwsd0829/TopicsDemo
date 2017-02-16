@@ -32,7 +32,16 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    
+    //!! cannot co-exist with Page Based
     @IBAction func nextPageClicked() {
         self.pushController(withName: "FirstPageInterfaceController", context: ["key":"value"])
     }
+    
+    @IBAction func present() {
+        //presentController(withName: "ModalInterfaceController", context: ["key":"value"])
+        presentController(withNames: ["ModalInterfaceController", "ModalInterfaceController2"], contexts: [["key":"value"], []])
+    
+    }
+    
 }
