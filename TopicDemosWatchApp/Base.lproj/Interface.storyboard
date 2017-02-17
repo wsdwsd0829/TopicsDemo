@@ -82,6 +82,7 @@
                     <items>
                         <label alignment="left" text="First Page" id="hog-hs-ghA"/>
                         <inlineMovie width="1" height="100" alignment="left" posterImage="placeholder" id="soW-TW-sGh"/>
+                        <picker height="100" alignment="left" id="LaI-U8-0co"/>
                         <button width="55" alignment="left" title="Back" id="pK6-pd-huR">
                             <connections>
                                 <action selector="backClicked" destination="Cfa-ri-kU2" id="poe-BK-LR5"/>
@@ -107,9 +108,22 @@
                             </connections>
                         </button>
                     </items>
+                    <menu key="menu" id="9f1-Zt-0Hb">
+                        <items>
+                            <menuItem title="Menu Item 1" icon="accept" id="qjP-LL-C6z">
+                                <connections>
+                                    <action selector="firstMenuItemClicked" destination="Cfa-ri-kU2" id="qKY-XD-Vqt"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Menu Item 2" icon="add" id="tz4-u1-cvO"/>
+                            <menuItem title="Menu Item 3" icon="block" id="USs-Hb-VJT"/>
+                            <menuItem title="Menu Item 4" icon="decline" id="b3w-fB-cn0"/>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="inlineMovie" destination="soW-TW-sGh" id="NA8-zd-fXN"/>
                         <outlet property="label" destination="hog-hs-ghA" id="XDZ-nP-jiD"/>
+                        <outlet property="picker" destination="LaI-U8-0co" id="MtF-hs-PTX"/>
                     </connections>
                 </controller>
             </objects>
