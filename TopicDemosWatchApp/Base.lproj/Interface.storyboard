@@ -83,6 +83,11 @@
                         <label alignment="left" text="First Page" id="hog-hs-ghA"/>
                         <inlineMovie width="1" height="100" alignment="left" posterImage="placeholder" id="soW-TW-sGh"/>
                         <picker height="100" alignment="left" id="LaI-U8-0co"/>
+                        <button width="1" alignment="left" title="Alert" id="GcT-VM-94W">
+                            <connections>
+                                <action selector="alertClicked" destination="Cfa-ri-kU2" id="JT4-nG-euq"/>
+                            </connections>
+                        </button>
                         <button width="55" alignment="left" title="Back" id="pK6-pd-huR">
                             <connections>
                                 <action selector="backClicked" destination="Cfa-ri-kU2" id="poe-BK-LR5"/>

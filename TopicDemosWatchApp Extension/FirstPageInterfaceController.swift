@@ -38,6 +38,8 @@ class FirstPageInterfaceController: WKInterfaceController {
         }
         picker.setItems(items)
         picker.focus()
+        
+        setupSetting()
     }
 
     override func willActivate() {
@@ -75,4 +77,27 @@ class FirstPageInterfaceController: WKInterfaceController {
         print("firstMenuItemClicked")
     }
     
+    //MARK: Alert
+    @IBAction func alertClicked() {
+        showAlert()
+    }
+    func showAlert(title: String = "Alert title", message:String = "Alert Message") {
+        let action1 = WKAlertAction(title: "OK", style: .default) {
+            print("OK alert btn clicked")
+        }
+        let action2 = WKAlertAction(title: "Cancel", style: .destructive) {
+            print("Cancel alert btn clicked")
+        }
+        self.presentAlert(withTitle: "Alert title", message: "Alert Message", preferredStyle: .alert, actions: [action1, action2])
+    }
+    //MARK: Setting TODO: below not working
+    func setupSetting() {
+        if let _ = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.mygroupid") {
+            let defaults = UserDefaults(suiteName: "group.mygroupid")
+            if let str = defaults?.string(forKey: "name_preference") {
+                showAlert(message: str)
+            }
+        }
+    }
 }
+
