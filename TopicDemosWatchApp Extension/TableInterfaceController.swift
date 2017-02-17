@@ -18,20 +18,20 @@ class TableInterfaceController: WKInterfaceController {
     //https://makeapppie.com/2015/08/20/swift-watchkit-headers-footers-and-more-multiple-row-types-in-apple-watch-tables/
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        table.setRowTypes(["MainRowType","MainRowType", "InfoRowType","InfoRowType","ImageRowType"])
+        table.setRowTypes(["MainRowType", "InfoRowType","ImageRowType"])
        // table.setNumberOfRows(5, withRowType: "MainRowType") //for only one type of table
-        for i in 0...1 {
+        for i in 0..<1 {
             let row: MainRowType = table.rowController(at: i) as! MainRowType
             row.label.setText("hello world long text")
             row.button.setTitle("btn")
         }
        // table.setNumberOfRows(5, withRowType: "InfoRowType")
-        for i in 2...3 {
+        for i in 1..<2 {
             let row: InfoRowType = table.rowController(at: i) as! InfoRowType
             row.label.setText("text world long hello")
         }
         
-        for i in 4..<5 {
+        for i in 2..<3 {
             let row: ImageRowType = table.rowController(at: i) as! ImageRowType
             let image = UIImage(named: "placeholder.png")
             

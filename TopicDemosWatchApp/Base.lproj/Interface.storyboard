@@ -81,6 +81,7 @@
                 <controller identifier="FirstPageInterfaceController" title="First Page" id="Cfa-ri-kU2" customClass="FirstPageInterfaceController" customModule="TopicDemosWatchApp_Extension">
                     <items>
                         <label alignment="left" text="First Page" id="hog-hs-ghA"/>
+                        <inlineMovie width="1" height="100" alignment="left" posterImage="placeholder" id="soW-TW-sGh"/>
                         <button width="55" alignment="left" title="Back" id="pK6-pd-huR">
                             <connections>
                                 <action selector="backClicked" destination="Cfa-ri-kU2" id="poe-BK-LR5"/>
@@ -107,11 +108,12 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="inlineMovie" destination="soW-TW-sGh" id="NA8-zd-fXN"/>
                         <outlet property="label" destination="hog-hs-ghA" id="XDZ-nP-jiD"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="495" y="345"/>
+            <point key="canvasLocation" x="457" y="393"/>
         </scene>
         <!--TableInterfaceController-->
         <scene sceneID="yOc-VF-rah">
@@ -161,7 +163,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="729" y="345"/>
+            <point key="canvasLocation" x="720" y="392"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

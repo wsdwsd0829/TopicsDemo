@@ -12,11 +12,18 @@ import Foundation
 
 class FirstPageInterfaceController: WKInterfaceController {
     @IBOutlet var label: WKInterfaceLabel!
+    @IBOutlet var inlineMovie: WKInterfaceInlineMovie! //OS 3.0
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         if let dict = context as? [String: String] {
              label.setText(dict["key"])
+        }
+        
+        if let videoURL = Bundle.main.url(forResource: "SampleVideo_360x240_2mb", withExtension: "mp4") {
+            print("find mp4")
+            inlineMovie.setMovieURL(videoURL)
+            //inlineMovie.playFromBeginning()
         }
         // Configure interface objects here.
     }

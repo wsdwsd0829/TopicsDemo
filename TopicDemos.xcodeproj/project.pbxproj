@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D343F881E557C3900739962 /* SampleVideo_360x240_2mb.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0D343F871E557C3900739962 /* SampleVideo_360x240_2mb.mp4 */; };
 		0D45FECA1E554A5000BF7C9C /* TableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FEC91E554A5000BF7C9C /* TableInterfaceController.swift */; };
 		0D45FECC1E554BF100BF7C9C /* MainRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FECB1E554BF100BF7C9C /* MainRowType.swift */; };
 		0D45FECE1E5551B300BF7C9C /* InfoRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FECD1E5551B300BF7C9C /* InfoRowType.swift */; };
@@ -99,6 +100,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D343F871E557C3900739962 /* SampleVideo_360x240_2mb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleVideo_360x240_2mb.mp4; sourceTree = "<group>"; };
 		0D45FEC91E554A5000BF7C9C /* TableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableInterfaceController.swift; sourceTree = "<group>"; };
 		0D45FECB1E554BF100BF7C9C /* MainRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRowType.swift; sourceTree = "<group>"; };
 		0D45FECD1E5551B300BF7C9C /* InfoRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoRowType.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		0D806A141E541CF5007219F2 /* TopicDemosWatchApp Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0D343F871E557C3900739962 /* SampleVideo_360x240_2mb.mp4 */,
 				0D45FED21E55736500BF7C9C /* placeholder.png */,
 				0D806A2D1E550ACD007219F2 /* TopicDemosWatchApp Extension.entitlements */,
 				0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */,
@@ -514,6 +517,7 @@
 			files = (
 				0D806A201E541CF5007219F2 /* Assets.xcassets in Resources */,
 				0D45FED31E55736500BF7C9C /* placeholder.png in Resources */,
+				0D343F881E557C3900739962 /* SampleVideo_360x240_2mb.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
