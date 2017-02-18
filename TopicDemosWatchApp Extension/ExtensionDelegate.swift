@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import UserNotifications
 
 let ComplicationCurrentEntry = "ComplicationCurrentEntry"
 
@@ -17,7 +18,13 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     }
     
     func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
+        //MARK: notifications for watch only
+        //For register Actions & Categories & handling see TableInTable Project :)
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) { (res, error) in
+            if res {
+                print("notification request success")
+            }
+        }
     }
 
     func applicationDidBecomeActive() {
