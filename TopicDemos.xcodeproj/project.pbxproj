@@ -25,6 +25,7 @@
 		0D806A241E541CF5007219F2 /* TopicDemosWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0D806A041E541CF5007219F2 /* TopicDemosWatchApp.app */; };
 		0D806A311E551F08007219F2 /* FirstPageInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D806A301E551F08007219F2 /* FirstPageInterfaceController.swift */; };
 		0D9EC6601E57A037006542C5 /* Settings-Watch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D9EC65F1E57A037006542C5 /* Settings-Watch.bundle */; };
+		0D9EC6641E580E07006542C5 /* gallery.ckcomplication in Resources */ = {isa = PBXBuildFile; fileRef = 0D9EC6631E580E07006542C5 /* gallery.ckcomplication */; };
 		0DA3054B1E4B98980040CA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA3054A1E4B98980040CA45 /* AppDelegate.swift */; };
 		0DA305501E4B98980040CA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA3054E1E4B98980040CA45 /* Main.storyboard */; };
 		0DA305521E4B98980040CA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA305511E4B98980040CA45 /* Assets.xcassets */; };
@@ -125,6 +126,7 @@
 		0D806A2F1E550B62007219F2 /* TopicDemosWatchApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TopicDemosWatchApp.entitlements; sourceTree = "<group>"; };
 		0D806A301E551F08007219F2 /* FirstPageInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPageInterfaceController.swift; sourceTree = "<group>"; };
 		0D9EC65F1E57A037006542C5 /* Settings-Watch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Settings-Watch.bundle"; sourceTree = "<group>"; };
+		0D9EC6631E580E07006542C5 /* gallery.ckcomplication */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gallery.ckcomplication; sourceTree = "<group>"; };
 		0DA305471E4B98980040CA45 /* TopicDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopicDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA3054A1E4B98980040CA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DA3054F1E4B98980040CA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		0DA3053E1E4B98980040CA45 = {
 			isa = PBXGroup;
 			children = (
+				0D9EC6631E580E07006542C5 /* gallery.ckcomplication */,
 				0D9EC65F1E57A037006542C5 /* Settings-Watch.bundle */,
 				0DA305491E4B98980040CA45 /* TopicDemos */,
 				0DA3055E1E4B98980040CA45 /* TopicDemosTests */,
@@ -532,6 +535,7 @@
 				0D9EC6601E57A037006542C5 /* Settings-Watch.bundle in Resources */,
 				0DA305521E4B98980040CA45 /* Assets.xcassets in Resources */,
 				0DA305C71E4FF48D0040CA45 /* TextView.storyboard in Resources */,
+				0D9EC6641E580E07006542C5 /* gallery.ckcomplication in Resources */,
 				0DA305501E4B98980040CA45 /* Main.storyboard in Resources */,
 				0DA305C01E4EBF5C0040CA45 /* Bluebooth.storyboard in Resources */,
 				0DA305791E4B99660040CA45 /* Media.storyboard in Resources */,

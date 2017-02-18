@@ -88,14 +88,14 @@ class FirstPageInterfaceController: WKInterfaceController {
         let action2 = WKAlertAction(title: "Cancel", style: .destructive) {
             print("Cancel alert btn clicked")
         }
-        self.presentAlert(withTitle: "Alert title", message: "Alert Message", preferredStyle: .alert, actions: [action1, action2])
+        self.presentAlert(withTitle: title, message: message, preferredStyle: .alert, actions: [action1, action2])
     }
-    //MARK: Setting TODO: below not working
+    //MARK: Setting
     func setupSetting() {
         if let _ = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.mygroupid") {
             let defaults = UserDefaults(suiteName: "group.mygroupid")
             if let str = defaults?.string(forKey: "name_preference") {
-                showAlert(message: str)
+                showAlert(title: "settings", message: str)
             }
         }
     }

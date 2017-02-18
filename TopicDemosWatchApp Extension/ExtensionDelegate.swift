@@ -8,8 +8,14 @@
 
 import WatchKit
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate {
+let ComplicationCurrentEntry = "ComplicationCurrentEntry"
 
+class ExtensionDelegate: NSObject, WKExtensionDelegate {
+    
+    var myComplicationData: [String: Any] {
+        return [ComplicationCurrentEntry: [String: Any]()]
+    }
+    
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
     }

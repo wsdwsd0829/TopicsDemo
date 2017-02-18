@@ -1,0 +1,12 @@
+{
+  "supported complication families" : {
+    "7" : "D742E2A8-51F0-4F80-8914-FB10E8347D28.json",
+    "3" : "8E90B3E7-C339-41DB-A193-171150A3F0CE.json",
+    "4" : "E50605E8-3BCC-41F8-A00C-1056C464A7E1.json",
+    "0" : "7F2BDB7F-C81C-4817-B946-9EFBDAC200BA.json",
+    "1" : "18ABA8EF-1163-489C-BB44-D0D5D99CC781.json",
+    "6" : "1B4E28F7-0D7E-4009-A4EB-96D1D0F0E019.json",
+    "2" : "95427BBE-FFEF-4B90-8A7A-75861DA1238B.json"
+  },
+  "client ID" : "com.maxsida.TopicDemos.watchkitapp.watchkitextension"
+}
