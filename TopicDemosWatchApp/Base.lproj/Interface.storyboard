@@ -203,7 +203,9 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="TopicDemosWatchApp" customModuleProvider="target"/>
+                <controller animationDuration="1" id="4sK-HA-Art" customClass="NotificationController" customModule="TopicDemosWatchApp" customModuleProvider="target">
+                    <color key="backgroundColor" red="1" green="0.72521554206638572" blue="0.40709934136935955" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </controller>
             </objects>
             <point key="canvasLocation" x="485" y="1084"/>
         </scene>
