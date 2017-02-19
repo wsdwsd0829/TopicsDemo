@@ -26,6 +26,9 @@
 		0D806A311E551F08007219F2 /* FirstPageInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D806A301E551F08007219F2 /* FirstPageInterfaceController.swift */; };
 		0D9EC6601E57A037006542C5 /* Settings-Watch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D9EC65F1E57A037006542C5 /* Settings-Watch.bundle */; };
 		0D9EC6641E580E07006542C5 /* gallery.ckcomplication in Resources */ = {isa = PBXBuildFile; fileRef = 0D9EC6631E580E07006542C5 /* gallery.ckcomplication */; };
+		0D9EC6671E5A12AA006542C5 /* ApplePay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9EC6661E5A12AA006542C5 /* ApplePay.storyboard */; };
+		0D9EC6691E5A12C7006542C5 /* ApplePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9EC6681E5A12C7006542C5 /* ApplePayViewController.swift */; };
+		0D9EC66B1E5A15BB006542C5 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9EC66A1E5A15BB006542C5 /* PassKit.framework */; };
 		0DA3054B1E4B98980040CA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA3054A1E4B98980040CA45 /* AppDelegate.swift */; };
 		0DA305501E4B98980040CA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA3054E1E4B98980040CA45 /* Main.storyboard */; };
 		0DA305521E4B98980040CA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA305511E4B98980040CA45 /* Assets.xcassets */; };
@@ -127,6 +130,9 @@
 		0D806A301E551F08007219F2 /* FirstPageInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPageInterfaceController.swift; sourceTree = "<group>"; };
 		0D9EC65F1E57A037006542C5 /* Settings-Watch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Settings-Watch.bundle"; sourceTree = "<group>"; };
 		0D9EC6631E580E07006542C5 /* gallery.ckcomplication */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gallery.ckcomplication; sourceTree = "<group>"; };
+		0D9EC6661E5A12AA006542C5 /* ApplePay.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ApplePay.storyboard; path = ApplePay/ApplePay.storyboard; sourceTree = "<group>"; };
+		0D9EC6681E5A12C7006542C5 /* ApplePayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplePayViewController.swift; path = ApplePay/ApplePayViewController.swift; sourceTree = "<group>"; };
+		0D9EC66A1E5A15BB006542C5 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/PassKit.framework; sourceTree = DEVELOPER_DIR; };
 		0DA305471E4B98980040CA45 /* TopicDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopicDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA3054A1E4B98980040CA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DA3054F1E4B98980040CA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9EC66B1E5A15BB006542C5 /* PassKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +246,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0D9EC6651E5A1293006542C5 /* ApplePay */ = {
+			isa = PBXGroup;
+			children = (
+				0D9EC6661E5A12AA006542C5 /* ApplePay.storyboard */,
+				0D9EC6681E5A12C7006542C5 /* ApplePayViewController.swift */,
+			);
+			name = ApplePay;
+			sourceTree = "<group>";
+		};
 		0DA3053E1E4B98980040CA45 = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +285,7 @@
 		0DA305491E4B98980040CA45 /* TopicDemos */ = {
 			isa = PBXGroup;
 			children = (
+				0D9EC6651E5A1293006542C5 /* ApplePay */,
 				0D806A2E1E550B31007219F2 /* TopicDemos.entitlements */,
 				0DA305C51E4FF47C0040CA45 /* Layout */,
 				0DA305BC1E4EBF300040CA45 /* Bluebooth */,
@@ -312,6 +329,7 @@
 		0DA3057D1E4B9B250040CA45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D9EC66A1E5A15BB006542C5 /* PassKit.framework */,
 				0DA305C31E4EC0060040CA45 /* CoreBluetooth.framework */,
 				0DA305C11E4EC0010040CA45 /* QuartzCore.framework */,
 				0DA305821E4B9B510040CA45 /* CoreMedia.framework */,
@@ -456,6 +474,9 @@
 						DevelopmentTeam = 9MKJC68VMT;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
@@ -466,6 +487,9 @@
 						DevelopmentTeam = 9MKJC68VMT;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
@@ -538,6 +562,7 @@
 				0D9EC6641E580E07006542C5 /* gallery.ckcomplication in Resources */,
 				0DA305501E4B98980040CA45 /* Main.storyboard in Resources */,
 				0DA305C01E4EBF5C0040CA45 /* Bluebooth.storyboard in Resources */,
+				0D9EC6671E5A12AA006542C5 /* ApplePay.storyboard in Resources */,
 				0DA305791E4B99660040CA45 /* Media.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA305BE1E4EBF520040CA45 /* BlueboothViewController.swift in Sources */,
+				0D9EC6691E5A12C7006542C5 /* ApplePayViewController.swift in Sources */,
 				0DA3057C1E4B99FE0040CA45 /* PlayVideoViewController.swift in Sources */,
 				0DA3054B1E4B98980040CA45 /* AppDelegate.swift in Sources */,
 				0DA305C91E4FF4A20040CA45 /* TextViewController.swift in Sources */,
@@ -699,11 +725,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "TopicDemosWatchApp Extension/TopicDemosWatchApp Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Pay Payment Processing:merchant.com.maxsida.applepaysandbox";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9MKJC68VMT;
 				INFOPLIST_FILE = "TopicDemosWatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxsida.TopicDemos.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -717,11 +746,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "TopicDemosWatchApp Extension/TopicDemosWatchApp Extension.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9MKJC68VMT;
 				INFOPLIST_FILE = "TopicDemosWatchApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxsida.TopicDemos.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
