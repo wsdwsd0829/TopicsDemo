@@ -1,0 +1,14 @@
+PODS:
+  - Stripe/ApplePay (7.0.1):
+    - Stripe/Core
+  - Stripe/Core (7.0.1)
+
+DEPENDENCIES:
+  - Stripe/ApplePay
+
+SPEC CHECKSUMS:
+  Stripe: b92298b31cf156fb23a029361b57e2fcb6583d57
+
+PODFILE CHECKSUM: 4773f6d303a2cc6d993f3f1c50d1bfa330781046
+
+COCOAPODS: 1.1.1
