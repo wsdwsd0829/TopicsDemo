@@ -54,6 +54,12 @@
 		0DA305C41E4EC0060040CA45 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA305C31E4EC0060040CA45 /* CoreBluetooth.framework */; };
 		0DA305C71E4FF48D0040CA45 /* TextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA305C61E4FF48D0040CA45 /* TextView.storyboard */; };
 		0DA305C91E4FF4A20040CA45 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA305C81E4FF4A20040CA45 /* TextViewController.swift */; };
+		284C8E341E60C95600030009 /* ImageTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C8E331E60C95600030009 /* ImageTest.storyboard */; };
+		284C8E361E60C96C00030009 /* ImageTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C8E351E60C96C00030009 /* ImageTestViewController.swift */; };
+		284C8E381E60C9A300030009 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 284C8E371E60C9A300030009 /* test.jpg */; };
+		284C8E7C1E60EC2B00030009 /* portrait.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 284C8E7B1E60EC2B00030009 /* portrait.jpg */; };
+		284C8E7E1E60EC3100030009 /* landscape.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 284C8E7D1E60EC3100030009 /* landscape.jpg */; };
+		284C8E801E60ED7500030009 /* test2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 284C8E7F1E60ED7500030009 /* test2.jpg */; };
 		288F01931E5EC535005D204E /* ContainerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288F01921E5EC535005D204E /* ContainerController.storyboard */; };
 		288F01951E5EC554005D204E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F01941E5EC554005D204E /* ContainerViewController.swift */; };
 		288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F01961E5EC57E005D204E /* ChildViewController.swift */; };
@@ -213,6 +219,13 @@
 		13768A2D931DEF879E28421D /* Pods-TopicDemosWatchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopicDemosWatchApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopicDemosWatchApp/Pods-TopicDemosWatchApp.release.xcconfig"; sourceTree = "<group>"; };
 		149EF4EFC45C652030141334 /* Pods_TopicDemosWatchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopicDemosWatchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FA8D7D8D2552A0D80F09BD /* Pods-TopicDemosWatchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopicDemosWatchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopicDemosWatchApp/Pods-TopicDemosWatchApp.debug.xcconfig"; sourceTree = "<group>"; };
+		284C8E331E60C95600030009 /* ImageTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageTest.storyboard; sourceTree = "<group>"; };
+		284C8E351E60C96C00030009 /* ImageTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTestViewController.swift; path = ImageTest/ImageTestViewController.swift; sourceTree = "<group>"; };
+		284C8E371E60C9A300030009 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		284C8E7B1E60EC2B00030009 /* portrait.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portrait.jpg; sourceTree = "<group>"; };
+		284C8E7D1E60EC3100030009 /* landscape.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = landscape.jpg; sourceTree = "<group>"; };
+		284C8E7F1E60ED7500030009 /* test2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2.jpg; sourceTree = "<group>"; };
+		284C8E811E60EEAC00030009 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		288F01921E5EC535005D204E /* ContainerController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContainerController.storyboard; sourceTree = "<group>"; };
 		288F01941E5EC554005D204E /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = ContainerController/ContainerViewController.swift; sourceTree = "<group>"; };
 		288F01961E5EC57E005D204E /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildViewController.swift; path = ContainerController/ChildViewController.swift; sourceTree = "<group>"; };
@@ -407,6 +420,7 @@
 		0DA305491E4B98980040CA45 /* TopicDemos */ = {
 			isa = PBXGroup;
 			children = (
+				284C8E321E60C94900030009 /* ImageTest */,
 				288F01911E5EC521005D204E /* ContainerController */,
 				0D86F3001E5A34F900EE3577 /* ApplePaySwagServer.py */,
 				0D9EC6651E5A1293006542C5 /* ApplePay */,
@@ -419,6 +433,7 @@
 				0DA305511E4B98980040CA45 /* Assets.xcassets */,
 				0DA305531E4B98980040CA45 /* LaunchScreen.storyboard */,
 				0DA305561E4B98980040CA45 /* Info.plist */,
+				284C8E811E60EEAC00030009 /* MyPlayground.playground */,
 			);
 			path = TopicDemos;
 			sourceTree = "<group>";
@@ -503,6 +518,19 @@
 				DE35C1E1ADC9BF8AF791D8C3 /* Pods-TopicDemosWatchApp Extension.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		284C8E321E60C94900030009 /* ImageTest */ = {
+			isa = PBXGroup;
+			children = (
+				284C8E7F1E60ED7500030009 /* test2.jpg */,
+				284C8E7D1E60EC3100030009 /* landscape.jpg */,
+				284C8E7B1E60EC2B00030009 /* portrait.jpg */,
+				284C8E371E60C9A300030009 /* test.jpg */,
+				284C8E331E60C95600030009 /* ImageTest.storyboard */,
+				284C8E351E60C96C00030009 /* ImageTestViewController.swift */,
+			);
+			name = ImageTest;
 			sourceTree = "<group>";
 		};
 		288F01911E5EC521005D204E /* ContainerController */ = {
@@ -797,10 +825,15 @@
 			files = (
 				0DA305551E4B98980040CA45 /* LaunchScreen.storyboard in Resources */,
 				0D9EC6601E57A037006542C5 /* Settings-Watch.bundle in Resources */,
+				284C8E341E60C95600030009 /* ImageTest.storyboard in Resources */,
+				284C8E381E60C9A300030009 /* test.jpg in Resources */,
 				0DA305521E4B98980040CA45 /* Assets.xcassets in Resources */,
 				0DA305C71E4FF48D0040CA45 /* TextView.storyboard in Resources */,
+				284C8E7E1E60EC3100030009 /* landscape.jpg in Resources */,
 				0D9EC6641E580E07006542C5 /* gallery.ckcomplication in Resources */,
 				0DA305501E4B98980040CA45 /* Main.storyboard in Resources */,
+				284C8E7C1E60EC2B00030009 /* portrait.jpg in Resources */,
+				284C8E801E60ED7500030009 /* test2.jpg in Resources */,
 				0DA305C01E4EBF5C0040CA45 /* Bluebooth.storyboard in Resources */,
 				288F01931E5EC535005D204E /* ContainerController.storyboard in Resources */,
 				0D86F3011E5A34F900EE3577 /* ApplePaySwagServer.py in Resources */,
@@ -1078,6 +1111,7 @@
 			files = (
 				288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */,
 				0DA305BE1E4EBF520040CA45 /* BlueboothViewController.swift in Sources */,
+				284C8E361E60C96C00030009 /* ImageTestViewController.swift in Sources */,
 				0D9EC6691E5A12C7006542C5 /* ApplePayViewController.swift in Sources */,
 				0DA3057C1E4B99FE0040CA45 /* PlayVideoViewController.swift in Sources */,
 				0DA3054B1E4B98980040CA45 /* AppDelegate.swift in Sources */,
