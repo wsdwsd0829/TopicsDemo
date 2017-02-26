@@ -25,15 +25,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         verifyAudioPlaybackAvailable()
-        //MARK: user
+
+        //MARK: Firebase
         FIRApp.configure()
+        networkService = FirebaseService.shared
+
         if let user = FIRAuth.auth()?.currentUser {
             print("user login")
             testSaveAndFetch(user)
         } else {
             print("user logout")
         }
-        networkService = FirebaseService.shared
         //MARK: request siriKit
         INPreferences.requestSiriAuthorization() { status in
             switch status {
