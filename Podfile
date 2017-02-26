@@ -6,6 +6,11 @@ target 'TopicDemos' do
   use_frameworks!
 
   pod 'Stripe/ApplePay'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Auth'
+  pod 'SwiftyJSON'
   # Pods for TopicDemos
 
   target 'TopicDemosTests' do

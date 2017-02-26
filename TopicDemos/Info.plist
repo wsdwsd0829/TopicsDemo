@@ -50,5 +50,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>iMessage App need camera</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>iMessage App need microphone</string>
 </dict>
 </plist>

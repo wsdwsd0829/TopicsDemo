@@ -10,14 +10,30 @@ import UIKit
 import AVKit
 import AVFoundation
 import Intents
+import Firebase
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var networkService: NetworkService!
+    
+    struct Constants {
+        static let userId = "kUserId"
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         verifyAudioPlaybackAvailable()
+        //MARK: user
+        FIRApp.configure()
+        if let user = FIRAuth.auth()?.currentUser {
+            print("user login")
+            testSaveAndFetch(user)
+        } else {
+            print("user logout")
+        }
+        networkService = FirebaseService.shared
         //MARK: request siriKit
         INPreferences.requestSiriAuthorization() { status in
             switch status {
