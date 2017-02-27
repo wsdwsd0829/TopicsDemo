@@ -12,7 +12,7 @@ class ImageTestViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageContainerView: UIView!
     var counter = 0
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class ImageTestViewController: UIViewController {
         let newImage = aspectFillImageFrom(image: image, frame:
         imageView.frame)
         imageView.image = newImage
-        print("index \(index) counter \(counter) imagename: \(imageName) \(imageView.image)")
+        print("index \(index) counter \(counter) imagename: \(imageName) \(String(describing: imageView.image))")
     }
     
     func aspectFillImageFrom(image: UIImage, frame: CGRect) -> UIImage? {

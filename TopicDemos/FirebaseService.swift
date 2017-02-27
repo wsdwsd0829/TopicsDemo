@@ -9,6 +9,14 @@
 import UIKit
 import Firebase
 
+/*
+ Firebase tricks:
+ 1. database: setup user rules (toogle need rules)
+ 2. storage: setup user rules (toogle, need disable rules)
+ 3. save as dict   /users/:userId/montages/:montageId  use "ref" to point database
+ 
+ 
+ */
 protocol NetworkService {
     func addMontage(montage: Montage, user_id: String, completionHandler: @escaping (Error?) -> Void)
     func fetchMontages(user_id: String, completionHandler: @escaping ([Montage], NSError?) -> Void)

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oRC-Cl-dUu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12100" systemVersion="16E163f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oRC-Cl-dUu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12072"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,17 +28,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="275" id="Cb4-L0-chS"/>
-                                            <constraint firstAttribute="width" constant="375" id="ciS-gK-26Y"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.38614280812121937" green="1" blue="0.41899222994553498" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="275" id="7m1-rS-osW"/>
+                                    <constraint firstAttribute="trailing" secondItem="xfe-8I-2c2" secondAttribute="trailing" id="DTa-hT-w1b"/>
                                     <constraint firstItem="xfe-8I-2c2" firstAttribute="leading" secondItem="MOR-tu-Z9E" secondAttribute="leading" id="IcF-ZK-15q"/>
                                     <constraint firstItem="xfe-8I-2c2" firstAttribute="top" secondItem="MOR-tu-Z9E" secondAttribute="top" id="K41-O6-9C9"/>
-                                    <constraint firstAttribute="width" constant="375" id="Y6R-gB-0CH"/>
-                                    <constraint firstAttribute="trailing" secondItem="xfe-8I-2c2" secondAttribute="trailing" id="htr-Bg-dAl"/>
                                     <constraint firstAttribute="bottom" secondItem="xfe-8I-2c2" secondAttribute="bottom" id="zJL-CZ-xME"/>
                                 </constraints>
                             </view>
@@ -46,6 +44,7 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MOR-tu-Z9E" firstAttribute="top" secondItem="WsI-aC-Jpi" secondAttribute="bottom" constant="23" id="SA3-dk-hIf"/>
+                            <constraint firstAttribute="trailing" secondItem="MOR-tu-Z9E" secondAttribute="trailing" id="hi2-hV-X2w"/>
                             <constraint firstItem="MOR-tu-Z9E" firstAttribute="leading" secondItem="M04-K7-SCJ" secondAttribute="leading" id="jgh-Hj-6Gj"/>
                         </constraints>
                     </view>

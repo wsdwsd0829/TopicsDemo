@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12100" systemVersion="16E163f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jY1-Ku-Zu0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12072"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--You Tube View Controller-->
+        <scene sceneID="U8j-rp-wF6">
+            <objects>
+                <viewController storyboardIdentifier="YouTubeViewController" id="jY1-Ku-Zu0" customClass="YouTubeViewController" customModule="TopicDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oKy-oo-usz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ghv-XC-otl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pra-wn-LWs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xrQ-Pa-NSc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="612"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCg-jL-aIy">
+                                <rect key="frame" x="171" y="629" width="32" height="30"/>
+                                <state key="normal" title="click"/>
+                                <connections>
+                                    <action selector="clickAction:" destination="jY1-Ku-Zu0" eventType="touchUpInside" id="deh-a6-QPl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ghv-XC-otl" firstAttribute="top" secondItem="LCg-jL-aIy" secondAttribute="bottom" constant="8" id="29a-E3-6xF"/>
+                            <constraint firstItem="LCg-jL-aIy" firstAttribute="centerX" secondItem="Pra-wn-LWs" secondAttribute="centerX" id="G8B-br-jxV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="xrQ-Pa-NSc" id="BZL-KB-man"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yOt-pV-Hck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="372"/>
+        </scene>
+    </scenes>
+</document>
