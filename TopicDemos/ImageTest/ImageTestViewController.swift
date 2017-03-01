@@ -38,7 +38,8 @@ class ImageTestViewController: UIViewController {
         imageView.image = newImage
         print("index \(index) counter \(counter) imagename: \(imageName) \(String(describing: imageView.image))")
     }
-    
+
+    //http://nshipster.com/image-resizing/
     func aspectFillImageFrom(image: UIImage, frame: CGRect) -> UIImage? {
         var scaleRatio: CGFloat = 0
         //image too wide, scale height to chop left/right
@@ -54,11 +55,9 @@ class ImageTestViewController: UIViewController {
         
         UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
         image.draw(in: CGRect(origin: CGPoint.zero, size: size))
-        
         let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
         return scaledImage
     }
-    
-
 }

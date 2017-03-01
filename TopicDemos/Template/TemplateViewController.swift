@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Helper
 
 class TemplateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("string".name)
+        print(("Str" as NSString).objcname())
         // Do any additional setup after loading the view.
     }
 
