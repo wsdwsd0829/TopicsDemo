@@ -14,8 +14,7 @@ import Firebase
  1. database: setup user rules (toogle need rules)
  2. storage: setup user rules (toogle, need disable rules)
  3. save as dict   /users/:userId/montages/:montageId  use "ref" to point database
- 
- 
+ //backend: https://console.firebase.google.com/project/topics-1f8dc/database/data/
  */
 protocol NetworkService {
     func addMontage(montage: Montage, user_id: String, completionHandler: @escaping (Error?) -> Void)

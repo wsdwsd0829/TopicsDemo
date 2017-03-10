@@ -16,6 +16,7 @@
 		0D0633CA1E63345D00D6A16A /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0633C81E63345D00D6A16A /* Clip.swift */; };
 		0D0633CB1E63345D00D6A16A /* Montage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0633C91E63345D00D6A16A /* Montage.swift */; };
 		0D0633CD1E634FD500D6A16A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D0633CC1E634FD500D6A16A /* GoogleService-Info.plist */; };
+		0D1409651E725DCC00E4542A /* DesignPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1409641E725DCC00E4542A /* DesignPattern.swift */; };
 		0D343F881E557C3900739962 /* SampleVideo_360x240_2mb.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0D343F871E557C3900739962 /* SampleVideo_360x240_2mb.mp4 */; };
 		0D3C11771E635F9A00239684 /* GeneralExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3C11761E635F9A00239684 /* GeneralExtensions.swift */; };
 		0D45FECA1E554A5000BF7C9C /* TableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FEC91E554A5000BF7C9C /* TableInterfaceController.swift */; };
@@ -181,6 +182,7 @@
 		0D0633C81E63345D00D6A16A /* Clip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 		0D0633C91E63345D00D6A16A /* Montage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Montage.swift; sourceTree = "<group>"; };
 		0D0633CC1E634FD500D6A16A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0D1409641E725DCC00E4542A /* DesignPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignPattern.swift; path = DesignPatterns/DesignPattern.swift; sourceTree = "<group>"; };
 		0D343F871E557C3900739962 /* SampleVideo_360x240_2mb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleVideo_360x240_2mb.mp4; sourceTree = "<group>"; };
 		0D3C11761E635F9A00239684 /* GeneralExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralExtensions.swift; sourceTree = "<group>"; };
 		0D45FEC91E554A5000BF7C9C /* TableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableInterfaceController.swift; sourceTree = "<group>"; };
@@ -356,6 +358,14 @@
 			name = Firebase;
 			sourceTree = "<group>";
 		};
+		0D1409631E725D9500E4542A /* DesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				0D1409641E725DCC00E4542A /* DesignPattern.swift */,
+			);
+			name = DesignPatterns;
+			sourceTree = "<group>";
+		};
 		0D3C11751E635F6C00239684 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +488,7 @@
 		0DA305491E4B98980040CA45 /* TopicDemos */ = {
 			isa = PBXGroup;
 			children = (
+				0D1409631E725D9500E4542A /* DesignPatterns */,
 				0DF3C3AB1E63ED1800588CFC /* Template */,
 				0DF3C3A61E63EC3800588CFC /* Youtube */,
 				0D3C11751E635F6C00239684 /* Helpers */,
@@ -1210,6 +1221,7 @@
 				0DA3054B1E4B98980040CA45 /* AppDelegate.swift in Sources */,
 				288F01951E5EC554005D204E /* ContainerViewController.swift in Sources */,
 				0DA305C91E4FF4A20040CA45 /* TextViewController.swift in Sources */,
+				0D1409651E725DCC00E4542A /* DesignPattern.swift in Sources */,
 				0D0633C31E63323800D6A16A /* UIViewController+Alerts.m in Sources */,
 				0D0633CA1E63345D00D6A16A /* Clip.swift in Sources */,
 			);
