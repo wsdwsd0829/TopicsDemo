@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ImageTestViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageContainerView: UIView!
+    
+    
     var counter = 0
     
     
@@ -21,7 +24,10 @@ class ImageTestViewController: UIViewController {
             //self is nil
             self?.updateImage()
         }
+        
+        loadImage()
     }
+    //MARK: rotate image
     func updateImage() {
         let images = ["test2.jpg", "landscape.jpg", "portrait.jpg", "test.jpg"];
         let index = counter%images.count
@@ -38,7 +44,7 @@ class ImageTestViewController: UIViewController {
         imageView.image = newImage
         print("index \(index) counter \(counter) imagename: \(imageName) \(String(describing: imageView.image))")
     }
-
+    //MARK: aspectFill from top image resizing
     //http://nshipster.com/image-resizing/
     func aspectFillImageFrom(image: UIImage, frame: CGRect) -> UIImage? {
         var scaleRatio: CGFloat = 0
@@ -60,4 +66,45 @@ class ImageTestViewController: UIViewController {
         
         return scaledImage
     }
+    //MARK: Associated Object
+    
+    @IBOutlet weak var remoteImageView: UIImageView!
+    func loadImage() {
+        let imageUrlString = "https://static.pexels.com/photos/51099/pexels-photo-51099.jpeg"
+        remoteImageView.setupSdWebImageManger()
+        remoteImageView.loadImageIfPossible(urlString: imageUrlString)
+    }
 }
+
+extension UIImageView {
+    func setupSdWebImageManger() {
+        let manager = SDWebImageManager.shared()
+        self.fetcher = manager
+    }
+    func loadImageIfPossible(urlString: String) {
+        guard let url = URL(string: urlString) else {
+            fatalError()
+        }
+        if let fetcher = self.fetcher as? SDWebImageManager {
+            fetcher.downloadImage(with: url, options: .allowInvalidSSLCertificates, progress: nil, completed: { (image, err, cacheType, resBool, url) in
+                self.image = image
+            })
+        } else {
+            print("not set fetcher using associated object")
+        }
+    }
+    struct AssciateObjectKey {
+        static var SDWebImageManagerKey = "SDWebImageManagerKey"
+    }
+    var fetcher: AnyObject? {
+        get {
+            return objc_getAssociatedObject(self, &AssciateObjectKey.SDWebImageManagerKey) as AnyObject?
+        }
+        set {
+            objc_setAssociatedObject(self, &AssciateObjectKey.SDWebImageManagerKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+}
+
+
