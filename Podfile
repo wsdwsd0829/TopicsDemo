@@ -13,6 +13,8 @@ target 'TopicDemos' do
   pod 'SwiftyJSON'
   pod 'SDWebImage', '~> 3.8.2'
   pod 'AFNetworking', '~> 3.0.4'
+  swift_version = "3.0"
+  pod "PromiseKit", "~> 4.0"
   # Pods for TopicDemos
 
   target 'TopicDemosTests' do

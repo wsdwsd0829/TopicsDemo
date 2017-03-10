@@ -53,6 +53,17 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.8)
+  - PromiseKit (4.1.7):
+    - PromiseKit/Foundation (= 4.1.7)
+    - PromiseKit/QuartzCore (= 4.1.7)
+    - PromiseKit/UIKit (= 4.1.7)
+  - PromiseKit/CorePromise (4.1.7)
+  - PromiseKit/Foundation (4.1.7):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.1.7):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.1.7):
+    - PromiseKit/CorePromise
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -67,6 +78,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - PromiseKit (~> 4.0)
   - SDWebImage (~> 3.8.2)
   - Stripe/ApplePay
   - SwiftyJSON
@@ -82,10 +94,11 @@ SPEC CHECKSUMS:
   FirebaseStorage: a5c55b23741a49a72af8f30f95b3bb5ddbeda12d
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
+  PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Stripe: b92298b31cf156fb23a029361b57e2fcb6583d57
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 8a5bddb5da8ddb07877a2a8a2d1461ede48f7790
+PODFILE CHECKSUM: 60ce0bb59ac73d9e615061b6c3196db449fe97db
 
 COCOAPODS: 1.2.0
