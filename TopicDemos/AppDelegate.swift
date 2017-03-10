@@ -43,7 +43,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             default: print("siri must authorized to work")
             }
         }
+        
+        //MARK: design pattern practice
+        PatternCenter.shared.testObserverPattern()
+        
         return true
+        
+        
     }
     
     func handleSiriAuthorized() {
