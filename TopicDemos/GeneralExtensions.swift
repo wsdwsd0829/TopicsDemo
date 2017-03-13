@@ -19,20 +19,31 @@ extension UIView {
     }
 }
 
+enum InstantiateType {
+    case storyboard, nib
+}
 protocol ViewControllerInstantiable {
-    //set id in storyboard, and call this 
-    static func instantiate(controllerType type: UIViewController.Type) -> UIViewController
+
+    //set id in storyboard, and call this
+    static func instantiate(controllerType type: UIViewController.Type, _ instantiateType: InstantiateType) -> UIViewController;
 }
 
 extension UIViewController: ViewControllerInstantiable {
-    static func instantiate(controllerType type: UIViewController.Type) -> UIViewController {
+    static func instantiate(controllerType type: UIViewController.Type, _ instantiateType: InstantiateType = .storyboard) -> UIViewController {
         let controllerName = String(describing: type.self)
         guard let controllerEnum = Controllers.init(rawValue: controllerName) else {
             fatalError("Busted!!: no suct controller defined")
         }
-        let storyboard = UIStoryboard(name: controllerEnum.storyboardName, bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: controllerEnum.identifier) //cast back to what you want
-        return vc
+        switch instantiateType {
+        case .storyboard:
+            
+            let storyboard = UIStoryboard(name: controllerEnum.storyboardName, bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: controllerEnum.identifier) //cast back to what you want
+            return vc
+        case .nib:
+            let avc = type.init(nibName: controllerName , bundle: nil)
+            return avc
+        }
     }
 }
 
@@ -40,6 +51,7 @@ extension UIViewController: ViewControllerInstantiable {
 enum Controllers: String {
     //capitalize on purpose to use rawdata as id
     case ProfileListViewController, EmailViewController, YouTubeViewController, CreateClipsViewController, DetailViewController, ViewController
+    case PromiseKitViewController
     var identifier: String {
         switch self {
         default: return self.rawValue
@@ -51,6 +63,12 @@ enum Controllers: String {
         case .EmailViewController: return "Auth"
         case .YouTubeViewController, .ViewController: return "Main"
         case .CreateClipsViewController: return "CreateClips"
+        default: return "" //not support instantiate from storyboard
+        }
+    }
+    var nibName: String {
+        switch self {
+        default: return identifier
         }
     }
 }

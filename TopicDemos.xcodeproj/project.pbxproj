@@ -17,6 +17,9 @@
 		0D0633CB1E63345D00D6A16A /* Montage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0633C91E63345D00D6A16A /* Montage.swift */; };
 		0D0633CD1E634FD500D6A16A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D0633CC1E634FD500D6A16A /* GoogleService-Info.plist */; };
 		0D1409651E725DCC00E4542A /* DesignPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1409641E725DCC00E4542A /* DesignPattern.swift */; };
+		0D1409781E76382200E4542A /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1409771E76382200E4542A /* SecondTabViewController.swift */; };
+		0D14097C1E7639D800E4542A /* PromiseKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D14097A1E7639D800E4542A /* PromiseKitViewController.swift */; };
+		0D14097D1E7639D800E4542A /* PromiseKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D14097B1E7639D800E4542A /* PromiseKitViewController.xib */; };
 		0D343F881E557C3900739962 /* SampleVideo_360x240_2mb.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0D343F871E557C3900739962 /* SampleVideo_360x240_2mb.mp4 */; };
 		0D3C11771E635F9A00239684 /* GeneralExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3C11761E635F9A00239684 /* GeneralExtensions.swift */; };
 		0D45FECA1E554A5000BF7C9C /* TableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FEC91E554A5000BF7C9C /* TableInterfaceController.swift */; };
@@ -243,6 +246,9 @@
 		0D0633C91E63345D00D6A16A /* Montage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Montage.swift; sourceTree = "<group>"; };
 		0D0633CC1E634FD500D6A16A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0D1409641E725DCC00E4542A /* DesignPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignPattern.swift; path = DesignPatterns/DesignPattern.swift; sourceTree = "<group>"; };
+		0D1409771E76382200E4542A /* SecondTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondTabViewController.swift; path = SecondTab/SecondTabViewController.swift; sourceTree = "<group>"; };
+		0D14097A1E7639D800E4542A /* PromiseKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromiseKitViewController.swift; path = SecondTab/PromiseKit/PromiseKitViewController.swift; sourceTree = "<group>"; };
+		0D14097B1E7639D800E4542A /* PromiseKitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PromiseKitViewController.xib; path = SecondTab/PromiseKit/PromiseKitViewController.xib; sourceTree = "<group>"; };
 		0D343F871E557C3900739962 /* SampleVideo_360x240_2mb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleVideo_360x240_2mb.mp4; sourceTree = "<group>"; };
 		0D3C11761E635F9A00239684 /* GeneralExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralExtensions.swift; sourceTree = "<group>"; };
 		0D45FEC91E554A5000BF7C9C /* TableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableInterfaceController.swift; sourceTree = "<group>"; };
@@ -435,6 +441,24 @@
 			name = DesignPatterns;
 			sourceTree = "<group>";
 		};
+		0D1409741E7637F600E4542A /* SecondTab */ = {
+			isa = PBXGroup;
+			children = (
+				0D1409791E7639C500E4542A /* PromiseKit */,
+				0D1409771E76382200E4542A /* SecondTabViewController.swift */,
+			);
+			name = SecondTab;
+			sourceTree = "<group>";
+		};
+		0D1409791E7639C500E4542A /* PromiseKit */ = {
+			isa = PBXGroup;
+			children = (
+				0D14097A1E7639D800E4542A /* PromiseKitViewController.swift */,
+				0D14097B1E7639D800E4542A /* PromiseKitViewController.xib */,
+			);
+			name = PromiseKit;
+			sourceTree = "<group>";
+		};
 		0D3C11751E635F6C00239684 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +584,7 @@
 		0DA305491E4B98980040CA45 /* TopicDemos */ = {
 			isa = PBXGroup;
 			children = (
+				0D1409741E7637F600E4542A /* SecondTab */,
 				0D1409631E725D9500E4542A /* DesignPatterns */,
 				0DF3C3AB1E63ED1800588CFC /* Template */,
 				0DF3C3A61E63EC3800588CFC /* Youtube */,
@@ -1106,6 +1131,7 @@
 				0DA305C71E4FF48D0040CA45 /* TextView.storyboard in Resources */,
 				284C8E7E1E60EC3100030009 /* landscape.jpg in Resources */,
 				0D9EC6641E580E07006542C5 /* gallery.ckcomplication in Resources */,
+				0D14097D1E7639D800E4542A /* PromiseKitViewController.xib in Resources */,
 				0DA305501E4B98980040CA45 /* Main.storyboard in Resources */,
 				0D0633CD1E634FD500D6A16A /* GoogleService-Info.plist in Resources */,
 				284C8E7C1E60EC2B00030009 /* portrait.jpg in Resources */,
@@ -1389,7 +1415,9 @@
 				0D3C11771E635F9A00239684 /* GeneralExtensions.swift in Sources */,
 				0D0633C21E63323800D6A16A /* EmailViewController.m in Sources */,
 				288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */,
+				0D1409781E76382200E4542A /* SecondTabViewController.swift in Sources */,
 				0DA305BE1E4EBF520040CA45 /* BlueboothViewController.swift in Sources */,
+				0D14097C1E7639D800E4542A /* PromiseKitViewController.swift in Sources */,
 				284C8E361E60C96C00030009 /* ImageTestViewController.swift in Sources */,
 				0D9EC6691E5A12C7006542C5 /* ApplePayViewController.swift in Sources */,
 				0D0633CB1E63345D00D6A16A /* Montage.swift in Sources */,
