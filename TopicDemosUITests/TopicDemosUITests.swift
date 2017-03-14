@@ -31,6 +31,15 @@ class TopicDemosUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+        let app = XCUIApplication()
+        app.tabBars.children(matching: .button).matching(identifier: "Item").element(boundBy: 1).tap()
+        
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["UITesting"].tap()
+        app.buttons["MyBtn"].tap() //label then identifier
+        tablesQuery.staticTexts["Cell row index: 5"].swipeUp()
+        
     }
     
 }

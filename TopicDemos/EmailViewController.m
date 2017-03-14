@@ -31,6 +31,7 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    [[PMTesting alloc] init];
     self.delegate = (id<AuthDelegate>)[UIApplication.sharedApplication delegate];
 }
 

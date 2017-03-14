@@ -85,6 +85,11 @@
 		288F01931E5EC535005D204E /* ContainerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288F01921E5EC535005D204E /* ContainerController.storyboard */; };
 		288F01951E5EC554005D204E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F01941E5EC554005D204E /* ContainerViewController.swift */; };
 		288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F01961E5EC57E005D204E /* ChildViewController.swift */; };
+		28987D9D1E7893E2000B5976 /* UITestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28987D9B1E7893E2000B5976 /* UITestingViewController.swift */; };
+		28987D9E1E7893E2000B5976 /* UITestingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28987D9C1E7893E2000B5976 /* UITestingViewController.xib */; };
+		28987DE51E789E95000B5976 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28987DE41E789E95000B5976 /* Readme.txt */; };
+		28987DE71E78A724000B5976 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28987DE61E78A724000B5976 /* main.swift */; };
+		28987E011E78E971000B5976 /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28987E001E78E971000B5976 /* Testing.swift */; };
 		28B8A9E21E72165200DCAE12 /* ChildXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B8A9E01E72165200DCAE12 /* ChildXibViewController.swift */; };
 		28B8A9E31E72165200DCAE12 /* ChildXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28B8A9E11E72165200DCAE12 /* ChildXibViewController.xib */; };
 		2FAD8E8A3D779B5ECE45F32F /* Pods_TopicDemos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0338ADE8D401A537422DB12C /* Pods_TopicDemos.framework */; };
@@ -334,6 +339,11 @@
 		288F01921E5EC535005D204E /* ContainerController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContainerController.storyboard; sourceTree = "<group>"; };
 		288F01941E5EC554005D204E /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = ContainerController/ContainerViewController.swift; sourceTree = "<group>"; };
 		288F01961E5EC57E005D204E /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildViewController.swift; path = ContainerController/ChildViewController.swift; sourceTree = "<group>"; };
+		28987D9B1E7893E2000B5976 /* UITestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITestingViewController.swift; path = SecondTab/UITesting/UITestingViewController.swift; sourceTree = "<group>"; };
+		28987D9C1E7893E2000B5976 /* UITestingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UITestingViewController.xib; path = SecondTab/UITesting/UITestingViewController.xib; sourceTree = "<group>"; };
+		28987DE41E789E95000B5976 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		28987DE61E78A724000B5976 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		28987E001E78E971000B5976 /* Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		28B8A9E01E72165200DCAE12 /* ChildXibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildXibViewController.swift; path = ContainerController/ChildXibViewController.swift; sourceTree = "<group>"; };
 		28B8A9E11E72165200DCAE12 /* ChildXibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChildXibViewController.xib; path = ContainerController/ChildXibViewController.xib; sourceTree = "<group>"; };
 		35A63710E42500F876A74A59 /* Pods_TopicDemosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopicDemosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -444,6 +454,7 @@
 		0D1409741E7637F600E4542A /* SecondTab */ = {
 			isa = PBXGroup;
 			children = (
+				28987D961E7893B6000B5976 /* UITesting */,
 				0D1409791E7639C500E4542A /* PromiseKit */,
 				0D1409771E76382200E4542A /* SecondTabViewController.swift */,
 			);
@@ -584,6 +595,7 @@
 		0DA305491E4B98980040CA45 /* TopicDemos */ = {
 			isa = PBXGroup;
 			children = (
+				28987E021E78E9F8000B5976 /* BridgingRelated */,
 				0D1409741E7637F600E4542A /* SecondTab */,
 				0D1409631E725D9500E4542A /* DesignPatterns */,
 				0DF3C3AB1E63ED1800588CFC /* Template */,
@@ -604,7 +616,9 @@
 				0DA305511E4B98980040CA45 /* Assets.xcassets */,
 				0DA305531E4B98980040CA45 /* LaunchScreen.storyboard */,
 				0DA305561E4B98980040CA45 /* Info.plist */,
+				28987DE61E78A724000B5976 /* main.swift */,
 				284C8E811E60EEAC00030009 /* MyPlayground.playground */,
+				28987DE41E789E95000B5976 /* Readme.txt */,
 			);
 			path = TopicDemos;
 			sourceTree = "<group>";
@@ -793,6 +807,23 @@
 				28B8A9E11E72165200DCAE12 /* ChildXibViewController.xib */,
 			);
 			name = ContainerController;
+			sourceTree = "<group>";
+		};
+		28987D961E7893B6000B5976 /* UITesting */ = {
+			isa = PBXGroup;
+			children = (
+				28987D9B1E7893E2000B5976 /* UITestingViewController.swift */,
+				28987D9C1E7893E2000B5976 /* UITestingViewController.xib */,
+			);
+			name = UITesting;
+			sourceTree = "<group>";
+		};
+		28987E021E78E9F8000B5976 /* BridgingRelated */ = {
+			isa = PBXGroup;
+			children = (
+				28987E001E78E971000B5976 /* Testing.swift */,
+			);
+			name = BridgingRelated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1126,6 +1157,7 @@
 				284C8E341E60C95600030009 /* ImageTest.storyboard in Resources */,
 				284C8E381E60C9A300030009 /* test.jpg in Resources */,
 				0DA305521E4B98980040CA45 /* Assets.xcassets in Resources */,
+				28987DE51E789E95000B5976 /* Readme.txt in Resources */,
 				0D0633BC1E63320900D6A16A /* Firebase.storyboard in Resources */,
 				0DF3C3A81E63EC4E00588CFC /* Youtube.storyboard in Resources */,
 				0DA305C71E4FF48D0040CA45 /* TextView.storyboard in Resources */,
@@ -1138,6 +1170,7 @@
 				284C8E801E60ED7500030009 /* test2.jpg in Resources */,
 				0DA305C01E4EBF5C0040CA45 /* Bluebooth.storyboard in Resources */,
 				288F01931E5EC535005D204E /* ContainerController.storyboard in Resources */,
+				28987D9E1E7893E2000B5976 /* UITestingViewController.xib in Resources */,
 				0D86F3011E5A34F900EE3577 /* ApplePaySwagServer.py in Resources */,
 				0D9EC6671E5A12AA006542C5 /* ApplePay.storyboard in Resources */,
 				0DA305791E4B99660040CA45 /* Media.storyboard in Resources */,
@@ -1414,6 +1447,7 @@
 			files = (
 				0D3C11771E635F9A00239684 /* GeneralExtensions.swift in Sources */,
 				0D0633C21E63323800D6A16A /* EmailViewController.m in Sources */,
+				28987DE71E78A724000B5976 /* main.swift in Sources */,
 				288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */,
 				0D1409781E76382200E4542A /* SecondTabViewController.swift in Sources */,
 				0DA305BE1E4EBF520040CA45 /* BlueboothViewController.swift in Sources */,
@@ -1423,6 +1457,7 @@
 				0D0633CB1E63345D00D6A16A /* Montage.swift in Sources */,
 				0DA3057C1E4B99FE0040CA45 /* PlayVideoViewController.swift in Sources */,
 				0DF3C3AF1E63ED5D00588CFC /* TemplateViewController.swift in Sources */,
+				28987E011E78E971000B5976 /* Testing.swift in Sources */,
 				0D0633C51E63337B00D6A16A /* FirebaseHelper.swift in Sources */,
 				0D0633BA1E6331FE00D6A16A /* FirebaseViewController.swift in Sources */,
 				0DF3C3AA1E63EC6200588CFC /* YouTubeViewController.swift in Sources */,
@@ -1434,6 +1469,7 @@
 				0D0633C31E63323800D6A16A /* UIViewController+Alerts.m in Sources */,
 				28B8A9E21E72165200DCAE12 /* ChildXibViewController.swift in Sources */,
 				0D0633CA1E63345D00D6A16A /* Clip.swift in Sources */,
+				28987D9D1E7893E2000B5976 /* UITestingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

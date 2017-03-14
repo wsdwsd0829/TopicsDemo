@@ -27,6 +27,7 @@ class PlayVideoViewController: UIViewController {
         buttons.forEach {
             $0.backgroundColor = UIColor.red
         }
+        
         //"http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"  //steaming
         //"http://www.ebookfrenzy.com/ios_book/movie/movie.mov"
         //comment following section to use button & segue
@@ -42,6 +43,7 @@ class PlayVideoViewController: UIViewController {
             
             player.play()
         }
+ 
  
         // Do any additional setup after loading the view.
     }

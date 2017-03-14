@@ -13,23 +13,29 @@ class SecondTabViewController: UITableViewController {
         static let cellIdentifier: String = "DefaultCellIdentifer";
     }
     enum Row: Int {
-        case promiseKit
+        case promiseKit, uiTesting
         var title:String {
             switch self {
             case .promiseKit: return "PromiseKit";
+            case .uiTesting: return "UITesting"
             }
         }
         var identifier: String {
             switch self {
             case .promiseKit: return "PromiseKitViewController"
+            case .uiTesting: return "UITestingViewController"
             }
         }
         
         var nibName: String? {
             return Controllers(rawValue: identifier)?.nibName
         }
-        var viewControllerType: UIViewController.Type {
-            return PromiseKitViewController.self
+        var viewControllerType: UIViewController.Type {  //UIViewController.Type is AnyClass
+            switch self {
+            case .promiseKit: return PromiseKitViewController.self
+            case .uiTesting: return UITestingViewController.self
+            }
+            
         }
         
         static func row(at indexPath: IndexPath) -> Row? {
@@ -37,8 +43,16 @@ class SecondTabViewController: UITableViewController {
         }
         
         static var allRows: [Row] {
-            return [.promiseKit]
+            return [.promiseKit, .uiTesting]
         }
+        /*
+        var viewController: AnyClass {
+            switch self {
+            case .promiseKit: return PromiseKitViewController.self
+            case .uiTesting: return UITestingViewController.self
+            }
+        }
+        */
     }
     
     override func viewDidLoad() {
