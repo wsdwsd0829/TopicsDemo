@@ -48,7 +48,6 @@ extension AppDelegate: AuthDelegate {
         }
         
         networkService.saveImage(data, withName: "\(clip3.thumbnailNameId).png", completionHandler: { (downloadUrlStr ,err) in
-            print(downloadUrlStr!)
             if let durl = downloadUrlStr {
                 clip3.thumbnail_url = durl
                 self.networkService.addMontage(montage: montage2, user_id: user.uid, completionHandler: { (err) in
@@ -56,6 +55,8 @@ extension AppDelegate: AuthDelegate {
                         print(err!)
                     }
                 })
+            } else {
+                print(err?.localizedDescription ?? "")
             }
         })
         //test saving

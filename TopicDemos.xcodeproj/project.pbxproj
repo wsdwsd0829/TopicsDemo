@@ -92,6 +92,7 @@
 		28987E011E78E971000B5976 /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28987E001E78E971000B5976 /* Testing.swift */; };
 		28B8A9E21E72165200DCAE12 /* ChildXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B8A9E01E72165200DCAE12 /* ChildXibViewController.swift */; };
 		28B8A9E31E72165200DCAE12 /* ChildXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28B8A9E11E72165200DCAE12 /* ChildXibViewController.xib */; };
+		28C9D34E1E79C92C00286D95 /* ObjcTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C9D34D1E79C92C00286D95 /* ObjcTesting.m */; };
 		2FAD8E8A3D779B5ECE45F32F /* Pods_TopicDemos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0338ADE8D401A537422DB12C /* Pods_TopicDemos.framework */; };
 		65E92232CB59C377C6442943 /* Pods_TopicDemosWatchApp_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80911218E757088E334E376F /* Pods_TopicDemosWatchApp_Extension.framework */; };
 		6E09F6914947DD072C63B7E4 /* Pods_TopicDemosWatchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149EF4EFC45C652030141334 /* Pods_TopicDemosWatchApp.framework */; };
@@ -346,6 +347,8 @@
 		28987E001E78E971000B5976 /* Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		28B8A9E01E72165200DCAE12 /* ChildXibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildXibViewController.swift; path = ContainerController/ChildXibViewController.swift; sourceTree = "<group>"; };
 		28B8A9E11E72165200DCAE12 /* ChildXibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChildXibViewController.xib; path = ContainerController/ChildXibViewController.xib; sourceTree = "<group>"; };
+		28C9D34C1E79C92C00286D95 /* ObjcTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjcTesting.h; path = BridgingRelated/ObjcTesting.h; sourceTree = "<group>"; };
+		28C9D34D1E79C92C00286D95 /* ObjcTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjcTesting.m; path = BridgingRelated/ObjcTesting.m; sourceTree = "<group>"; };
 		35A63710E42500F876A74A59 /* Pods_TopicDemosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopicDemosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3FE0E46DCF73155A5F938D /* Pods_TopicDemosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopicDemosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80911218E757088E334E376F /* Pods_TopicDemosWatchApp_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopicDemosWatchApp_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -822,6 +825,8 @@
 			isa = PBXGroup;
 			children = (
 				28987E001E78E971000B5976 /* Testing.swift */,
+				28C9D34C1E79C92C00286D95 /* ObjcTesting.h */,
+				28C9D34D1E79C92C00286D95 /* ObjcTesting.m */,
 			);
 			name = BridgingRelated;
 			sourceTree = "<group>";
@@ -1463,6 +1468,7 @@
 				0DF3C3AA1E63EC6200588CFC /* YouTubeViewController.swift in Sources */,
 				0D0633C71E6333EF00D6A16A /* FirebaseService.swift in Sources */,
 				0DA3054B1E4B98980040CA45 /* AppDelegate.swift in Sources */,
+				28C9D34E1E79C92C00286D95 /* ObjcTesting.m in Sources */,
 				288F01951E5EC554005D204E /* ContainerViewController.swift in Sources */,
 				0DA305C91E4FF4A20040CA45 /* TextViewController.swift in Sources */,
 				0D1409651E725DCC00E4542A /* DesignPattern.swift in Sources */,

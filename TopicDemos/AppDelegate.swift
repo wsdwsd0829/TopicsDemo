@@ -55,6 +55,10 @@ class AppDelegate: UIApplication, UIApplicationDelegate {  //change UIResponder 
         //MARK: design pattern practice
         PatternCenter.shared.testObserverPattern()
         
+        
+        //MARK: Bridging related test
+        ObjcTesting.useSwift()
+        
         return true
         
         
