@@ -68,6 +68,7 @@
 		0DA305C41E4EC0060040CA45 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA305C31E4EC0060040CA45 /* CoreBluetooth.framework */; };
 		0DA305C71E4FF48D0040CA45 /* TextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA305C61E4FF48D0040CA45 /* TextView.storyboard */; };
 		0DA305C91E4FF4A20040CA45 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA305C81E4FF4A20040CA45 /* TextViewController.swift */; };
+		0DCD7CEC1E7DE53F00D7D951 /* CommandPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD7CEB1E7DE53F00D7D951 /* CommandPattern.swift */; };
 		0DF3C3A81E63EC4E00588CFC /* Youtube.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF3C3A71E63EC4E00588CFC /* Youtube.storyboard */; };
 		0DF3C3AA1E63EC6200588CFC /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF3C3A91E63EC6200588CFC /* YouTubeViewController.swift */; };
 		0DF3C3AD1E63ED2300588CFC /* Template.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF3C3AC1E63ED2300588CFC /* Template.storyboard */; };
@@ -311,6 +312,7 @@
 		0DA305C31E4EC0060040CA45 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		0DA305C61E4FF48D0040CA45 /* TextView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TextView.storyboard; sourceTree = "<group>"; };
 		0DA305C81E4FF4A20040CA45 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewController.swift; path = Layout/TextViewController.swift; sourceTree = "<group>"; };
+		0DCD7CEB1E7DE53F00D7D951 /* CommandPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandPattern.swift; sourceTree = "<group>"; };
 		0DF3C3A71E63EC4E00588CFC /* Youtube.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Youtube.storyboard; sourceTree = "<group>"; };
 		0DF3C3A91E63EC6200588CFC /* YouTubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
 		0DF3C3AC1E63ED2300588CFC /* Template.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Template.storyboard; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 		0D1409631E725D9500E4542A /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				0DCD7CE21E7DDE9900D7D951 /* CommandPattern */,
 				0D1409641E725DCC00E4542A /* DesignPattern.swift */,
 			);
 			name = DesignPatterns;
@@ -672,6 +675,14 @@
 				0DA305C81E4FF4A20040CA45 /* TextViewController.swift */,
 			);
 			name = Layout;
+			sourceTree = "<group>";
+		};
+		0DCD7CE21E7DDE9900D7D951 /* CommandPattern */ = {
+			isa = PBXGroup;
+			children = (
+				0DCD7CEB1E7DE53F00D7D951 /* CommandPattern.swift */,
+			);
+			name = CommandPattern;
 			sourceTree = "<group>";
 		};
 		0DF3C3A61E63EC3800588CFC /* Youtube */ = {
@@ -1431,6 +1442,7 @@
 				288F01951E5EC554005D204E /* ContainerViewController.swift in Sources */,
 				0DA305C91E4FF4A20040CA45 /* TextViewController.swift in Sources */,
 				0D1409651E725DCC00E4542A /* DesignPattern.swift in Sources */,
+				0DCD7CEC1E7DE53F00D7D951 /* CommandPattern.swift in Sources */,
 				0D0633C31E63323800D6A16A /* UIViewController+Alerts.m in Sources */,
 				28B8A9E21E72165200DCAE12 /* ChildXibViewController.swift in Sources */,
 				0D0633CA1E63345D00D6A16A /* Clip.swift in Sources */,

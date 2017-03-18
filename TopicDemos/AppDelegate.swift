@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //MARK: design pattern practice
         PatternCenter.shared.testObserverPattern()
-        
+        PatternCenter.shared.testCommandPattern()
         return true
         
         

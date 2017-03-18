@@ -21,6 +21,20 @@ class PatternCenter {
         center.addObserver(o2)
         center.notifyEvent(event)
     }
+
+    func testCommandPattern() {
+        let calc = Calculator()
+            calc.add(amount: 3)  //3
+            calc.multiply(amount: 5) //15
+            calc.multiply(amount: 3) //45
+            calc.divide(amount: 9) //5
+            calc.substract(amount: 2) //3
+        while calc.commands.count > 0 {
+            calc.commands.removeLast().execute()
+            calc.commands.removeLast()
+            print(calc.total)
+        }
+    }
 }
 
 //MARK: ObserverPattern
