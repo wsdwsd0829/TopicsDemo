@@ -3,3 +3,5 @@
 //
 
 @import ObjcHelper;
+
+#import "ObjcTesting.h"

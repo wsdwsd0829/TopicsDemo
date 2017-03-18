@@ -12,17 +12,25 @@ import AVFoundation
 import Intents
 import Firebase
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+//@UIApplicationMain -> replaced with main.swift cause subclass UIApplication; cannot co-exist
+//https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Attributes.html
+//http://stackoverflow.com/questions/24516250/what-does-uiapplicationmain-means
+class AppDelegate: UIApplication, UIApplicationDelegate {  //change UIResponder with UIApplication, must init window by self
     var window: UIWindow?
     var networkService: NetworkService!
-    
     struct Constants {
         static let userId = "kUserId"
     }
+    //UIApplication Methods
+    override func sendEvent(_ event: UIEvent) {
+        super.sendEvent(event)
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        window?.makeKeyAndVisible()
+        
         // Override point for customization after application launch.
         verifyAudioPlaybackAvailable()
 
@@ -47,9 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //MARK: design pattern practice
         PatternCenter.shared.testObserverPattern()
         PatternCenter.shared.testCommandPattern()
+        
+        //MARK: Bridging related test
+        ObjcTesting.useSwift()
         return true
-        
-        
     }
     
     func handleSiriAuthorized() {

@@ -50,7 +50,7 @@ extension UIViewController: ViewControllerInstantiable {
 //Template
 enum Controllers: String {
     //capitalize on purpose to use rawdata as id
-    case ProfileListViewController, EmailViewController, YouTubeViewController, CreateClipsViewController, DetailViewController, ViewController
+    case ProfileListViewController, EmailViewController, YouTubeViewController, CreateClipsViewController, DetailViewController, ViewController, UITestingViewController
     case PromiseKitViewController
     var identifier: String {
         switch self {
