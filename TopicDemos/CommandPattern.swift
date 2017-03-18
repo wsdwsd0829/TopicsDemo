@@ -7,16 +7,19 @@
 //
 
 import Foundation
+
+//Summary: Receiver object, execute; GenericCommand
+
+//TODO improve as Book
 protocol Command {  //obj method params
     func execute()
-    var obj: AnyObject { get set }
-    var block: (Int) -> Void { get set }
-    var param: Int { get set }
 }
+
+//MARK: My version of Command
 class CalculatorCommand: Command {
     func execute() {
         //(obj as! Calculator).per
-        block(param)
+        block(param) //block can preserve the obj's context when saved, this will make obj not necessary //how? disadvantage?
     }
     var obj: AnyObject
     var block: ((Int)->Void)
@@ -28,31 +31,57 @@ class CalculatorCommand: Command {
         self.param = param
     }
 }
+//MAKR: book's 
+class GenericCommand<T>: Command {
+
+    private var receiver: T
+    private var instruction: (T)->Void
+    
+    init(receiver: T, instruction: @escaping (T)->Void) {
+        self.receiver = receiver
+        self.instruction = instruction
+    }
+    
+    func execute() {
+        instruction(receiver)
+    }
+}
+
 protocol Commands {
     var commands: [Command] { get set }
-    func register(obj: AnyObject, block: (Int)->Void, param: Int)
 }
 
 class Calculator: NSObject, Commands {
-    func register(obj: AnyObject, block: (Int) -> Void, param: Int) {
-        
-    }
-
     var commands = [Command]()
 
     private(set) var total = 0;
     func add(amount:Int) {
         total += amount;
+        //IMPORTANT: substract of type: (Int)->Void,
+        //IMPORTANT: Calculator.substract of type: (Calculator)-> ((Int)->Void)
+        //commands.append(CalculatorCommand(obj: self, block: substract, param: amount))
         
-        commands.append(CalculatorCommand(obj: self, block: substract, param: amount))
+        //this not good: should think about interface instead of impl
+        
+        commands.append(GenericCommand<Calculator>(receiver: self, instruction: { calc in
+            Calculator.substract(calc)(amount: amount)
+            })
+        )
+        
+        //good version: think about interface instead of impl
+        //self.addCommand(method: Calculator.substract, amount: amount)
+
     }
+    
     func substract(amount:Int) {
         total -= amount;
         
-        commands.append(CalculatorCommand(obj: self, block: add, param: amount))
+        self.addCommand(method: Calculator.add, amount: amount)
+        //commands.append(CalculatorCommand(obj: self, block: add, param: amount))
     }
+    
     func multiply(amount:Int) {
-        var tempTotal = total
+        let tempTotal = total
         total = total * amount;
         
         if amount != 0 {
@@ -60,6 +89,8 @@ class Calculator: NSObject, Commands {
         } else {
             commands.append(CalculatorCommand(obj: self, block: setTotal, param: tempTotal))
         }
+        //self.addCommand(method: Calculator.divide, amount: amount)
+
     }
     
     func divide(amount:Int) {
@@ -67,11 +98,36 @@ class Calculator: NSObject, Commands {
             fatalError("cannot divide by 0")
         }
         total = total / amount;
+        
         commands.append(CalculatorCommand(obj: self, block: multiply, param: amount))
+        
+        //self.addCommand(method: Calculator.multiply, amount: amount)
+
     }
     
     private func setTotal(amount: Int) {
         total = amount
     }
+    
+    private func addCommand(method: @escaping (Calculator)-> ((Int)->Void), amount: Int) {
+        let cmd = GenericCommand<Calculator>(receiver: self, instruction: { calc in
+            method(calc)(amount)
+        })
+        commands.append(cmd)
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
