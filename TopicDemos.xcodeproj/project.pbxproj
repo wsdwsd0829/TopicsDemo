@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D035CD91E7F820E005F5CA6 /* MyUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6ACCE61E7F81D100CDEC4F /* MyUtility.framework */; };
+		0D035CDA1E7F820E005F5CA6 /* MyUtility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6ACCE61E7F81D100CDEC4F /* MyUtility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0D0633BA1E6331FE00D6A16A /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0633B91E6331FE00D6A16A /* FirebaseViewController.swift */; };
 		0D0633BC1E63320900D6A16A /* Firebase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D0633BB1E63320900D6A16A /* Firebase.storyboard */; };
 		0D0633C21E63323800D6A16A /* EmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0633BF1E63323800D6A16A /* EmailViewController.m */; };
@@ -21,7 +23,6 @@
 		0D14097C1E7639D800E4542A /* PromiseKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D14097A1E7639D800E4542A /* PromiseKitViewController.swift */; };
 		0D14097D1E7639D800E4542A /* PromiseKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D14097B1E7639D800E4542A /* PromiseKitViewController.xib */; };
 		0D343F881E557C3900739962 /* SampleVideo_360x240_2mb.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0D343F871E557C3900739962 /* SampleVideo_360x240_2mb.mp4 */; };
-		0D3C11771E635F9A00239684 /* GeneralExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3C11761E635F9A00239684 /* GeneralExtensions.swift */; };
 		0D45FECA1E554A5000BF7C9C /* TableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FEC91E554A5000BF7C9C /* TableInterfaceController.swift */; };
 		0D45FECC1E554BF100BF7C9C /* MainRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FECB1E554BF100BF7C9C /* MainRowType.swift */; };
 		0D45FECE1E5551B300BF7C9C /* InfoRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FECD1E5551B300BF7C9C /* InfoRowType.swift */; };
@@ -102,6 +103,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0D035CDB1E7F820E005F5CA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D6ACCDF1E7F81D100CDEC4F /* MyUtility.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D36FD881E7F7BAC00585A8C;
+			remoteInfo = MyUtility;
+		};
+		0D6ACCE51E7F81D100CDEC4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D6ACCDF1E7F81D100CDEC4F /* MyUtility.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0D36FD891E7F7BAC00585A8C;
+			remoteInfo = MyUtility;
+		};
+		0D6ACCE71E7F81D100CDEC4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D6ACCDF1E7F81D100CDEC4F /* MyUtility.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0D36FD921E7F7BAC00585A8C;
+			remoteInfo = MyUtilityTests;
+		};
 		0D806A121E541CF5007219F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0DA3053F1E4B98980040CA45 /* Project object */;
@@ -230,6 +252,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				280875351E66943F00BC1D15 /* ObjcHelper.framework in Embed Frameworks */,
+				0D035CDA1E7F820E005F5CA6 /* MyUtility.framework in Embed Frameworks */,
 				280874FD1E66933A00BC1D15 /* Helper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -257,12 +280,12 @@
 		0D14097A1E7639D800E4542A /* PromiseKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromiseKitViewController.swift; path = SecondTab/PromiseKit/PromiseKitViewController.swift; sourceTree = "<group>"; };
 		0D14097B1E7639D800E4542A /* PromiseKitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PromiseKitViewController.xib; path = SecondTab/PromiseKit/PromiseKitViewController.xib; sourceTree = "<group>"; };
 		0D343F871E557C3900739962 /* SampleVideo_360x240_2mb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleVideo_360x240_2mb.mp4; sourceTree = "<group>"; };
-		0D3C11761E635F9A00239684 /* GeneralExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralExtensions.swift; sourceTree = "<group>"; };
 		0D45FEC91E554A5000BF7C9C /* TableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableInterfaceController.swift; sourceTree = "<group>"; };
 		0D45FECB1E554BF100BF7C9C /* MainRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRowType.swift; sourceTree = "<group>"; };
 		0D45FECD1E5551B300BF7C9C /* InfoRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoRowType.swift; sourceTree = "<group>"; };
 		0D45FED01E556D3E00BF7C9C /* ImageRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRowType.swift; sourceTree = "<group>"; };
 		0D45FED21E55736500BF7C9C /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		0D6ACCDF1E7F81D100CDEC4F /* MyUtility.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MyUtility.xcodeproj; path = ../../myApps/MyUtility/MyUtility.xcodeproj; sourceTree = "<group>"; };
 		0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalInterfaceController.swift; sourceTree = "<group>"; };
 		0D806A041E541CF5007219F2 /* TopicDemosWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopicDemosWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D806A071E541CF5007219F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -394,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA305C41E4EC0060040CA45 /* CoreBluetooth.framework in Frameworks */,
+				0D035CD91E7F820E005F5CA6 /* MyUtility.framework in Frameworks */,
 				0DA305C21E4EC0010040CA45 /* QuartzCore.framework in Frameworks */,
 				0DA305831E4B9B510040CA45 /* CoreMedia.framework in Frameworks */,
 				0DA305811E4B9B2B0040CA45 /* MediaPlayer.framework in Frameworks */,
@@ -479,7 +503,6 @@
 		0D3C11751E635F6C00239684 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0D3C11761E635F9A00239684 /* GeneralExtensions.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -492,6 +515,15 @@
 				0D45FED01E556D3E00BF7C9C /* ImageRowType.swift */,
 			);
 			name = RowControllers;
+			sourceTree = "<group>";
+		};
+		0D6ACCE01E7F81D100CDEC4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D6ACCE61E7F81D100CDEC4F /* MyUtility.framework */,
+				0D6ACCE81E7F81D100CDEC4F /* MyUtilityTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		0D806A051E541CF5007219F2 /* TopicDemosWatchApp */ = {
@@ -784,6 +816,7 @@
 		280875321E66941000BC1D15 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				0D6ACCDF1E7F81D100CDEC4F /* MyUtility.xcodeproj */,
 				280875331E66942300BC1D15 /* SwiftHelper */,
 				280875311E66940900BC1D15 /* ObjcHelper */,
 			);
@@ -941,6 +974,7 @@
 				0D86F31D1E5AA7F200EE3577 /* PBXTargetDependency */,
 				280874FF1E66933A00BC1D15 /* PBXTargetDependency */,
 				280875371E66943F00BC1D15 /* PBXTargetDependency */,
+				0D035CDC1E7F820E005F5CA6 /* PBXTargetDependency */,
 			);
 			name = TopicDemos;
 			productName = TopicDemos;
@@ -1080,6 +1114,10 @@
 					ProjectRef = 280874F31E66932B00BC1D15 /* Helper.xcodeproj */;
 				},
 				{
+					ProductGroup = 0D6ACCE01E7F81D100CDEC4F /* Products */;
+					ProjectRef = 0D6ACCDF1E7F81D100CDEC4F /* MyUtility.xcodeproj */;
+				},
+				{
 					ProductGroup = 280875291E66940500BC1D15 /* Products */;
 					ProjectRef = 280875281E66940500BC1D15 /* ObjcHelper.xcodeproj */;
 				},
@@ -1098,6 +1136,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		0D6ACCE61E7F81D100CDEC4F /* MyUtility.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MyUtility.framework;
+			remoteRef = 0D6ACCE51E7F81D100CDEC4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0D6ACCE81E7F81D100CDEC4F /* MyUtilityTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MyUtilityTests.xctest;
+			remoteRef = 0D6ACCE71E7F81D100CDEC4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		280874F91E66932B00BC1D15 /* Helper.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -1461,7 +1513,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D3C11771E635F9A00239684 /* GeneralExtensions.swift in Sources */,
 				0D0633C21E63323800D6A16A /* EmailViewController.m in Sources */,
 				28987DE71E78A724000B5976 /* main.swift in Sources */,
 				288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */,
@@ -1510,6 +1561,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0D035CDC1E7F820E005F5CA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyUtility;
+			targetProxy = 0D035CDB1E7F820E005F5CA6 /* PBXContainerItemProxy */;
+		};
 		0D806A131E541CF5007219F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0D806A0F1E541CF5007219F2 /* TopicDemosWatchApp Extension */;
