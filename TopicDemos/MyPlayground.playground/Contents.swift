@@ -21,96 +21,42 @@ errors.contains(.Unknown)
 
 //Summary:
 
-//MARK: Command Pattern
-protocol Command {  //obj method params
-    func execute()
-    var obj: AnyClass { get set }
-    var block: (Int) -> Void { get set }
-    var param: Int { get set }
+enum Terrain: String {
+    case forest = "F"
+    case mountain = "M"
+    case water = "W"
 }
-class CalculatorCommand: Command {
-    func execute() {
-        obj.perform { 
-            block(self.param)
-        }
-    }
-    var obj: AnyClass
-    var block: ((Int)->Void)
-    var param: Int
-    
-    init(obj: AnyClass, block: (Int) -> Void, param: Int) {
-        self.obj = obj
-        self.block = block
-        self.param = param
-    }
-}
-protocol Commands {
-    var commands: [Command] { get set }
-    func register(obj: AnyClass, block: (Int)->Void, param: Int)
-}
-class Calculator: Commands {
-    var commands = [Command]()
-    func register(obj: AnyClass, block: (Int) -> Void, param: Int) {
-        
-    }
-    private(set) var total = 0;
-    func add(amount:Int) {
-        total += amount;
-        
-       commands.append(CalculatorCommand(self, substract, amount))
-    }
-    func subtract(amount:Int) {
-        total -= amount;
-        
-        commands.append(CalculatorCommand(self, add, amount))
-    }
-    func multiply(amount:Int) {
-        var tempTotal = total
-        total = total * amount;
-        
-        if amount != 0 {
-        commands.append(CalculatorCommand(self, divide, amount))
-        } else {
-         commands.append(CalculatorCommand(self, setTotal, tempTotal))
-        }
-    }
-    
-    func divide(amount:Int) {
-        guard amount != 0 else {
-            fatalError("cannot divide by 0")
-        }
-        total = total / amount;
-        commands.append(CalculatorCommand(self, multiply, amount))
-    }
-    
-    private func setTotal(amount: Int) {
-        total = amount
+
+MemoryLayout.size(ofValue: Terrain.forest) // → 1 (byte)
+MemoryLayout.size(ofValue: "F") // → 24 (bytes)
+
+class Manager  {
+    static var managers = [String: Manager]()
+    static func createManager(with name: String) -> Manager {
+        let aManager = Manager()
+        Manager.managers[name] = aManager
+        Manager.managers
+        return aManager
     }
 }
 
-let calc = Calculator()
+func createManagerAndDisgard() {
+    Manager.createManager(with: "hello")
+}
 
-func testRun() {
-    calc.add(amount: 3)
-    calc.total
-    calc.multiply(amount: 5)
-    calc.total
-    calc.multiply(amount: 3)
-    calc.total
-    calc.divide(amount: 9)
-    calc.total
-    calc.subtract(amount: 2)
-    calc.total
+func createManagerAndDisgard2() {
+    Manager.createManager(with: "hello2")
 }
-func testUndo() {
-    while calc.commands.count > 0 {
-        calc.commands.removeLast().execute()
-        calc.commands.removeLast()
-    }
-}
-testRun()
-//print("--------------")
-//testUndo()
+createManagerAndDisgard()
+createManagerAndDisgard2()
+Manager.managers
+
+
+
+
+
+
+
 
 
 

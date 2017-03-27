@@ -361,7 +361,7 @@
 		284C8E7B1E60EC2B00030009 /* portrait.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portrait.jpg; sourceTree = "<group>"; };
 		284C8E7D1E60EC3100030009 /* landscape.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = landscape.jpg; sourceTree = "<group>"; };
 		284C8E7F1E60ED7500030009 /* test2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2.jpg; sourceTree = "<group>"; };
-		284C8E811E60EEAC00030009 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		287E076D1E8307C500FFC19C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		288F01921E5EC535005D204E /* ContainerController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContainerController.storyboard; sourceTree = "<group>"; };
 		288F01941E5EC554005D204E /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = ContainerController/ContainerViewController.swift; sourceTree = "<group>"; };
 		288F01961E5EC57E005D204E /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildViewController.swift; path = ContainerController/ChildViewController.swift; sourceTree = "<group>"; };
@@ -655,8 +655,8 @@
 				0DA305531E4B98980040CA45 /* LaunchScreen.storyboard */,
 				0DA305561E4B98980040CA45 /* Info.plist */,
 				28987DE61E78A724000B5976 /* main.swift */,
-				284C8E811E60EEAC00030009 /* MyPlayground.playground */,
 				28987DE41E789E95000B5976 /* Readme.txt */,
+				287E076D1E8307C500FFC19C /* MyPlayground.playground */,
 			);
 			path = TopicDemos;
 			sourceTree = "<group>";
