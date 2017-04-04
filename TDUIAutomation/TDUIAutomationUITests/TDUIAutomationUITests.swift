@@ -32,6 +32,18 @@ class TDUIAutomationUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["AVPlayerViewController"].tap()
+        app.navigationBars["TopicDemos.PlayVideoView"].children(matching: .button).matching(identifier: "Back").element(boundBy: 0).tap()
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.children(matching: .button).matching(identifier: "Item").element(boundBy: 1).tap()
+        tablesQuery.staticTexts["PromiseKit"].tap()
+        tabBarsQuery.children(matching: .button).matching(identifier: "Item").element(boundBy: 0).tap()
+        tablesQuery.staticTexts["Dynamic Text"].tap()
+        app.navigationBars["TopicDemos.TextView"].children(matching: .button).matching(identifier: "Back").element(boundBy: 0).tap()
+        
     }
     
 }

@@ -11,7 +11,8 @@ import AVKit
 import AVFoundation
 import Intents
 import Firebase
-
+#if TARGET_IOS
+#endif
 //@UIApplicationMain -> replaced with main.swift cause subclass UIApplication; cannot co-exist
 //https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Attributes.html
 //http://stackoverflow.com/questions/24516250/what-does-uiapplicationmain-means
@@ -55,7 +56,7 @@ class AppDelegate: UIApplication, UIApplicationDelegate {  //change UIResponder 
         //MARK: design pattern practice
         PatternCenter.shared.testObserverPattern()
         PatternCenter.shared.testCommandPattern()
-        
+        RunLoop.current.loopUntil(condition: {return false}, timeout: 4)
         //MARK: Bridging related test
         ObjcTesting.useSwift()
         return true
