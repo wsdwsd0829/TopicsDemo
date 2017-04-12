@@ -1,0 +1,20 @@
+/*
+                               John
+                               /
+Nancy         Marie        Robert
+  \             \          /
+   Ruth   John   Leila  Herbert
+     \   /       \    /
+    Dianne        Doug
+          \      /
+            Mark
+
+ */
+
+// Given the family tree above, impliment the 2 functions in the protocol
+
+/*
+ protocol Search {
+ func maxGenerations() -> Int
+ func mostRecentAncestor(named: String) -> Person?
+ */

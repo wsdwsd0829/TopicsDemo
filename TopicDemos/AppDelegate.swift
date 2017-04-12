@@ -61,7 +61,6 @@ class AppDelegate: UIApplication, UIApplicationDelegate {  //change UIResponder 
         PatternCenter.shared.testObserverPattern()
         PatternCenter.shared.testCommandPattern()
         RunLoop.current.loopUntil(timeout: 2, condition: { return false })
-        
         //MARK: Bridging related test
         ObjcTesting.useSwift()
         return true
