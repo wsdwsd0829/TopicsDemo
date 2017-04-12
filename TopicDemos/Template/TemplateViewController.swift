@@ -22,6 +22,8 @@ class TemplateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //must be called after viewDidLoad
+        navigationController?.setNavigationBarHidden(false, animated: true)
         print("string".name)
         print(("Str" as NSString).objcname())
         self.label.text = "ViewDidLoad"
@@ -31,15 +33,23 @@ class TemplateViewController: UIViewController {
         }
             // Do any additional setup after loading the view.
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+ 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+    }
+    
     func cancelClicked(_ sender: AnyObject) {
         if presentingViewController != nil {
-           dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
         } else if let nvc = navigationController {
             if nvc.viewControllers.count > 1 {
                 nvc.popViewController(animated: true)
             }
         }
     }
-
 }

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F54b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,23 +23,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="08Q-j5-J68">
-                    <rect key="frame" x="129" y="273.5" width="116" height="120"/>
+                    <rect key="frame" x="109" y="273.5" width="156" height="120"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaQ-uK-q6P">
-                            <rect key="frame" x="0.0" y="0.0" width="116" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="156" height="30"/>
                             <state key="normal" title="presentNVC"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rl-tF-gWb">
-                            <rect key="frame" x="0.0" y="30" width="116" height="30"/>
-                            <state key="normal" title="presentVCInNVC"/>
+                            <rect key="frame" x="0.0" y="30" width="156" height="30"/>
+                            <state key="normal" title="presentVCInNVC (bad)"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnh-qW-vi3">
-                            <rect key="frame" x="0.0" y="60" width="116" height="30"/>
-                            <state key="normal" title="pushNVC"/>
+                            <rect key="frame" x="0.0" y="60" width="156" height="30"/>
+                            <state key="normal" title="pushNVC (bad)"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fF9-OS-KIi">
-                            <rect key="frame" x="0.0" y="90" width="116" height="30"/>
-                            <state key="normal" title="pushVC"/>
+                            <rect key="frame" x="0.0" y="90" width="156" height="30"/>
+                            <state key="normal" title="pushVCInNVC (bad)"/>
                         </button>
                     </subviews>
                 </stackView>

@@ -34,7 +34,8 @@ class NavigationViewController: UIViewController, UIToolbarDelegate {
         title = "abcdefg"
         navigationItem.title = "block you"
         
-        //appearance:
+        
+        //MARK navigationBar appearance:
         navigationController?.navigationBar.tintColor = UIColor.blue
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isTranslucent = false //default true
@@ -44,16 +45,17 @@ class NavigationViewController: UIViewController, UIToolbarDelegate {
         let gr = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
         view.addGestureRecognizer(gr)
         
+        //MARK: navigation (bar) hidden
+        //must be called after viewDidLoad
         navigationController?.setNavigationBarHidden(true, animated: true)
         
-        //tool bar & items
+        //MARK: tool bar & items  
+        //step 1. set hidden in viewWillAppear/Disappear, step2 set toolbar items
         let flex = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let mid = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
         let left = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
         let right = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
-        navigationController?.isToolbarHidden = false
         //!!! flex can reuse but others cannot
-       
         toolbarItems = [flex, left, flex,mid,flex, right, flex]
         //1. set frame not working!
         //2. navigationController?.toolbar.delegate = self; //not working!
@@ -78,11 +80,17 @@ class NavigationViewController: UIViewController, UIToolbarDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.isToolbarHidden = false
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setToolbarHidden(true, animated: true)
     }
     
+    //MARK: present/push trickes
+    
+    //case 1
     //works, a new presend NVC
     func presentNVC_Clicked(_ sender: AnyObject!) {
         present(nvc!, animated: true, completion: {
@@ -90,6 +98,7 @@ class NavigationViewController: UIViewController, UIToolbarDelegate {
         })
     }
     
+    //case 2
     //crash!!!
     //'Application tried to present modally an active controller 
     //<TopicDemos.NavigationViewController: 0x7f9ce54427b0>.'
@@ -102,29 +111,40 @@ class NavigationViewController: UIViewController, UIToolbarDelegate {
         // vc2.navigationController will return return nvc1
     }
     
+    //case 3
     //assuming we have an nvc aleady:
     //'Pushing a navigation controller is not supported'
     func pushNVC_Clicked(_ sender: AnyObject!) {
-        //self.navigationController?.pushViewController(nvc, animated: true)
+        self.navigationController?.pushViewController(nvc, animated: true)
         
         //but this works!!!
         //self.navigationController?.show(nvc, sender: self) //cannot push so try to present
     }
     
+    //case 4
+    //work but:do not do this also has side effect as case 2's show
     func pushVCInNVC_Clicked(_ sender: AnyObject!) {
         assert(self.navigationController !== tvcInNVC.navigationController)
         self.navigationController?.pushViewController(tvcInNVC, animated: true)
         assert(self.navigationController === tvcInNVC.navigationController)
+//        tvc.toolbarItems = toolbarItems  (need to reset if add new controller)
+//        self.navigationController?.pushViewController(tvc, animated: true)
+
     }
     
     //easy to understand, not in buttons
     func pushVC_Clicked(_ sender: AnyObject) {
         self.navigationController?.pushViewController(tvc, animated: true)
     }
+    
 }
 
 //take away:  1. alway present or push single controller, with only exception: present modally navigation controller with rootViewController
 //2. do not use show(xxx) if do not know what you are doing, at least I do not yet;
+
+//only 
+//1. present nvc 
+//2. push/present vc without nvc
 
 
 
