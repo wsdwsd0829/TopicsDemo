@@ -13,18 +13,22 @@ class SecondTabViewController: UITableViewController {
     struct Constants {
         static let cellIdentifier: String = "DefaultCellIdentifer";
     }
+    /// To add a new Row:  add title, viewControllerType, allRows
     enum Row: Int {
-        case promiseKit, uiTesting
+        case promiseKit, uiTesting, accessibility
         var title:String {
             switch self {
-            case .promiseKit: return "PromiseKit";
+            case .promiseKit: return "PromiseKit"
             case .uiTesting: return "UITesting"
+            case .accessibility: return "Accessibility"
             }
         }
         var identifier: String {
             switch self {
             case .promiseKit: return "PromiseKitViewController"
             case .uiTesting: return "UITestingViewController"
+            default: return self.title + "ViewController"
+
             }
         }
         
@@ -35,6 +39,7 @@ class SecondTabViewController: UITableViewController {
             switch self {
             case .promiseKit: return PromiseKitViewController.self
             case .uiTesting: return UITestingViewController.self
+            case .accessibility: return AccessibilityViewController.self
             }
             
         }
@@ -44,7 +49,7 @@ class SecondTabViewController: UITableViewController {
         }
         
         static var allRows: [Row] {
-            return [.promiseKit, .uiTesting]
+            return [.promiseKit, .uiTesting, .accessibility]
         }
         /*
         var viewController: AnyClass {

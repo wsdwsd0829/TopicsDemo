@@ -52,14 +52,18 @@ class ApplePayViewController: UIViewController, PKPaymentAuthorizationViewContro
     func buttonClicked(_ sender: Any) {
         let pavc = PKPaymentAuthorizationViewController(paymentRequest: request)
         pavc.delegate = self
-        if PKPaymentAuthorizationController.canMakePayments(usingNetworks: [.visa, .masterCard]) {
-            //Solved: not reaching here even set Test Visa in wallet: need activate in identifier console
-            self.present(pavc, animated: true, completion: {
-            })
-            print("payment ready")
+        if #available(iOS 10.0, *) {
+            if PKPaymentAuthorizationController.canMakePayments(usingNetworks: [.visa, .masterCard]) {
+                //Solved: not reaching here even set Test Visa in wallet: need activate in identifier console
+                self.present(pavc, animated: true, completion: {
+                })
+                print("payment ready")
+            } else {
+                print("payment not setup")
+                PKPassLibrary().openPaymentSetup()
+            }
         } else {
-            print("payment not setup")
-            PKPassLibrary().openPaymentSetup()
+            // Fallback on earlier versions
         }
     }
     

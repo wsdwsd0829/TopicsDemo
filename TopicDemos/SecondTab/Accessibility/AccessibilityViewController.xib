@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccessibilityViewController" customModule="TopicDemos" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="i5M-Pr-FkT" id="1hr-7q-az7"/>
+                <outlet property="label" destination="ggh-h1-wFB" id="ofz-uD-kJf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xt-bA-Lz1">
+                    <rect key="frame" x="16" y="100" width="46" height="30"/>
+                    <accessibility key="accessibilityConfiguration" hint="Button Hint" identifier="Button Identifier" label="Button"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="yaY-yv-bdD"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggh-h1-wFB">
+                    <rect key="frame" x="70" y="104.5" width="42" height="21"/>
+                    <accessibility key="accessibilityConfiguration" hint="Label Hint" identifier="Label Identifier" label="Label"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <accessibility key="accessibilityConfiguration" identifier="AccessibilityIdentifier">
+                <bool key="isElement" value="NO"/>
+            </accessibility>
+            <constraints>
+                <constraint firstItem="ggh-h1-wFB" firstAttribute="leading" secondItem="8xt-bA-Lz1" secondAttribute="trailing" constant="8" id="7nU-x4-qJO"/>
+                <constraint firstItem="8xt-bA-Lz1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="T3t-3i-OV8"/>
+                <constraint firstItem="ggh-h1-wFB" firstAttribute="centerY" secondItem="8xt-bA-Lz1" secondAttribute="centerY" id="Vx2-Ao-6DU"/>
+                <constraint firstItem="8xt-bA-Lz1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="teN-dD-rkz"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

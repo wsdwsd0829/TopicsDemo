@@ -20,9 +20,13 @@ class ImageTestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //imageView.layer.contentsScale = UIScreen.main.scale
-        Timer.scheduledTimer(withTimeInterval: 2, repeats: true) {[weak self] (timer)  in
-            //self is nil
-            self?.updateImage()
+        if #available(iOS 10.0, *) {
+            Timer.scheduledTimer(withTimeInterval: 2, repeats: true) {[weak self] (timer)  in
+                //self is nil
+                self?.updateImage()
+            }
+        } else {
+            // Fallback on earlier versions
         }
         
         loadImage()

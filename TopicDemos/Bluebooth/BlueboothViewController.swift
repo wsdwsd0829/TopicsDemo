@@ -127,9 +127,13 @@ extension BlueboothViewController: CBPeripheralDelegate {
                     let data = count.data(using: .utf8)
                     //count += 1
                     peripheral.writeValue(data!, for: characteristic, type: .withResponse)
+                if #available(iOS 10.0, *) {
                     Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (timer) in
                         self.cbManager.connect(peripheral, options: nil)
                     }
+                } else {
+                    // Fallback on earlier versions
+                }
 
                // })
             }

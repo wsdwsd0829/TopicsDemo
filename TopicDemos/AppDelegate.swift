@@ -46,17 +46,22 @@ class AppDelegate: UIApplication, UIApplicationDelegate {  //change UIResponder 
             print("user logout")
         }
         //MARK: request siriKit
-        INPreferences.requestSiriAuthorization() { status in
-            switch status {
-            case .authorized: self.handleSiriAuthorized()
-            default: print("siri must authorized to work")
+        if #available(iOS 10.0, *) {
+            INPreferences.requestSiriAuthorization() { status in
+                switch status {
+                case .authorized: self.handleSiriAuthorized()
+                default: print("siri must authorized to work")
+                }
             }
+        } else {
+            // Fallback on earlier versions
         }
         
         //MARK: design pattern practice
         PatternCenter.shared.testObserverPattern()
         PatternCenter.shared.testCommandPattern()
-        RunLoop.current.loopUntil(condition: {return false}, timeout: 4)
+        RunLoop.current.loopUntil(timeout: 2, condition: { return false })
+        
         //MARK: Bridging related test
         ObjcTesting.useSwift()
         return true

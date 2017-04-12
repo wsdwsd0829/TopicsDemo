@@ -15,7 +15,11 @@ class PromiseKitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //e.g. of creating dispatch queue
-        let _ = DispatchQueue(label: "myq", qos: .background, attributes: [.concurrent], autoreleaseFrequency: .workItem, target: DispatchQueue.main)
+        if #available(iOS 10.0, *) {
+            let _ = DispatchQueue(label: "myq", qos: .background, attributes: [.concurrent], autoreleaseFrequency: .workItem, target: DispatchQueue.main)
+        } else {
+            // Fallback on earlier versions
+        }
 
         delay2(sec: 3)
         /*
