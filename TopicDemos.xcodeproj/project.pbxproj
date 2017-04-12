@@ -287,6 +287,7 @@
 		0D45FED21E55736500BF7C9C /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		0D6ACCDF1E7F81D100CDEC4F /* MyUtility.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MyUtility.xcodeproj; path = ../../myApps/MyUtility/MyUtility.xcodeproj; sourceTree = "<group>"; };
 		0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalInterfaceController.swift; sourceTree = "<group>"; };
+		0D77643A1E9AD37C00B73F13 /* BFSAndDFS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BFSAndDFS.playground; sourceTree = "<group>"; };
 		0D806A041E541CF5007219F2 /* TopicDemosWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopicDemosWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D806A071E541CF5007219F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		0D806A091E541CF5007219F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -500,6 +501,14 @@
 				0D14097B1E7639D800E4542A /* PromiseKitViewController.xib */,
 			);
 			name = PromiseKit;
+			sourceTree = "<group>";
+		};
+		0D157A7D1E9AF49300108E16 /* Algs */ = {
+			isa = PBXGroup;
+			children = (
+				0D77643A1E9AD37C00B73F13 /* BFSAndDFS.playground */,
+			);
+			name = Algs;
 			sourceTree = "<group>";
 		};
 		0D3C11751E635F6C00239684 /* Helpers */ = {
@@ -861,6 +870,7 @@
 		289065441E8989450039B328 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				0D157A7D1E9AF49300108E16 /* Algs */,
 				287E076D1E8307C500FFC19C /* Enums.playground */,
 				289065471E8989740039B328 /* UsingPointers.playground */,
 				28AFCD8A1E89EA100069F739 /* RandomNumbers.playground */,

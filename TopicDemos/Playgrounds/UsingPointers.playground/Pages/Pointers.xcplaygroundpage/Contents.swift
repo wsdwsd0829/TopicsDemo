@@ -135,8 +135,11 @@ do {
     print("Getting the bytes of an instance")
     
     var sampleStruct = SampleStruct(number: 25, flag: true)
-    
+    withUnsafePointer(to: &sampleStruct, {
+        print($0)
+    })
     withUnsafeBytes(of: &sampleStruct) { bytes in
+        print(bytes)
         for byte in bytes {
             print(byte)
         }
