@@ -14,17 +14,19 @@ class SecondTabViewController: UITableViewController {
         static let cellIdentifier: String = "DefaultCellIdentifer";
     }
     enum Row: Int {
-        case promiseKit, uiTesting
+        case promiseKit, uiTesting, navigation
         var title:String {
             switch self {
-            case .promiseKit: return "PromiseKit";
+            case .promiseKit: return "PromiseKit"
             case .uiTesting: return "UITesting"
+            case .navigation: return "Navigation"
             }
         }
         var identifier: String {
             switch self {
             case .promiseKit: return "PromiseKitViewController"
             case .uiTesting: return "UITestingViewController"
+            case .navigation: return "NavigationViewController"
             }
         }
         
@@ -35,6 +37,8 @@ class SecondTabViewController: UITableViewController {
             switch self {
             case .promiseKit: return PromiseKitViewController.self
             case .uiTesting: return UITestingViewController.self
+            case .navigation: return NavigationViewController.self
+
             }
             
         }
@@ -44,7 +48,7 @@ class SecondTabViewController: UITableViewController {
         }
         
         static var allRows: [Row] {
-            return [.promiseKit, .uiTesting]
+            return [.promiseKit, .uiTesting, .navigation]
         }
         /*
         var viewController: AnyClass {
@@ -86,10 +90,10 @@ class SecondTabViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vcType = (Row.row(at: indexPath)?.viewControllerType) {
-            let pkvc = UIViewController.instantiate(controllerType: vcType, .nib)
-            self.navigationController?.pushViewController(pkvc, animated: true)
-        }
+        guard let vcType = (Row.row(at: indexPath)?.viewControllerType) else { return }
+        
+        let pkvc = UIViewController.instantiate(controllerType: vcType, .nib)
+        self.navigationController?.pushViewController(pkvc, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -28,6 +28,8 @@
 		0D45FECE1E5551B300BF7C9C /* InfoRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FECD1E5551B300BF7C9C /* InfoRowType.swift */; };
 		0D45FED11E556D3E00BF7C9C /* ImageRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45FED01E556D3E00BF7C9C /* ImageRowType.swift */; };
 		0D45FED31E55736500BF7C9C /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D45FED21E55736500BF7C9C /* placeholder.png */; };
+		0D573D671E9DC82900002647 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D573D651E9DC82900002647 /* NavigationViewController.swift */; };
+		0D573D681E9DC82900002647 /* NavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D573D661E9DC82900002647 /* NavigationViewController.xib */; };
 		0D6F87FF1E55372D007C0413 /* ModalInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */; };
 		0D806A081E541CF5007219F2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D806A061E541CF5007219F2 /* Interface.storyboard */; };
 		0D806A0A1E541CF5007219F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D806A091E541CF5007219F2 /* Assets.xcassets */; };
@@ -285,6 +287,8 @@
 		0D45FECD1E5551B300BF7C9C /* InfoRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoRowType.swift; sourceTree = "<group>"; };
 		0D45FED01E556D3E00BF7C9C /* ImageRowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRowType.swift; sourceTree = "<group>"; };
 		0D45FED21E55736500BF7C9C /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		0D573D651E9DC82900002647 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationViewController.swift; path = SecondTab/Navigation/NavigationViewController.swift; sourceTree = "<group>"; };
+		0D573D661E9DC82900002647 /* NavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NavigationViewController.xib; path = SecondTab/Navigation/NavigationViewController.xib; sourceTree = "<group>"; };
 		0D6ACCDF1E7F81D100CDEC4F /* MyUtility.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MyUtility.xcodeproj; path = ../../myApps/MyUtility/MyUtility.xcodeproj; sourceTree = "<group>"; };
 		0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalInterfaceController.swift; sourceTree = "<group>"; };
 		0D77643A1E9AD37C00B73F13 /* BFSAndDFS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BFSAndDFS.playground; sourceTree = "<group>"; };
@@ -487,6 +491,7 @@
 		0D1409741E7637F600E4542A /* SecondTab */ = {
 			isa = PBXGroup;
 			children = (
+				0D573D611E9DC7D500002647 /* Navigation */,
 				28987D961E7893B6000B5976 /* UITesting */,
 				0D1409791E7639C500E4542A /* PromiseKit */,
 				0D1409771E76382200E4542A /* SecondTabViewController.swift */,
@@ -526,6 +531,15 @@
 				0D45FED01E556D3E00BF7C9C /* ImageRowType.swift */,
 			);
 			name = RowControllers;
+			sourceTree = "<group>";
+		};
+		0D573D611E9DC7D500002647 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0D573D651E9DC82900002647 /* NavigationViewController.swift */,
+				0D573D661E9DC82900002647 /* NavigationViewController.xib */,
+			);
+			name = Navigation;
 			sourceTree = "<group>";
 		};
 		0D6ACCE01E7F81D100CDEC4F /* Products */ = {
@@ -1254,6 +1268,7 @@
 				284C8E7E1E60EC3100030009 /* landscape.jpg in Resources */,
 				0D9EC6641E580E07006542C5 /* gallery.ckcomplication in Resources */,
 				0D14097D1E7639D800E4542A /* PromiseKitViewController.xib in Resources */,
+				0D573D681E9DC82900002647 /* NavigationViewController.xib in Resources */,
 				0DA305501E4B98980040CA45 /* Main.storyboard in Resources */,
 				0D0633CD1E634FD500D6A16A /* GoogleService-Info.plist in Resources */,
 				284C8E7C1E60EC2B00030009 /* portrait.jpg in Resources */,
@@ -1547,6 +1562,7 @@
 				0DA3057C1E4B99FE0040CA45 /* PlayVideoViewController.swift in Sources */,
 				0DF3C3AF1E63ED5D00588CFC /* TemplateViewController.swift in Sources */,
 				28987E011E78E971000B5976 /* Testing.swift in Sources */,
+				0D573D671E9DC82900002647 /* NavigationViewController.swift in Sources */,
 				0D0633C51E63337B00D6A16A /* FirebaseHelper.swift in Sources */,
 				0D0633BA1E6331FE00D6A16A /* FirebaseViewController.swift in Sources */,
 				0DF3C3AA1E63EC6200588CFC /* YouTubeViewController.swift in Sources */,
