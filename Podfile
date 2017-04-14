@@ -18,7 +18,8 @@ target 'TopicDemos' do
   # Pods for TopicDemos
 
   target 'TopicDemosTests' do
-    inherit! :search_paths
+    #inherit! :search_paths
+    inherit! :complete
     # Pods for testing
   end
 

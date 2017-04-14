@@ -39,7 +39,32 @@ class TopicDemosUITests: XCTestCase {
         tablesQuery.staticTexts["UITesting"].tap()
         app.buttons["MyBtn"].tap() //label then identifier
         tablesQuery.staticTexts["Cell row index: 5"].swipeUp()
-        
     }
-    
+
+}
+//Helper
+extension TopicDemosUITests {
+    /*
+     Swift 2.3
+    //this will delay test process from finishing; for debugging on lldb
+    func pause(seconds: NSTimeInterval = 60, handler: ((NSError?) -> Void)? = nil) {
+        let expection = expectationWithDescription("Pause Test For Debugging")
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+            expection.fulfill()
+        })
+        waitForExpectationsWithTimeout(seconds+10) { (error) in
+            print(error?.localizedDescription)
+        }
+    }
+     */
+    //this will delay test process from finishing; for debugging on lldb
+    func pause(seconds: TimeInterval = 60, handler: ((NSError?) -> Void)? = nil) {
+        let expection = expectation(description: "Pause Test For Debugging")
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+            expection.fulfill()
+        }
+        waitForExpectations(timeout: seconds+10) { (err) in
+            print(err?.localizedDescription ?? "")
+        }
+    }
 }

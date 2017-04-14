@@ -40,7 +40,6 @@ class Person: NSObject, Search {
         while candidate.count > 0 {
             let find = candidate.filter{ $0.name == named }
             if find.count > 0 {
-                //print("abc")
                 return find.first
             }
             //next level
