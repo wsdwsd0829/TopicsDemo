@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D035CD91E7F820E005F5CA6 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6ACCE61E7F81D100CDEC4F /* MyUtility.framework */; };
-		0D035CDA1E7F820E005F5CA6 /* ReferenceProxy in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6ACCE61E7F81D100CDEC4F /* MyUtility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D035CD91E7F820E005F5CA6 /* MyUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6ACCE61E7F81D100CDEC4F /* MyUtility.framework */; };
+		0D035CDA1E7F820E005F5CA6 /* MyUtility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6ACCE61E7F81D100CDEC4F /* MyUtility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0D0633BA1E6331FE00D6A16A /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0633B91E6331FE00D6A16A /* FirebaseViewController.swift */; };
 		0D0633BC1E63320900D6A16A /* Firebase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D0633BB1E63320900D6A16A /* Firebase.storyboard */; };
 		0D0633C21E63323800D6A16A /* EmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0633BF1E63323800D6A16A /* EmailViewController.m */; };
@@ -76,10 +76,10 @@
 		0DF3C3AA1E63EC6200588CFC /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF3C3A91E63EC6200588CFC /* YouTubeViewController.swift */; };
 		0DF3C3AD1E63ED2300588CFC /* Template.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF3C3AC1E63ED2300588CFC /* Template.storyboard */; };
 		0DF3C3AF1E63ED5D00588CFC /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF3C3AE1E63ED5D00588CFC /* TemplateViewController.swift */; };
-		280874FC1E66933A00BC1D15 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 280874F91E66932B00BC1D15 /* Helper.framework */; };
-		280874FD1E66933A00BC1D15 /* ReferenceProxy in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 280874F91E66932B00BC1D15 /* Helper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		280875341E66943F00BC1D15 /* ReferenceProxy in Frameworks */ = {isa = PBXBuildFile; fileRef = 2808752E1E66940500BC1D15 /* ObjcHelper.framework */; };
-		280875351E66943F00BC1D15 /* ReferenceProxy in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2808752E1E66940500BC1D15 /* ObjcHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		280874FC1E66933A00BC1D15 /* Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280874F91E66932B00BC1D15 /* Helper.framework */; };
+		280874FD1E66933A00BC1D15 /* Helper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 280874F91E66932B00BC1D15 /* Helper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		280875341E66943F00BC1D15 /* ObjcHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2808752E1E66940500BC1D15 /* ObjcHelper.framework */; };
+		280875351E66943F00BC1D15 /* ObjcHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2808752E1E66940500BC1D15 /* ObjcHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		284C8E341E60C95600030009 /* ImageTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C8E331E60C95600030009 /* ImageTest.storyboard */; };
 		284C8E361E60C96C00030009 /* ImageTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C8E351E60C96C00030009 /* ImageTestViewController.swift */; };
 		284C8E381E60C9A300030009 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 284C8E371E60C9A300030009 /* test.jpg */; };
@@ -99,6 +99,10 @@
 		28C59A751E9BF870003172A0 /* AccessibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C59A731E9BF870003172A0 /* AccessibilityViewController.swift */; };
 		28C59A761E9BF870003172A0 /* AccessibilityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28C59A741E9BF870003172A0 /* AccessibilityViewController.xib */; };
 		28C9D34E1E79C92C00286D95 /* ObjcTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C9D34D1E79C92C00286D95 /* ObjcTesting.m */; };
+		28E66D9E1EA15ABA00F8C1AE /* FileHandleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E66D9C1EA15ABA00F8C1AE /* FileHandleViewController.swift */; };
+		28E66D9F1EA15ABA00F8C1AE /* FileHandleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28E66D9D1EA15ABA00F8C1AE /* FileHandleViewController.xib */; };
+		28E66DA11EA15D3000F8C1AE /* SL_intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 28E66DA01EA15D3000F8C1AE /* SL_intro.mp3 */; };
+		28E66DA41EA15EFF00F8C1AE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E66DA31EA15EFF00F8C1AE /* TabBarViewController.swift */; };
 		2FAD8E8A3D779B5ECE45F32F /* Pods_TopicDemos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0338ADE8D401A537422DB12C /* Pods_TopicDemos.framework */; };
 		65E92232CB59C377C6442943 /* Pods_TopicDemosWatchApp_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80911218E757088E334E376F /* Pods_TopicDemosWatchApp_Extension.framework */; };
 		6E09F6914947DD072C63B7E4 /* Pods_TopicDemosWatchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149EF4EFC45C652030141334 /* Pods_TopicDemosWatchApp.framework */; };
@@ -256,9 +260,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				280875351E66943F00BC1D15 /* ReferenceProxy in Embed Frameworks */,
-				0D035CDA1E7F820E005F5CA6 /* ReferenceProxy in Embed Frameworks */,
-				280874FD1E66933A00BC1D15 /* ReferenceProxy in Embed Frameworks */,
+				280875351E66943F00BC1D15 /* ObjcHelper.framework in Embed Frameworks */,
+				0D035CDA1E7F820E005F5CA6 /* MyUtility.framework in Embed Frameworks */,
+				280874FD1E66933A00BC1D15 /* Helper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +390,10 @@
 		28C59A741E9BF870003172A0 /* AccessibilityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AccessibilityViewController.xib; path = SecondTab/Accessibility/AccessibilityViewController.xib; sourceTree = "<group>"; };
 		28C9D34C1E79C92C00286D95 /* ObjcTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjcTesting.h; path = BridgingRelated/ObjcTesting.h; sourceTree = "<group>"; };
 		28C9D34D1E79C92C00286D95 /* ObjcTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjcTesting.m; path = BridgingRelated/ObjcTesting.m; sourceTree = "<group>"; };
+		28E66D9C1EA15ABA00F8C1AE /* FileHandleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHandleViewController.swift; path = SecondTab/FileHandle/FileHandleViewController.swift; sourceTree = "<group>"; };
+		28E66D9D1EA15ABA00F8C1AE /* FileHandleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FileHandleViewController.xib; path = SecondTab/FileHandle/FileHandleViewController.xib; sourceTree = "<group>"; };
+		28E66DA01EA15D3000F8C1AE /* SL_intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SL_intro.mp3; sourceTree = "<group>"; };
+		28E66DA31EA15EFF00F8C1AE /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = FirstTab/TabBarViewController.swift; sourceTree = "<group>"; };
 		35A63710E42500F876A74A59 /* Pods_TopicDemosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopicDemosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3FE0E46DCF73155A5F938D /* Pods_TopicDemosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopicDemosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D737FE813BB1AAD43157918 /* Pods-TopicDemos-TopicDemosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopicDemos-TopicDemosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopicDemos-TopicDemosTests/Pods-TopicDemos-TopicDemosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -432,13 +440,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA305C41E4EC0060040CA45 /* CoreBluetooth.framework in Frameworks */,
-				0D035CD91E7F820E005F5CA6 /* ReferenceProxy in Frameworks */,
+				0D035CD91E7F820E005F5CA6 /* MyUtility.framework in Frameworks */,
 				0DA305C21E4EC0010040CA45 /* QuartzCore.framework in Frameworks */,
 				0DA305831E4B9B510040CA45 /* CoreMedia.framework in Frameworks */,
 				0DA305811E4B9B2B0040CA45 /* MediaPlayer.framework in Frameworks */,
 				0DA3057F1E4B9B250040CA45 /* MobileCoreServices.framework in Frameworks */,
-				280874FC1E66933A00BC1D15 /* ReferenceProxy in Frameworks */,
-				280875341E66943F00BC1D15 /* ReferenceProxy in Frameworks */,
+				280874FC1E66933A00BC1D15 /* Helper.framework in Frameworks */,
+				280875341E66943F00BC1D15 /* ObjcHelper.framework in Frameworks */,
 				2FAD8E8A3D779B5ECE45F32F /* Pods_TopicDemos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +508,7 @@
 		0D1409741E7637F600E4542A /* SecondTab */ = {
 			isa = PBXGroup;
 			children = (
+				28E66D981EA15A9800F8C1AE /* FileHandle */,
 				28C59A6E1E9BF83F003172A0 /* Accessibility */,
 				0D573D611E9DC7D500002647 /* Navigation */,
 				28987D961E7893B6000B5976 /* UITesting */,
@@ -669,21 +678,16 @@
 		0DA305491E4B98980040CA45 /* TopicDemos */ = {
 			isa = PBXGroup;
 			children = (
+				28E66DA21EA15E7200F8C1AE /* FirstTab */,
 				28987E021E78E9F8000B5976 /* BridgingRelated */,
 				0D1409741E7637F600E4542A /* SecondTab */,
 				0D1409631E725D9500E4542A /* DesignPatterns */,
 				0DF3C3AB1E63ED1800588CFC /* Template */,
-				0DF3C3A61E63EC3800588CFC /* Youtube */,
 				0D3C11751E635F6C00239684 /* Helpers */,
-				0D0633B81E6331D600D6A16A /* Firebase */,
-				284C8E321E60C94900030009 /* ImageTest */,
 				288F01911E5EC521005D204E /* ContainerController */,
 				0D86F3001E5A34F900EE3577 /* ApplePaySwagServer.py */,
-				0D9EC6651E5A1293006542C5 /* ApplePay */,
 				0D806A2E1E550B31007219F2 /* TopicDemos.entitlements */,
 				0DA305C51E4FF47C0040CA45 /* Layout */,
-				0DA305BC1E4EBF300040CA45 /* Bluebooth */,
-				0DA3057A1E4B99C80040CA45 /* Media */,
 				0DA3054A1E4B98980040CA45 /* AppDelegate.swift */,
 				0D0633BD1E63323800D6A16A /* TopicDemos-Bridging-Header.h */,
 				0DA3054E1E4B98980040CA45 /* Main.storyboard */,
@@ -931,6 +935,30 @@
 				28C59A741E9BF870003172A0 /* AccessibilityViewController.xib */,
 			);
 			name = Accessibility;
+			sourceTree = "<group>";
+		};
+		28E66D981EA15A9800F8C1AE /* FileHandle */ = {
+			isa = PBXGroup;
+			children = (
+				28E66DA01EA15D3000F8C1AE /* SL_intro.mp3 */,
+				28E66D9C1EA15ABA00F8C1AE /* FileHandleViewController.swift */,
+				28E66D9D1EA15ABA00F8C1AE /* FileHandleViewController.xib */,
+			);
+			name = FileHandle;
+			sourceTree = "<group>";
+		};
+		28E66DA21EA15E7200F8C1AE /* FirstTab */ = {
+			isa = PBXGroup;
+			children = (
+				0DA3057A1E4B99C80040CA45 /* Media */,
+				284C8E321E60C94900030009 /* ImageTest */,
+				0DF3C3A61E63EC3800588CFC /* Youtube */,
+				0D0633B81E6331D600D6A16A /* Firebase */,
+				0D9EC6651E5A1293006542C5 /* ApplePay */,
+				0DA305BC1E4EBF300040CA45 /* Bluebooth */,
+				28E66DA31EA15EFF00F8C1AE /* TabBarViewController.swift */,
+			);
+			name = FirstTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1289,6 +1317,7 @@
 				0DA305C71E4FF48D0040CA45 /* TextView.storyboard in Resources */,
 				284C8E7E1E60EC3100030009 /* landscape.jpg in Resources */,
 				0D9EC6641E580E07006542C5 /* gallery.ckcomplication in Resources */,
+				28E66DA11EA15D3000F8C1AE /* SL_intro.mp3 in Resources */,
 				0D14097D1E7639D800E4542A /* PromiseKitViewController.xib in Resources */,
 				0D573D681E9DC82900002647 /* NavigationViewController.xib in Resources */,
 				0DA305501E4B98980040CA45 /* Main.storyboard in Resources */,
@@ -1298,6 +1327,7 @@
 				28C59A761E9BF870003172A0 /* AccessibilityViewController.xib in Resources */,
 				0DA305C01E4EBF5C0040CA45 /* Bluebooth.storyboard in Resources */,
 				288F01931E5EC535005D204E /* ContainerController.storyboard in Resources */,
+				28E66D9F1EA15ABA00F8C1AE /* FileHandleViewController.xib in Resources */,
 				28987D9E1E7893E2000B5976 /* UITestingViewController.xib in Resources */,
 				0D86F3011E5A34F900EE3577 /* ApplePaySwagServer.py in Resources */,
 				0D9EC6671E5A12AA006542C5 /* ApplePay.storyboard in Resources */,
@@ -1594,12 +1624,14 @@
 				0DA3054B1E4B98980040CA45 /* AppDelegate.swift in Sources */,
 				28C9D34E1E79C92C00286D95 /* ObjcTesting.m in Sources */,
 				288F01951E5EC554005D204E /* ContainerViewController.swift in Sources */,
+				28E66D9E1EA15ABA00F8C1AE /* FileHandleViewController.swift in Sources */,
 				0DA305C91E4FF4A20040CA45 /* TextViewController.swift in Sources */,
 				0D1409651E725DCC00E4542A /* DesignPattern.swift in Sources */,
 				0DCD7CEC1E7DE53F00D7D951 /* CommandPattern.swift in Sources */,
 				0D0633C31E63323800D6A16A /* UIViewController+Alerts.m in Sources */,
 				28B8A9E21E72165200DCAE12 /* ChildXibViewController.swift in Sources */,
 				0D0633CA1E63345D00D6A16A /* Clip.swift in Sources */,
+				28E66DA41EA15EFF00F8C1AE /* TabBarViewController.swift in Sources */,
 				28987D9D1E7893E2000B5976 /* UITestingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
