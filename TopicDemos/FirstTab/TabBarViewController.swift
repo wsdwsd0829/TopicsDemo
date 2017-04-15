@@ -12,13 +12,23 @@ class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.selectedIndex = 1
+        //self.selectedIndex = 1
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func encodeRestorableState(with coder: NSCoder) {
+        coder.encode(self.selectedIndex, forKey: "SelectedIndex")
+        super.encodeRestorableState(with: coder)
+    }
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        self.selectedIndex = coder.decodeInteger(forKey: "SelectedIndex")
+        super.decodeRestorableState(with: coder)
     }
     
 
