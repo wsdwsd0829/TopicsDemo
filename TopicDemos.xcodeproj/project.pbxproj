@@ -20,6 +20,9 @@
 		0D0633CD1E634FD500D6A16A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D0633CC1E634FD500D6A16A /* GoogleService-Info.plist */; };
 		0D0FA04A1EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FA0481EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.swift */; };
 		0D0FA04B1EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D0FA0491EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.xib */; };
+		0D0FA04E1EA3206800E3B3D0 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FA04D1EA3206800E3B3D0 /* CustomSegue.swift */; };
+		0D0FA0561EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FA0541EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.swift */; };
+		0D0FA0571EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D0FA0551EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.xib */; };
 		0D1409651E725DCC00E4542A /* DesignPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1409641E725DCC00E4542A /* DesignPattern.swift */; };
 		0D1409781E76382200E4542A /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1409771E76382200E4542A /* SecondTabViewController.swift */; };
 		0D14097C1E7639D800E4542A /* PromiseKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D14097A1E7639D800E4542A /* PromiseKitViewController.swift */; };
@@ -288,6 +291,9 @@
 		0D0633CC1E634FD500D6A16A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0D0FA0481EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPresentAnimateViewController.swift; path = SecondTab/CustomPresentAnimate/CustomPresentAnimateViewController.swift; sourceTree = "<group>"; };
 		0D0FA0491EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomPresentAnimateViewController.xib; path = SecondTab/CustomPresentAnimate/CustomPresentAnimateViewController.xib; sourceTree = "<group>"; };
+		0D0FA04D1EA3206800E3B3D0 /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSegue.swift; path = FirstTab/CustomSegue/CustomSegue.swift; sourceTree = "<group>"; };
+		0D0FA0541EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitePresentStyleViewController.swift; path = SecondTab/TransitePresentStyle/TransitePresentStyleViewController.swift; sourceTree = "<group>"; };
+		0D0FA0551EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TransitePresentStyleViewController.xib; path = SecondTab/TransitePresentStyle/TransitePresentStyleViewController.xib; sourceTree = "<group>"; };
 		0D1409641E725DCC00E4542A /* DesignPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignPattern.swift; path = DesignPatterns/DesignPattern.swift; sourceTree = "<group>"; };
 		0D1409771E76382200E4542A /* SecondTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondTabViewController.swift; path = SecondTab/SecondTabViewController.swift; sourceTree = "<group>"; };
 		0D14097A1E7639D800E4542A /* PromiseKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromiseKitViewController.swift; path = SecondTab/PromiseKit/PromiseKitViewController.swift; sourceTree = "<group>"; };
@@ -509,6 +515,23 @@
 			name = CustomPresentAnimate;
 			sourceTree = "<group>";
 		};
+		0D0FA04C1EA3203600E3B3D0 /* CustomSegue */ = {
+			isa = PBXGroup;
+			children = (
+				0D0FA04D1EA3206800E3B3D0 /* CustomSegue.swift */,
+			);
+			name = CustomSegue;
+			sourceTree = "<group>";
+		};
+		0D0FA04F1EA3DBF500E3B3D0 /* TransitePresentStyle */ = {
+			isa = PBXGroup;
+			children = (
+				0D0FA0541EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.swift */,
+				0D0FA0551EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.xib */,
+			);
+			name = TransitePresentStyle;
+			sourceTree = "<group>";
+		};
 		0D1409631E725D9500E4542A /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +544,7 @@
 		0D1409741E7637F600E4542A /* SecondTab */ = {
 			isa = PBXGroup;
 			children = (
+				0D0FA04F1EA3DBF500E3B3D0 /* TransitePresentStyle */,
 				0D0FA0441EA2ECF500E3B3D0 /* CustomPresentAnimate */,
 				28E66D981EA15A9800F8C1AE /* FileHandle */,
 				28C59A6E1E9BF83F003172A0 /* Accessibility */,
@@ -630,7 +654,8 @@
 				0D86F3081E5AA7F100EE3577 /* IntentHandler.swift */,
 				0D86F30A1E5AA7F100EE3577 /* Info.plist */,
 			);
-			path = Siri;
+			name = Siri;
+			path = ../Siri;
 			sourceTree = "<group>";
 		};
 		0D86F3121E5AA7F200EE3577 /* SiriUI */ = {
@@ -640,7 +665,8 @@
 				0D86F3151E5AA7F200EE3577 /* MainInterface.storyboard */,
 				0D86F3181E5AA7F200EE3577 /* Info.plist */,
 			);
-			path = SiriUI;
+			name = SiriUI;
+			path = ../SiriUI;
 			sourceTree = "<group>";
 		};
 		0D9EC6651E5A1293006542C5 /* ApplePay */ = {
@@ -665,8 +691,6 @@
 				0DA305691E4B98980040CA45 /* TopicDemosUITests */,
 				0D806A051E541CF5007219F2 /* TopicDemosWatchApp */,
 				0D806A141E541CF5007219F2 /* TopicDemosWatchApp Extension */,
-				0D86F3071E5AA7F100EE3577 /* Siri */,
-				0D86F3121E5AA7F200EE3577 /* SiriUI */,
 				280874651E66725400BC1D15 /* TopicDemosHelper */,
 				280874721E66725400BC1D15 /* TopicDemosHelperTests */,
 				0DA305481E4B98980040CA45 /* Products */,
@@ -693,8 +717,8 @@
 			isa = PBXGroup;
 			children = (
 				28E66DA21EA15E7200F8C1AE /* FirstTab */,
-				28987E021E78E9F8000B5976 /* BridgingRelated */,
 				0D1409741E7637F600E4542A /* SecondTab */,
+				28987E021E78E9F8000B5976 /* BridgingRelated */,
 				0D1409631E725D9500E4542A /* DesignPatterns */,
 				0DF3C3AB1E63ED1800588CFC /* Template */,
 				0D3C11751E635F6C00239684 /* Helpers */,
@@ -964,6 +988,9 @@
 		28E66DA21EA15E7200F8C1AE /* FirstTab */ = {
 			isa = PBXGroup;
 			children = (
+				0D0FA04C1EA3203600E3B3D0 /* CustomSegue */,
+				0D86F3071E5AA7F100EE3577 /* Siri */,
+				0D86F3121E5AA7F200EE3577 /* SiriUI */,
 				0DA3057A1E4B99C80040CA45 /* Media */,
 				284C8E321E60C94900030009 /* ImageTest */,
 				0DF3C3A61E63EC3800588CFC /* Youtube */,
@@ -1347,6 +1374,7 @@
 				0D86F3011E5A34F900EE3577 /* ApplePaySwagServer.py in Resources */,
 				0D9EC6671E5A12AA006542C5 /* ApplePay.storyboard in Resources */,
 				0DA305791E4B99660040CA45 /* Media.storyboard in Resources */,
+				0D0FA0571EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.xib in Resources */,
 				28B8A9E31E72165200DCAE12 /* ChildXibViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1618,6 +1646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0FA04E1EA3206800E3B3D0 /* CustomSegue.swift in Sources */,
 				0D0633C21E63323800D6A16A /* EmailViewController.m in Sources */,
 				28987DE71E78A724000B5976 /* main.swift in Sources */,
 				288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */,
@@ -1628,6 +1657,7 @@
 				284C8E361E60C96C00030009 /* ImageTestViewController.swift in Sources */,
 				0D9EC6691E5A12C7006542C5 /* ApplePayViewController.swift in Sources */,
 				28C59A751E9BF870003172A0 /* AccessibilityViewController.swift in Sources */,
+				0D0FA0561EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.swift in Sources */,
 				0D0633CB1E63345D00D6A16A /* Montage.swift in Sources */,
 				0DA3057C1E4B99FE0040CA45 /* PlayVideoViewController.swift in Sources */,
 				0DF3C3AF1E63ED5D00588CFC /* TemplateViewController.swift in Sources */,

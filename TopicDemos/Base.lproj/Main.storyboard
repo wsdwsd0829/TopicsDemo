@@ -243,7 +243,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TODO: segue to storyboard programtically" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAe-dF-lhv">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="segue programtically" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAe-dF-lhv">
                                                     <rect key="frame" x="8" y="14" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -256,6 +256,9 @@
                                                 <constraint firstAttribute="leadingMargin" secondItem="dAe-dF-lhv" secondAttribute="leading" id="kkA-JW-SxV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="u8L-Tj-3DA" kind="show" customClass="CustomSegue" customModule="TopicDemos" customModuleProvider="target" id="MyZ-a1-g6b"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -310,6 +313,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVV-nk-Y0X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2548.8000000000002" y="307.64617691154427"/>
+        </scene>
+        <!--Template View Controller-->
+        <scene sceneID="LyX-hO-wYb">
+            <objects>
+                <viewController id="u8L-Tj-3DA" customClass="TemplateViewController" customModule="TopicDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RF0-zN-Dzc"/>
+                        <viewControllerLayoutGuide type="bottom" id="tfx-5C-18J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RNF-Ad-mQO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bji-LO-WtB">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bji-LO-WtB" firstAttribute="centerX" secondItem="RNF-Ad-mQO" secondAttribute="centerX" id="lj7-He-O3p"/>
+                            <constraint firstItem="Bji-LO-WtB" firstAttribute="centerY" secondItem="RNF-Ad-mQO" secondAttribute="centerY" id="vMQ-pU-3J5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="Bji-LO-WtB" id="4eA-eI-FAY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDd-HX-5Gj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3042" y="509"/>
         </scene>
         <!--Youtube-->
         <scene sceneID="haL-WZ-VYV">

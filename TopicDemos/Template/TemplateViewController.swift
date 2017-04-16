@@ -11,6 +11,7 @@ import Helper
 
 class TemplateViewController: UIViewController {
     var shouldShowCancel: Bool = false
+    var labelStr: String?
     static func getOne() -> TemplateViewController {
         // NSStringFromClass(TemplateViewController.self)
         let storyboard = UIStoryboard(name: "Template", bundle: nil)
@@ -26,11 +27,12 @@ class TemplateViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
         print("string".name)
         print(("Str" as NSString).objcname())
-        self.label.text = "ViewDidLoad"
+        self.label.text = labelStr ?? "ViewDidLoad"
         
         if self.navigationController != nil {
             navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelClicked(_:)))
         } else if shouldShowCancel {
+            
             let cancelButton = UIButton(frame: CGRect(x: 10, y: 100, width: 200, height: 40))
             cancelButton.setTitle("Cancel Button", for: .normal)
             cancelButton.addTarget(self, action: #selector(cancelClicked(_:)), for: .touchUpInside)
@@ -43,12 +45,17 @@ class TemplateViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        //if presented: donot show navigation, for TransitePresentStyle test: TODO: how to hide navi button
+        if self.presentingViewController != nil {
+            self.presentingViewController?.navigationController?.setNavigationBarHidden(true, animated: true)
+        }
     }
  
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+        if self.presentingViewController != nil {
+            self.presentingViewController?.navigationController?.setNavigationBarHidden(false, animated: true)
+        }
     }
     
     func cancelClicked(_ sender: AnyObject) {

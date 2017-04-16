@@ -86,6 +86,11 @@ class NavigationViewController: UIViewController, UIToolbarDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setToolbarHidden(true, animated: true)
+        //reverse style
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.barStyle = .default
+        navigationController?.navigationBar.isTranslucent = true //default true
+
     }
     
     //MARK: present/push trickes
