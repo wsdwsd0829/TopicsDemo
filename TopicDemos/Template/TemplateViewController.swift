@@ -10,7 +10,7 @@ import UIKit
 import Helper
 
 class TemplateViewController: UIViewController {
-    
+    var shouldShowCancel: Bool = false
     static func getOne() -> TemplateViewController {
         // NSStringFromClass(TemplateViewController.self)
         let storyboard = UIStoryboard(name: "Template", bundle: nil)
@@ -30,6 +30,14 @@ class TemplateViewController: UIViewController {
         
         if self.navigationController != nil {
             navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelClicked(_:)))
+        } else if shouldShowCancel {
+            let cancelButton = UIButton(frame: CGRect(x: 10, y: 100, width: 200, height: 40))
+            cancelButton.setTitle("Cancel Button", for: .normal)
+            cancelButton.addTarget(self, action: #selector(cancelClicked(_:)), for: .touchUpInside)
+            cancelButton.backgroundColor = UIColor.green
+            cancelButton.setTitleColor(UIColor.blue, for: .normal)
+            self.view.addSubview(cancelButton)
+
         }
             // Do any additional setup after loading the view.
     }

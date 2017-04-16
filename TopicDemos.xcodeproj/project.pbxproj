@@ -18,6 +18,8 @@
 		0D0633CA1E63345D00D6A16A /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0633C81E63345D00D6A16A /* Clip.swift */; };
 		0D0633CB1E63345D00D6A16A /* Montage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0633C91E63345D00D6A16A /* Montage.swift */; };
 		0D0633CD1E634FD500D6A16A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D0633CC1E634FD500D6A16A /* GoogleService-Info.plist */; };
+		0D0FA04A1EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FA0481EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.swift */; };
+		0D0FA04B1EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D0FA0491EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.xib */; };
 		0D1409651E725DCC00E4542A /* DesignPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1409641E725DCC00E4542A /* DesignPattern.swift */; };
 		0D1409781E76382200E4542A /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1409771E76382200E4542A /* SecondTabViewController.swift */; };
 		0D14097C1E7639D800E4542A /* PromiseKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D14097A1E7639D800E4542A /* PromiseKitViewController.swift */; };
@@ -284,6 +286,8 @@
 		0D0633C81E63345D00D6A16A /* Clip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 		0D0633C91E63345D00D6A16A /* Montage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Montage.swift; sourceTree = "<group>"; };
 		0D0633CC1E634FD500D6A16A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0D0FA0481EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPresentAnimateViewController.swift; path = SecondTab/CustomPresentAnimate/CustomPresentAnimateViewController.swift; sourceTree = "<group>"; };
+		0D0FA0491EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomPresentAnimateViewController.xib; path = SecondTab/CustomPresentAnimate/CustomPresentAnimateViewController.xib; sourceTree = "<group>"; };
 		0D1409641E725DCC00E4542A /* DesignPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignPattern.swift; path = DesignPatterns/DesignPattern.swift; sourceTree = "<group>"; };
 		0D1409771E76382200E4542A /* SecondTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondTabViewController.swift; path = SecondTab/SecondTabViewController.swift; sourceTree = "<group>"; };
 		0D14097A1E7639D800E4542A /* PromiseKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromiseKitViewController.swift; path = SecondTab/PromiseKit/PromiseKitViewController.swift; sourceTree = "<group>"; };
@@ -496,6 +500,15 @@
 			name = Firebase;
 			sourceTree = "<group>";
 		};
+		0D0FA0441EA2ECF500E3B3D0 /* CustomPresentAnimate */ = {
+			isa = PBXGroup;
+			children = (
+				0D0FA0481EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.swift */,
+				0D0FA0491EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.xib */,
+			);
+			name = CustomPresentAnimate;
+			sourceTree = "<group>";
+		};
 		0D1409631E725D9500E4542A /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +521,7 @@
 		0D1409741E7637F600E4542A /* SecondTab */ = {
 			isa = PBXGroup;
 			children = (
+				0D0FA0441EA2ECF500E3B3D0 /* CustomPresentAnimate */,
 				28E66D981EA15A9800F8C1AE /* FileHandle */,
 				28C59A6E1E9BF83F003172A0 /* Accessibility */,
 				0D573D611E9DC7D500002647 /* Navigation */,
@@ -1326,6 +1340,7 @@
 				284C8E801E60ED7500030009 /* test2.jpg in Resources */,
 				28C59A761E9BF870003172A0 /* AccessibilityViewController.xib in Resources */,
 				0DA305C01E4EBF5C0040CA45 /* Bluebooth.storyboard in Resources */,
+				0D0FA04B1EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.xib in Resources */,
 				288F01931E5EC535005D204E /* ContainerController.storyboard in Resources */,
 				28E66D9F1EA15ABA00F8C1AE /* FileHandleViewController.xib in Resources */,
 				28987D9E1E7893E2000B5976 /* UITestingViewController.xib in Resources */,
@@ -1608,6 +1623,7 @@
 				288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */,
 				0D1409781E76382200E4542A /* SecondTabViewController.swift in Sources */,
 				0DA305BE1E4EBF520040CA45 /* BlueboothViewController.swift in Sources */,
+				0D0FA04A1EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.swift in Sources */,
 				0D14097C1E7639D800E4542A /* PromiseKitViewController.swift in Sources */,
 				284C8E361E60C96C00030009 /* ImageTestViewController.swift in Sources */,
 				0D9EC6691E5A12C7006542C5 /* ApplePayViewController.swift in Sources */,
