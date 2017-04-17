@@ -9,27 +9,25 @@
 import UIKit
 
 class AnimatedViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.green
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func cancelClicked(_ sender: AnyObject) {
+        if presentingViewController != nil {
+            //TODO: presentingViewController is not CustomPresentAnimateViewController
+           let presenting = (self.presentingViewController as? CustomPresentAnimateViewController)
+            presenting?.shouldInteractive = false
+            dismiss(animated: true, completion: {
+                presenting?.shouldInteractive = true
+            })
+        } else if let nvc = navigationController {
+            if nvc.viewControllers.count > 1 {
+                nvc.popViewController(animated: true)
+            }
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
