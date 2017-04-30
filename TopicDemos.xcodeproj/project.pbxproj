@@ -80,6 +80,7 @@
 		280874FD1E66933A00BC1D15 /* Helper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 280874F91E66932B00BC1D15 /* Helper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		280875341E66943F00BC1D15 /* ObjcHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2808752E1E66940500BC1D15 /* ObjcHelper.framework */; };
 		280875351E66943F00BC1D15 /* ObjcHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2808752E1E66940500BC1D15 /* ObjcHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2809C4061EAEE0C600320D19 /* FileHandle+ReadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2809C4051EAEE0C600320D19 /* FileHandle+ReadData.swift */; };
 		284C8E341E60C95600030009 /* ImageTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C8E331E60C95600030009 /* ImageTest.storyboard */; };
 		284C8E361E60C96C00030009 /* ImageTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C8E351E60C96C00030009 /* ImageTestViewController.swift */; };
 		284C8E381E60C9A300030009 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 284C8E371E60C9A300030009 /* test.jpg */; };
@@ -367,6 +368,7 @@
 		280874751E66725400BC1D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		280874F31E66932B00BC1D15 /* Helper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Helper.xcodeproj; path = Helper/Helper.xcodeproj; sourceTree = "<group>"; };
 		280875281E66940500BC1D15 /* ObjcHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjcHelper.xcodeproj; path = ObjcHelper/ObjcHelper.xcodeproj; sourceTree = "<group>"; };
+		2809C4051EAEE0C600320D19 /* FileHandle+ReadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FileHandle+ReadData.swift"; path = "SecondTab/FileHandle/FileHandle+ReadData.swift"; sourceTree = "<group>"; };
 		284C8E331E60C95600030009 /* ImageTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageTest.storyboard; sourceTree = "<group>"; };
 		284C8E351E60C96C00030009 /* ImageTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTestViewController.swift; path = ImageTest/ImageTestViewController.swift; sourceTree = "<group>"; };
 		284C8E371E60C9A300030009 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 		28987DE41E789E95000B5976 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		28987DE61E78A724000B5976 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		28987E001E78E971000B5976 /* Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
+		28A632131EB3F72F0063FB5A /* Generic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Generic.playground; sourceTree = "<group>"; };
 		28AFCD8A1E89EA100069F739 /* RandomNumbers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = RandomNumbers.playground; path = TopicDemos/Playgrounds/RandomNumbers.playground; sourceTree = "<group>"; };
 		28B8A9E01E72165200DCAE12 /* ChildXibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildXibViewController.swift; path = ContainerController/ChildXibViewController.swift; sourceTree = "<group>"; };
 		28B8A9E11E72165200DCAE12 /* ChildXibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChildXibViewController.xib; path = ContainerController/ChildXibViewController.xib; sourceTree = "<group>"; };
@@ -905,6 +908,7 @@
 				287E076D1E8307C500FFC19C /* Enums.playground */,
 				289065471E8989740039B328 /* UsingPointers.playground */,
 				28AFCD8A1E89EA100069F739 /* RandomNumbers.playground */,
+				28A632131EB3F72F0063FB5A /* Generic.playground */,
 			);
 			name = Playgrounds;
 			sourceTree = "<group>";
@@ -943,6 +947,7 @@
 				28E66DA01EA15D3000F8C1AE /* SL_intro.mp3 */,
 				28E66D9C1EA15ABA00F8C1AE /* FileHandleViewController.swift */,
 				28E66D9D1EA15ABA00F8C1AE /* FileHandleViewController.xib */,
+				2809C4051EAEE0C600320D19 /* FileHandle+ReadData.swift */,
 			);
 			name = FileHandle;
 			sourceTree = "<group>";
@@ -1605,6 +1610,7 @@
 			files = (
 				0D0633C21E63323800D6A16A /* EmailViewController.m in Sources */,
 				28987DE71E78A724000B5976 /* main.swift in Sources */,
+				2809C4061EAEE0C600320D19 /* FileHandle+ReadData.swift in Sources */,
 				288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */,
 				0D1409781E76382200E4542A /* SecondTabViewController.swift in Sources */,
 				0DA305BE1E4EBF520040CA45 /* BlueboothViewController.swift in Sources */,
