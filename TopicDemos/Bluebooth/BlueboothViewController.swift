@@ -72,15 +72,18 @@ extension BlueboothViewController: CBCentralManagerDelegate {
     //MARK: discover callback
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         //identifier: is changing
-        
-        if peripheral.name == "MiniBeacon_01322" { // can be mack book pro also
-            print("advertisementData: \(advertisementData), RSSI: \(RSSI)")
-            statusLabel.appendContent("advertisementData: \(advertisementData), RSSI: \(RSSI)")
-            statusLabel.appendContent("Discovered \(peripheral.name) \(peripheral.identifier)")
-            cbPeripheral = peripheral
-            cbPeripheral.delegate = self
-            cbManager.connect(peripheral, options: nil)
-            cbManager.stopScan()
+        if let name = peripheral.name {
+        print("-------- \(name)")
+        statusLabel.appendContent("-------- \(name)")
+            if name == "MiniBeacon_01322" { //raspberrypi // can be mack book pro also
+                print("advertisementData: \(advertisementData), RSSI: \(RSSI)")
+                statusLabel.appendContent("advertisementData: \(advertisementData), RSSI: \(RSSI)")
+                statusLabel.appendContent("Discovered \(peripheral.name) \(peripheral.identifier)")
+                cbPeripheral = peripheral
+                cbPeripheral.delegate = self
+                cbManager.connect(peripheral, options: nil)
+                cbManager.stopScan()
+            }
         }
     }
     
@@ -93,6 +96,12 @@ extension BlueboothViewController: CBCentralManagerDelegate {
     
     public func centralManagerDidUpdateState(_ central: CBCentralManager) {
         print(central.state)
+        switch central.state {
+        case .poweredOn:
+            cbManager.scanForPeripherals(withServices: nil, options: nil)
+
+        default: break
+        }
     }
 }
 extension BlueboothViewController: CBPeripheralDelegate {

@@ -60,7 +60,7 @@ class AppDelegate: UIApplication, UIApplicationDelegate {  //change UIResponder 
         //MARK: design pattern practice
         PatternCenter.shared.testObserverPattern()
         PatternCenter.shared.testCommandPattern()
-        RunLoop.current.loopUntil(timeout: 2, condition: { return false })
+        RunLoop.current.loopUntil(condition: { return false }, timeout: 0)
         //MARK: Bridging related test
         ObjcTesting.useSwift()
         return true
@@ -68,10 +68,18 @@ class AppDelegate: UIApplication, UIApplicationDelegate {  //change UIResponder 
     
     func handleSiriAuthorized() {
         print("siri authorized")
-        
     }
 }
-
+//MARK: save and restore
+extension AppDelegate {
+    func application(application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
+        return true
+    }
+    
+    func application(application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
+        return true
+    }
+}
 //MARK: AVFoundation & AVKit
 extension AppDelegate {
     func verifyAudioPlaybackAvailable() {

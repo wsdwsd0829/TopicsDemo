@@ -15,7 +15,7 @@ class SecondTabViewController: UITableViewController {
     }
     /// To add a new Row:  add title, viewControllerType, allRows
     enum Row: Int {
-        case promiseKit, uiTesting, accessibility, navigation, filehandle
+        case promiseKit, uiTesting, accessibility, navigation, filehandle, transitePresentStyle, customPresentAnimate
         var title:String {
             switch self {
             case .promiseKit: return "PromiseKit"
@@ -23,6 +23,8 @@ class SecondTabViewController: UITableViewController {
             case .accessibility: return "Accessibility"
             case .navigation: return "Navigation"
             case .filehandle: return "FileHandle"
+            case .transitePresentStyle: return "TransitePresentStyle"
+            case .customPresentAnimate: return "CustomPresentAnimate"
             }
         }
         var identifier: String {
@@ -41,7 +43,8 @@ class SecondTabViewController: UITableViewController {
             case .accessibility: return AccessibilityViewController.self
             case .navigation: return NavigationViewController.self
             case .filehandle: return FileHandleViewController.self
-
+            case .transitePresentStyle: return TransitePresentStyleViewController.self
+            case .customPresentAnimate: return CustomPresentAnimateViewController.self
             }
         }
         
@@ -50,7 +53,7 @@ class SecondTabViewController: UITableViewController {
         }
         
         static var allRows: [Row] {
-            return [.promiseKit, .uiTesting, .accessibility, .navigation, .filehandle]
+            return [.promiseKit, .uiTesting, .accessibility, .navigation, .filehandle, .transitePresentStyle, .customPresentAnimate]
         }
         /*
         var viewController: AnyClass {
@@ -75,6 +78,7 @@ class SecondTabViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Row.allRows.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier)
         if cell == nil {
@@ -101,7 +105,6 @@ class SecondTabViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80;
     }
-    
 }
 
 
