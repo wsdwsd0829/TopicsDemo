@@ -403,8 +403,9 @@
 		28987DE41E789E95000B5976 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		28987DE61E78A724000B5976 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		28987E001E78E971000B5976 /* Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
-		28A632131EB3F72F0063FB5A /* Generic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Generic.playground; sourceTree = "<group>"; };
+		28A632131EB3F72F0063FB5A /* GenericAssociateType.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GenericAssociateType.playground; sourceTree = "<group>"; };
 		28AFCD8A1E89EA100069F739 /* RandomNumbers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = RandomNumbers.playground; path = TopicDemos/Playgrounds/RandomNumbers.playground; sourceTree = "<group>"; };
+		28B291021EBA85E90022E14F /* GenericConstraints.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GenericConstraints.playground; sourceTree = "<group>"; };
 		28B8A9E01E72165200DCAE12 /* ChildXibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildXibViewController.swift; path = ContainerController/ChildXibViewController.swift; sourceTree = "<group>"; };
 		28B8A9E11E72165200DCAE12 /* ChildXibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChildXibViewController.xib; path = ContainerController/ChildXibViewController.xib; sourceTree = "<group>"; };
 		28C59A731E9BF870003172A0 /* AccessibilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessibilityViewController.swift; path = SecondTab/Accessibility/AccessibilityViewController.swift; sourceTree = "<group>"; };
@@ -954,11 +955,11 @@
 		289065441E8989450039B328 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				28B290FC1EBA85C30022E14F /* Generics */,
 				0D157A7D1E9AF49300108E16 /* Algs */,
 				287E076D1E8307C500FFC19C /* Enums.playground */,
 				289065471E8989740039B328 /* UsingPointers.playground */,
 				28AFCD8A1E89EA100069F739 /* RandomNumbers.playground */,
-				28A632131EB3F72F0063FB5A /* Generic.playground */,
 			);
 			name = Playgrounds;
 			sourceTree = "<group>";
@@ -980,6 +981,15 @@
 				28C9D34D1E79C92C00286D95 /* ObjcTesting.m */,
 			);
 			name = BridgingRelated;
+			sourceTree = "<group>";
+		};
+		28B290FC1EBA85C30022E14F /* Generics */ = {
+			isa = PBXGroup;
+			children = (
+				28A632131EB3F72F0063FB5A /* GenericAssociateType.playground */,
+				28B291021EBA85E90022E14F /* GenericConstraints.playground */,
+			);
+			name = Generics;
 			sourceTree = "<group>";
 		};
 		28C59A6E1E9BF83F003172A0 /* Accessibility */ = {
