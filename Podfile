@@ -20,6 +20,7 @@ target 'TopicDemos' do
   target 'TopicDemosTests' do
     #inherit! :search_paths
     inherit! :complete
+    pod 'KIF', :configurations => ['Debug']
     # Pods for testing
   end
 

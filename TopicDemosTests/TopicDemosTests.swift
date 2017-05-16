@@ -2,12 +2,11 @@
 //  TopicDemosTests.swift
 //  TopicDemosTests
 //
-//  Created by Sida Wang on 2/8/17.
+//  Created by Max Wang on 5/16/17.
 //  Copyright © 2017 Sida Wang. All rights reserved.
 //
 
 import XCTest
-@testable import TopicDemos
 
 class TopicDemosTests: XCTestCase {
     
