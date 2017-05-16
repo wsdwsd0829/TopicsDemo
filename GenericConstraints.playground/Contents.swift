@@ -56,16 +56,3 @@ doTheThings(p1: fooInstance, p2: barInstance)
 print("--------------------")
 doTheTypedThings(p1: fooInstance, p2: barInstance)
 
-
-class DBStore<T>
-{
-    func store<T>(a : T) where T: Foo {
-    }
-    func store<T>(a : T) where T: Bar {
-    }
-    func store<T>(a : T) where T: P {
-    }
-
-}
-
-

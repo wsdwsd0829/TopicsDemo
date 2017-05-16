@@ -394,6 +394,7 @@
 		284C8E7B1E60EC2B00030009 /* portrait.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portrait.jpg; sourceTree = "<group>"; };
 		284C8E7D1E60EC3100030009 /* landscape.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = landscape.jpg; sourceTree = "<group>"; };
 		284C8E7F1E60ED7500030009 /* test2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2.jpg; sourceTree = "<group>"; };
+		2861DD131ECB6BB3008B39AF /* Inheritance.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Inheritance.playground; sourceTree = "<group>"; };
 		287E076D1E8307C500FFC19C /* Enums.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Enums.playground; path = TopicDemos/Enums.playground; sourceTree = "<group>"; };
 		288F01921E5EC535005D204E /* ContainerController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContainerController.storyboard; sourceTree = "<group>"; };
 		288F01941E5EC554005D204E /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = ContainerController/ContainerViewController.swift; sourceTree = "<group>"; };
@@ -949,6 +950,14 @@
 			name = ImageTest;
 			sourceTree = "<group>";
 		};
+		2861DD0F1ECB6BA2008B39AF /* Inheritance */ = {
+			isa = PBXGroup;
+			children = (
+				2861DD131ECB6BB3008B39AF /* Inheritance.playground */,
+			);
+			name = Inheritance;
+			sourceTree = "<group>";
+		};
 		288F01911E5EC521005D204E /* ContainerController */ = {
 			isa = PBXGroup;
 			children = (
@@ -964,6 +973,7 @@
 		289065441E8989450039B328 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				2861DD0F1ECB6BA2008B39AF /* Inheritance */,
 				0D11BADC1EC4378E006EE4C2 /* ObjcBookSwiftCollection */,
 				28B290FC1EBA85C30022E14F /* Generics */,
 				0D157A7D1E9AF49300108E16 /* Algs */,
