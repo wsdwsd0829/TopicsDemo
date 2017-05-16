@@ -32,6 +32,11 @@ class AppDelegate: UIApplication, UIApplicationDelegate {  //change UIResponder 
         window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         window?.makeKeyAndVisible()
         
+        if ProcessInfo.processInfo.arguments.contains("UITests") {
+//            UIView.setAnimationsEnabled(false)
+//            UIApplication.shared.keyWindow?.layer.speed = 1000
+        }
+
         // Override point for customization after application launch.
         verifyAudioPlaybackAvailable()
 

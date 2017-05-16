@@ -25,7 +25,7 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
         view.addGestureRecognizer(tgr)
         tgr.delegate = self
 //!!!http://stackoverflow.com/questions/8192480/uitapgesturerecognizer-breaks-uitableview-didselectrowatindexpath
-        tgr.cancelsTouchesInView = false  //will pass down to view from tableView and do not block tableView from receive it's own touch event to trigger didSelectRow 
+        tgr.cancelsTouchesInView = false  //will pass down to view from tableView and do not block tableView from receive it's own touch event to trigger didSelectRow
         
         let bbi = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editClicked))
         self.navigationItem.rightBarButtonItem = bbi
@@ -86,12 +86,14 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             animals.remove(at: indexPath.row)
+            tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .left)
+//            tableView.reloadData() //this will stop tableView animating delete row
+
+            tableView.endUpdates()
         }
-        tableView.reloadData()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         
     }
 }

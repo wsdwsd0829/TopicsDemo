@@ -53,6 +53,9 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.8)
+  - KIF (3.5.1):
+    - KIF/Core (= 3.5.1)
+  - KIF/Core (3.5.1)
   - PromiseKit (4.1.7):
     - PromiseKit/Foundation (= 4.1.7)
     - PromiseKit/QuartzCore (= 4.1.7)
@@ -78,6 +81,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - KIF
   - PromiseKit (~> 4.0)
   - SDWebImage (~> 3.8.2)
   - Stripe/ApplePay
@@ -94,11 +98,12 @@ SPEC CHECKSUMS:
   FirebaseStorage: a5c55b23741a49a72af8f30f95b3bb5ddbeda12d
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
+  KIF: 082eb65279e51c3092923802849eb796a04982ab
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Stripe: b92298b31cf156fb23a029361b57e2fcb6583d57
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: c90597ca2c34c2074f74823b249be04da997acbd
+PODFILE CHECKSUM: d46de274ff814f66293291987e752d588dfce2f7
 
 COCOAPODS: 1.2.0

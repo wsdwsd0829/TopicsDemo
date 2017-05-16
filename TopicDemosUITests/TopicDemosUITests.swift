@@ -18,27 +18,43 @@ class TopicDemosUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-
+    func testExample0() {
+        measure {
+            let app = XCUIApplication()
+            app.launchArguments = ["UITests"]
+            app.launch()
+            let tablesQuery = XCUIApplication().tables
+            tablesQuery.staticTexts["UITesting"].tap()
+            tablesQuery.staticTexts["Cell row index: 0 cat"].swipeLeft()
+            tablesQuery.buttons["Delete"].tap()
+            tablesQuery.staticTexts["Cell row index: 2 snake"].swipeLeft()
+            tablesQuery.buttons["Delete"].tap()
+            
+            super.tearDown()
+        }
+    }
+    
+    func testExample1() {
         let app = XCUIApplication()
-        app.tabBars.children(matching: .button).matching(identifier: "Item").element(boundBy: 1).tap()
+        app.launch()
         
-        let tablesQuery = app.tables
+        let tablesQuery = XCUIApplication().tables
         tablesQuery.staticTexts["UITesting"].tap()
-        app.buttons["MyBtn"].tap() //label then identifier
-        tablesQuery.staticTexts["Cell row index: 5"].swipeUp()
+        tablesQuery.staticTexts["Cell row index: 0 cat"].swipeLeft()
+        tablesQuery.buttons["Delete"].tap()
+        tablesQuery.staticTexts["Cell row index: 2 snake"].swipeLeft()
+        tablesQuery.buttons["Delete"].tap()
+        
+        super.tearDown()
     }
 
 }
