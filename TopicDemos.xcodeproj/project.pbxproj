@@ -303,6 +303,7 @@
 		0D0FA0981EA400E500E3B3D0 /* AnimatedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimatedViewController.xib; sourceTree = "<group>"; };
 		0D0FA09A1EA4047F00E3B3D0 /* AnimatorObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimatorObject.swift; path = SecondTab/CustomPresentAnimate/AnimatorObject.swift; sourceTree = "<group>"; };
 		0D0FA11B1EA47D1500E3B3D0 /* InteractiveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InteractiveObject.swift; path = SecondTab/CustomPresentAnimate/InteractiveObject.swift; sourceTree = "<group>"; };
+		0D11BAE31EC43838006EE4C2 /* ObjcBookAdvancedSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ObjcBookAdvancedSwift; path = Playgrounds/ObjcBookAdvancedSwift; sourceTree = "<group>"; };
 		0D1409641E725DCC00E4542A /* DesignPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignPattern.swift; path = DesignPatterns/DesignPattern.swift; sourceTree = "<group>"; };
 		0D1409771E76382200E4542A /* SecondTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondTabViewController.swift; path = SecondTab/SecondTabViewController.swift; sourceTree = "<group>"; };
 		0D14097A1E7639D800E4542A /* PromiseKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromiseKitViewController.swift; path = SecondTab/PromiseKit/PromiseKitViewController.swift; sourceTree = "<group>"; };
@@ -546,6 +547,14 @@
 				0D0FA0551EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.xib */,
 			);
 			name = TransitePresentStyle;
+			sourceTree = "<group>";
+		};
+		0D11BADC1EC4378E006EE4C2 /* ObjcBookSwiftCollection */ = {
+			isa = PBXGroup;
+			children = (
+				0D11BAE31EC43838006EE4C2 /* ObjcBookAdvancedSwift */,
+			);
+			name = ObjcBookSwiftCollection;
 			sourceTree = "<group>";
 		};
 		0D1409631E725D9500E4542A /* DesignPatterns */ = {
@@ -955,6 +964,7 @@
 		289065441E8989450039B328 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				0D11BADC1EC4378E006EE4C2 /* ObjcBookSwiftCollection */,
 				28B290FC1EBA85C30022E14F /* Generics */,
 				0D157A7D1E9AF49300108E16 /* Algs */,
 				287E076D1E8307C500FFC19C /* Enums.playground */,
