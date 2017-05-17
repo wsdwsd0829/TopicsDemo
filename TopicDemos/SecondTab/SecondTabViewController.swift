@@ -15,7 +15,7 @@ class SecondTabViewController: UITableViewController {
     }
     /// To add a new Row:  add title, viewControllerType, allRows
     enum Row: Int {
-        case promiseKit, uiTesting, accessibility, navigation, filehandle, transitePresentStyle, customPresentAnimate
+        case promiseKit, uiTesting, accessibility, navigation, filehandle, transitePresentStyle, customPresentAnimate, coreData
         var title:String {
             switch self {
             case .promiseKit: return "PromiseKit"
@@ -25,6 +25,7 @@ class SecondTabViewController: UITableViewController {
             case .filehandle: return "FileHandle"
             case .transitePresentStyle: return "TransitePresentStyle"
             case .customPresentAnimate: return "CustomPresentAnimate"
+            case .coreData: return "CoreData"
             }
         }
         var identifier: String {
@@ -45,6 +46,7 @@ class SecondTabViewController: UITableViewController {
             case .filehandle: return FileHandleViewController.self
             case .transitePresentStyle: return TransitePresentStyleViewController.self
             case .customPresentAnimate: return CustomPresentAnimateViewController.self
+            case .coreData: return CoreDataViewController.self
             }
         }
         
@@ -53,7 +55,7 @@ class SecondTabViewController: UITableViewController {
         }
         
         static var allRows: [Row] {
-            return [.promiseKit, .uiTesting, .accessibility, .navigation, .filehandle, .transitePresentStyle, .customPresentAnimate]
+            return [.promiseKit, .uiTesting, .accessibility, .navigation, .filehandle, .transitePresentStyle, .customPresentAnimate, .coreData]
         }
         /*
         var viewController: AnyClass {
