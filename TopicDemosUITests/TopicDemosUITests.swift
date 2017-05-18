@@ -26,7 +26,7 @@ class TopicDemosUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
 
     }
-    
+    //"Application "com.maxsida.TopicDemos" is installing or uninstalling, and cannot be launched"
     func testExample0() {
         measure {
             let app = XCUIApplication()
@@ -34,9 +34,9 @@ class TopicDemosUITests: XCTestCase {
             app.launch()
             let tablesQuery = XCUIApplication().tables
             tablesQuery.staticTexts["UITesting"].tap()
-            tablesQuery.staticTexts["Cell row index: 0 cat"].swipeLeft()
+            tablesQuery.staticTexts["cat"].swipeLeft()
             tablesQuery.buttons["Delete"].tap()
-            tablesQuery.staticTexts["Cell row index: 2 snake"].swipeLeft()
+            tablesQuery.staticTexts["snake"].swipeLeft()
             tablesQuery.buttons["Delete"].tap()
             
             super.tearDown()
@@ -47,16 +47,33 @@ class TopicDemosUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         
-        let tablesQuery = XCUIApplication().tables
+        let tablesQuery = app.tables
+        
         tablesQuery.staticTexts["UITesting"].tap()
-        tablesQuery.staticTexts["Cell row index: 0 cat"].swipeLeft()
+        
+        //both exists and isHittable fail if hidden
+        //still work if element isUserInteractive = false or enabled = false ???
+        let button = app.buttons["MyButton"]
+        XCTAssertTrue(button.exists)
+        XCTAssertTrue(button.isHittable)
+
+        let label = app.staticTexts["Label"]
+        XCTAssertTrue(label.isHittable)
+        XCTAssertTrue(label.exists)
+        
+        tablesQuery.staticTexts["cat"].swipeLeft()
         tablesQuery.buttons["Delete"].tap()
-        tablesQuery.staticTexts["Cell row index: 2 snake"].swipeLeft()
+        tablesQuery.staticTexts["snake"].swipeLeft()
         tablesQuery.buttons["Delete"].tap()
         
+        let row11 = tablesQuery.staticTexts["pig"]
+        XCTAssertTrue(row11.exists)
+        //http://stackoverflow.com/questions/33573760/ui-automation-how-can-an-element-exists-but-not-be-hittable
+        XCTAssertFalse(row11.isHittable)
+        
+        tablesQuery.element.swipeUp()
         super.tearDown()
     }
-
 }
 //Helper
 extension TopicDemosUITests {

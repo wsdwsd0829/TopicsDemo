@@ -36,6 +36,7 @@ class KifTests: KIFTestCase {
     //    }
     
     func testExample() {
+        
         tester().waitForView(withAccessibilityLabel: "UITesting")
         tester().tapView(withAccessibilityLabel: "UITesting")
         tester().swipeView(withAccessibilityLabel: "Cell row index: 0 cat", in: .left)
