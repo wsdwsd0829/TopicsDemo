@@ -69,6 +69,7 @@ class AppDelegate: UIApplication, UIApplicationDelegate {  //change UIResponder 
         RunLoop.current.loopUntil(condition: { return false }, timeout: 0)
         //MARK: Bridging related test
         ObjcTesting.useSwift()
+ 
         return true
     }
     

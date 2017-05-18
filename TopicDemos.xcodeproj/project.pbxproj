@@ -39,6 +39,12 @@
 		0D45FED31E55736500BF7C9C /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D45FED21E55736500BF7C9C /* placeholder.png */; };
 		0D573D671E9DC82900002647 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D573D651E9DC82900002647 /* NavigationViewController.swift */; };
 		0D573D681E9DC82900002647 /* NavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D573D661E9DC82900002647 /* NavigationViewController.xib */; };
+		0D6E541B1ECC085700725635 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E54191ECC085700725635 /* CoreDataViewController.swift */; };
+		0D6E541C1ECC085700725635 /* CoreDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D6E541A1ECC085700725635 /* CoreDataViewController.xib */; };
+		0D6E54231ECC08BC00725635 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E54211ECC08BC00725635 /* Model.xcdatamodeld */; };
+		0D6E54271ECC09CD00725635 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0D6E54261ECC09CD00725635 /* Readme.txt */; };
+		0D6E54291ECC0D1E00725635 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E54281ECC0D1E00725635 /* CoreDataStack.swift */; };
+		0D6E54331ECC0F8300725635 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E54321ECC0F8300725635 /* Mood.swift */; };
 		0D6F87FF1E55372D007C0413 /* ModalInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */; };
 		0D806A081E541CF5007219F2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D806A061E541CF5007219F2 /* Interface.storyboard */; };
 		0D806A0A1E541CF5007219F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D806A091E541CF5007219F2 /* Assets.xcassets */; };
@@ -317,6 +323,12 @@
 		0D573D651E9DC82900002647 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationViewController.swift; path = SecondTab/Navigation/NavigationViewController.swift; sourceTree = "<group>"; };
 		0D573D661E9DC82900002647 /* NavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NavigationViewController.xib; path = SecondTab/Navigation/NavigationViewController.xib; sourceTree = "<group>"; };
 		0D6ACCDF1E7F81D100CDEC4F /* MyUtility.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MyUtility.xcodeproj; path = ../../myApps/MyUtility/MyUtility.xcodeproj; sourceTree = "<group>"; };
+		0D6E54191ECC085700725635 /* CoreDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataViewController.swift; path = SecondTab/CoreData/CoreDataViewController.swift; sourceTree = "<group>"; };
+		0D6E541A1ECC085700725635 /* CoreDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CoreDataViewController.xib; path = SecondTab/CoreData/CoreDataViewController.xib; sourceTree = "<group>"; };
+		0D6E54221ECC08BC00725635 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		0D6E54261ECC09CD00725635 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Readme.txt; path = SecondTab/CoreData/Readme.txt; sourceTree = "<group>"; };
+		0D6E54281ECC0D1E00725635 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = SecondTab/CoreData/CoreDataStack.swift; sourceTree = "<group>"; };
+		0D6E54321ECC0F8300725635 /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mood.swift; path = SecondTab/CoreData/Models/Mood.swift; sourceTree = "<group>"; };
 		0D6F87FE1E55372D007C0413 /* ModalInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalInterfaceController.swift; sourceTree = "<group>"; };
 		0D77643A1E9AD37C00B73F13 /* BFSAndDFS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BFSAndDFS.playground; sourceTree = "<group>"; };
 		0D806A041E541CF5007219F2 /* TopicDemosWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopicDemosWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -570,6 +582,7 @@
 		0D1409741E7637F600E4542A /* SecondTab */ = {
 			isa = PBXGroup;
 			children = (
+				0D6E54151ECC082100725635 /* CoreData */,
 				0D0FA04F1EA3DBF500E3B3D0 /* TransitePresentStyle */,
 				0D0FA0441EA2ECF500E3B3D0 /* CustomPresentAnimate */,
 				28E66D981EA15A9800F8C1AE /* FileHandle */,
@@ -632,6 +645,27 @@
 				0D6ACCE81E7F81D100CDEC4F /* MyUtilityTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0D6E54151ECC082100725635 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0D6E541D1ECC087300725635 /* Models */,
+				0D6E54191ECC085700725635 /* CoreDataViewController.swift */,
+				0D6E541A1ECC085700725635 /* CoreDataViewController.xib */,
+				0D6E54261ECC09CD00725635 /* Readme.txt */,
+				0D6E54281ECC0D1E00725635 /* CoreDataStack.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		0D6E541D1ECC087300725635 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0D6E54211ECC08BC00725635 /* Model.xcdatamodeld */,
+				0D6E54321ECC0F8300725635 /* Mood.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		0D806A051E541CF5007219F2 /* TopicDemosWatchApp */ = {
@@ -1407,6 +1441,7 @@
 				0DA305C71E4FF48D0040CA45 /* TextView.storyboard in Resources */,
 				284C8E7E1E60EC3100030009 /* landscape.jpg in Resources */,
 				0D9EC6641E580E07006542C5 /* gallery.ckcomplication in Resources */,
+				0D6E541C1ECC085700725635 /* CoreDataViewController.xib in Resources */,
 				28E66DA11EA15D3000F8C1AE /* SL_intro.mp3 in Resources */,
 				0D14097D1E7639D800E4542A /* PromiseKitViewController.xib in Resources */,
 				0D573D681E9DC82900002647 /* NavigationViewController.xib in Resources */,
@@ -1420,6 +1455,7 @@
 				288F01931E5EC535005D204E /* ContainerController.storyboard in Resources */,
 				28E66D9F1EA15ABA00F8C1AE /* FileHandleViewController.xib in Resources */,
 				28987D9E1E7893E2000B5976 /* UITestingViewController.xib in Resources */,
+				0D6E54271ECC09CD00725635 /* Readme.txt in Resources */,
 				0D86F3011E5A34F900EE3577 /* ApplePaySwagServer.py in Resources */,
 				0D9EC6671E5A12AA006542C5 /* ApplePay.storyboard in Resources */,
 				0DA305791E4B99660040CA45 /* Media.storyboard in Resources */,
@@ -1706,14 +1742,18 @@
 				0D0FA04A1EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.swift in Sources */,
 				0D14097C1E7639D800E4542A /* PromiseKitViewController.swift in Sources */,
 				284C8E361E60C96C00030009 /* ImageTestViewController.swift in Sources */,
+				0D6E54231ECC08BC00725635 /* Model.xcdatamodeld in Sources */,
 				0D0FA09B1EA4047F00E3B3D0 /* AnimatorObject.swift in Sources */,
 				0D9EC6691E5A12C7006542C5 /* ApplePayViewController.swift in Sources */,
 				28C59A751E9BF870003172A0 /* AccessibilityViewController.swift in Sources */,
+				0D6E54291ECC0D1E00725635 /* CoreDataStack.swift in Sources */,
+				0D6E54331ECC0F8300725635 /* Mood.swift in Sources */,
 				0D0FA0971EA400CD00E3B3D0 /* AnimatedViewController.swift in Sources */,
 				0D0FA0561EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.swift in Sources */,
 				0D0633CB1E63345D00D6A16A /* Montage.swift in Sources */,
 				0DA3057C1E4B99FE0040CA45 /* PlayVideoViewController.swift in Sources */,
 				0DF3C3AF1E63ED5D00588CFC /* TemplateViewController.swift in Sources */,
+				0D6E541B1ECC085700725635 /* CoreDataViewController.swift in Sources */,
 				28987E011E78E971000B5976 /* Testing.swift in Sources */,
 				0D573D671E9DC82900002647 /* NavigationViewController.swift in Sources */,
 				0D0633C51E63337B00D6A16A /* FirebaseHelper.swift in Sources */,
@@ -2307,6 +2347,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0D6E54211ECC08BC00725635 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0D6E54221ECC08BC00725635 /* Model.xcdatamodel */,
+			);
+			currentVersion = 0D6E54221ECC08BC00725635 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = SecondTab/CoreData/Models/Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0DA3053F1E4B98980040CA45 /* Project object */;
 }
