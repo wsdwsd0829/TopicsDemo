@@ -33,3 +33,32 @@ class CoreDataStack: NSObject {
         return url
     }
 }
+
+class CoreDataStack2: NSObject {
+    var pc: NSPersistentContainer!
+    var mainContext: NSManagedObjectContext!
+
+    static let storeName = "Moody.sqlite"
+    static let modelName = "Mood"
+    
+    func setup() {
+        pc = NSPersistentContainer(name: CoreDataStack2.modelName)
+        let sd = NSPersistentStoreDescription(url: storeURL(withName: CoreDataStack2.storeName))
+        pc.persistentStoreDescriptions = [sd]
+        mainContext = pc.viewContext
+        //if not set store Descriptions use default modelName(Mood) + sqlite type in Application Support
+        pc.loadPersistentStores { (storeDesc, err) in
+            if err != nil {
+                print(err!)
+            }
+        }
+    }
+    
+    fileprivate func storeURL(withName name: String) -> URL {
+        guard let baseUrlStr = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {
+            fatalError("no application Dir")
+        }
+        let url = URL(fileURLWithPath: baseUrlStr).appendingPathComponent(name)
+        return url
+    }
+}

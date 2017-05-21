@@ -8,13 +8,14 @@
 
 import UIKit
 import CoreData
+
 class CoreDataViewController: UIViewController {
 
-    var cdStack: CoreDataStack!
+    var cdStack: CoreDataStack2!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cdStack = CoreDataStack()
+        cdStack = CoreDataStack2()
         cdStack.setup()
         
     }
@@ -41,14 +42,5 @@ class CoreDataViewController: UIViewController {
     @IBAction func deleteAll(_ sender: Any) {
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
