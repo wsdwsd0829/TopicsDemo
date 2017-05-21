@@ -16,3 +16,4 @@ class Mood: NSManagedObject {
     @NSManaged var image: Data?
     @NSManaged var colors: Data?
 }
+

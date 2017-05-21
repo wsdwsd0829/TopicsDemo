@@ -19,7 +19,7 @@ class CoreDataViewController: UIViewController {
         cdStack.setup()
         
     }
-    
+//MARK: Basic functions
     @IBAction func save(_ sender: Any) {
         guard let mood: Mood = NSEntityDescription.insertNewObject(forEntityName: "Mood", into: cdStack.mainContext) as? Mood else {
             fatalError("cannot create mood")
@@ -36,11 +36,29 @@ class CoreDataViewController: UIViewController {
     }
     
     @IBAction func update(_ sender: Any) {
-        
+        cdStack.mainContext.perform { //must from block
+            let fr = NSFetchRequest<Mood>(entityName: "Mood")
+            fr.fetchBatchSize = 50
+            fr.sortDescriptors = [NSSortDescriptor(key: "updateAt", ascending: true)]
+            if let result = try? fr.execute() {
+                result.first?.updateAt = Date()
+                result.first?.name = "updated happy"
+                try! self.cdStack.mainContext.save()
+            }
+        }
     }
     
     @IBAction func deleteAll(_ sender: Any) {
-        
+        cdStack.mainContext.perform { //must from block
+            let fr = NSFetchRequest<Mood>(entityName: "Mood")
+            fr.sortDescriptors = [NSSortDescriptor(key: "updateAt", ascending: true)]
+            if let result = try? fr.execute() {
+                result.forEach {
+                    self.cdStack.mainContext.delete($0)
+                }
+                try! self.cdStack.mainContext.save()
+            }
+        }
     }
 
 }
