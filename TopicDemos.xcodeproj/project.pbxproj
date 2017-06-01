@@ -309,7 +309,6 @@
 		0D0FA0981EA400E500E3B3D0 /* AnimatedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimatedViewController.xib; sourceTree = "<group>"; };
 		0D0FA09A1EA4047F00E3B3D0 /* AnimatorObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimatorObject.swift; path = SecondTab/CustomPresentAnimate/AnimatorObject.swift; sourceTree = "<group>"; };
 		0D0FA11B1EA47D1500E3B3D0 /* InteractiveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InteractiveObject.swift; path = SecondTab/CustomPresentAnimate/InteractiveObject.swift; sourceTree = "<group>"; };
-		0D11BAE31EC43838006EE4C2 /* ObjcBookAdvancedSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ObjcBookAdvancedSwift; path = Playgrounds/ObjcBookAdvancedSwift; sourceTree = "<group>"; };
 		0D1409641E725DCC00E4542A /* DesignPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignPattern.swift; path = DesignPatterns/DesignPattern.swift; sourceTree = "<group>"; };
 		0D1409771E76382200E4542A /* SecondTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondTabViewController.swift; path = SecondTab/SecondTabViewController.swift; sourceTree = "<group>"; };
 		0D14097A1E7639D800E4542A /* PromiseKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromiseKitViewController.swift; path = SecondTab/PromiseKit/PromiseKitViewController.swift; sourceTree = "<group>"; };
@@ -397,6 +396,7 @@
 		280874F31E66932B00BC1D15 /* Helper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Helper.xcodeproj; path = Helper/Helper.xcodeproj; sourceTree = "<group>"; };
 		280875281E66940500BC1D15 /* ObjcHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjcHelper.xcodeproj; path = ObjcHelper/ObjcHelper.xcodeproj; sourceTree = "<group>"; };
 		2809C4051EAEE0C600320D19 /* FileHandle+ReadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FileHandle+ReadData.swift"; path = "SecondTab/FileHandle/FileHandle+ReadData.swift"; sourceTree = "<group>"; };
+		2837D9711EE0D10D0075AABA /* Collection.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Collection.playground; sourceTree = "<group>"; };
 		284C8E331E60C95600030009 /* ImageTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageTest.storyboard; sourceTree = "<group>"; };
 		284C8E351E60C96C00030009 /* ImageTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTestViewController.swift; path = ImageTest/ImageTestViewController.swift; sourceTree = "<group>"; };
 		284C8E371E60C9A300030009 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
@@ -409,18 +409,18 @@
 		2861DD841ECBC217008B39AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2861DD8A1ECBC23D008B39AF /* KifTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KifTests.swift; sourceTree = "<group>"; };
 		2874D98A1EE0CD080055A701 /* markup.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = markup.playground; sourceTree = "<group>"; };
-		287E076D1E8307C500FFC19C /* Enums.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Enums.playground; path = TopicDemos/Enums.playground; sourceTree = "<group>"; };
+		287E076D1E8307C500FFC19C /* Enums.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Enums.playground; sourceTree = "<group>"; };
 		288F01921E5EC535005D204E /* ContainerController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContainerController.storyboard; sourceTree = "<group>"; };
 		288F01941E5EC554005D204E /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = ContainerController/ContainerViewController.swift; sourceTree = "<group>"; };
 		288F01961E5EC57E005D204E /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildViewController.swift; path = ContainerController/ChildViewController.swift; sourceTree = "<group>"; };
-		289065471E8989740039B328 /* UsingPointers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = UsingPointers.playground; path = TopicDemos/Playgrounds/UsingPointers.playground; sourceTree = "<group>"; };
+		289065471E8989740039B328 /* UsingPointers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UsingPointers.playground; sourceTree = "<group>"; };
 		28987D9B1E7893E2000B5976 /* UITestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITestingViewController.swift; path = SecondTab/UITesting/UITestingViewController.swift; sourceTree = "<group>"; };
 		28987D9C1E7893E2000B5976 /* UITestingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UITestingViewController.xib; path = SecondTab/UITesting/UITestingViewController.xib; sourceTree = "<group>"; };
 		28987DE41E789E95000B5976 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		28987DE61E78A724000B5976 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		28987E001E78E971000B5976 /* Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		28A632131EB3F72F0063FB5A /* GenericAssociateType.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GenericAssociateType.playground; sourceTree = "<group>"; };
-		28AFCD8A1E89EA100069F739 /* RandomNumbers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = RandomNumbers.playground; path = TopicDemos/Playgrounds/RandomNumbers.playground; sourceTree = "<group>"; };
+		28AFCD8A1E89EA100069F739 /* RandomNumbers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RandomNumbers.playground; sourceTree = "<group>"; };
 		28B291021EBA85E90022E14F /* GenericConstraints.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GenericConstraints.playground; sourceTree = "<group>"; };
 		28B8A9E01E72165200DCAE12 /* ChildXibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildXibViewController.swift; path = ContainerController/ChildXibViewController.swift; sourceTree = "<group>"; };
 		28B8A9E11E72165200DCAE12 /* ChildXibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChildXibViewController.xib; path = ContainerController/ChildXibViewController.xib; sourceTree = "<group>"; };
@@ -561,14 +561,6 @@
 				0D0FA0551EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.xib */,
 			);
 			name = TransitePresentStyle;
-			sourceTree = "<group>";
-		};
-		0D11BADC1EC4378E006EE4C2 /* ObjcBookSwiftCollection */ = {
-			isa = PBXGroup;
-			children = (
-				0D11BAE31EC43838006EE4C2 /* ObjcBookAdvancedSwift */,
-			);
-			name = ObjcBookSwiftCollection;
 			sourceTree = "<group>";
 		};
 		0D1409631E725D9500E4542A /* DesignPatterns */ = {
@@ -963,6 +955,14 @@
 			name = SwiftHelper;
 			sourceTree = "<group>";
 		};
+		2837D9701EE0D0F90075AABA /* AdvancedSwift */ = {
+			isa = PBXGroup;
+			children = (
+				2837D9711EE0D10D0075AABA /* Collection.playground */,
+			);
+			name = AdvancedSwift;
+			sourceTree = "<group>";
+		};
 		284C8E321E60C94900030009 /* ImageTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -1010,15 +1010,15 @@
 			isa = PBXGroup;
 			children = (
 				2874D98A1EE0CD080055A701 /* markup.playground */,
+				28AFCD8A1E89EA100069F739 /* RandomNumbers.playground */,
+				289065471E8989740039B328 /* UsingPointers.playground */,
+				287E076D1E8307C500FFC19C /* Enums.playground */,
+				2837D9701EE0D0F90075AABA /* AdvancedSwift */,
 				2861DD0F1ECB6BA2008B39AF /* Inheritance */,
-				0D11BADC1EC4378E006EE4C2 /* ObjcBookSwiftCollection */,
 				28B290FC1EBA85C30022E14F /* Generics */,
 				0D157A7D1E9AF49300108E16 /* Algs */,
-				287E076D1E8307C500FFC19C /* Enums.playground */,
-				289065471E8989740039B328 /* UsingPointers.playground */,
-				28AFCD8A1E89EA100069F739 /* RandomNumbers.playground */,
 			);
-			name = Playgrounds;
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 		28987D961E7893B6000B5976 /* UITesting */ = {
