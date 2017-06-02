@@ -37,6 +37,7 @@ class SecondTabViewController: UITableViewController {
         var nibName: String? {
             return Controllers(rawValue: identifier)?.nibName
         }
+        
         var viewControllerType: UIViewController.Type {  //UIViewController.Type is AnyClass
             switch self {
             case .promiseKit: return PromiseKitViewController.self

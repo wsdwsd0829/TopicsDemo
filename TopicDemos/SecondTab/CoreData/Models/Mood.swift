@@ -14,5 +14,6 @@ class Mood: NSManagedObject {
     @NSManaged var date: Date
     @NSManaged var updateAt: Date
     @NSManaged var image: Data?
-    @NSManaged var colors: Data?
+    @NSManaged var colors: [UIColor]?
 }
+

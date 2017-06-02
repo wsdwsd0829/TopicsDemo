@@ -17,7 +17,7 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
     
     var tgr:UITapGestureRecognizer!
     
-    var animals = ["cat", "dog", "snake", "mouse", "horse", "bull", "tiger", "rabbit", "dragon", "sheep", "monkey", "chicken", "dog", "pig"]
+    var animals = ["cat", "elephant", "snake", "mouse", "horse", "bull", "tiger", "rabbit", "dragon", "sheep", "monkey", "chicken", "dog", "pig"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.edgesForExtendedLayout = [];
@@ -71,10 +71,10 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
         let cellId = "UITestingCell"
         if let mycell = tableView.dequeueReusableCell(withIdentifier: cellId) {
             cell = mycell
-            cell?.textLabel?.text = "Cell row index: \(indexPath.row) \(animals[indexPath.row])"
+            cell?.textLabel?.text = "\(animals[indexPath.row])"
         } else {
             cell = UITableViewCell(style: .default, reuseIdentifier: cellId)
-            cell?.textLabel?.text = "Cell row index: \(indexPath.row) \(animals[indexPath.row])"
+            cell?.textLabel?.text = "\(animals[indexPath.row])"
         }
         return cell!
     }
