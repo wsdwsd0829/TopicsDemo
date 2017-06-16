@@ -45,7 +45,7 @@ class RunLoopTests: XCTestCase {
         }
         
         XCTAssertFalse(app.staticTexts["id100"].exists)
-            
+        
     }
     
     //exist -> soft fail, isHittable -> hard fail
@@ -60,7 +60,18 @@ class RunLoopTests: XCTestCase {
         if id7.isHittable { //this will cause an direct fail
             print("detected whether hittable")
         }
-        
+    }
+    
+    func testFailBag() {
+        FailBag().fail()
+    }
+    
+    override func recordFailure(withDescription description: String, inFile filePath: String, atLine lineNumber: UInt, expected: Bool) {
+        if let fail = FailBag.failures.first {
+            super.recordFailure(withDescription: "hello", inFile: fail.file!, atLine: UInt(fail.line!), expected: expected)
+            return
+        }
+        super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: expected)
     }
 }
 
