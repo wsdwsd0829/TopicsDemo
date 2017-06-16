@@ -100,8 +100,7 @@ class SecondTabViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vcType = (Row.row(at: indexPath)?.viewControllerType) else { return }
-        
-        let pkvc = UIViewController.instantiate(controllerType: vcType, .nib)
+        let pkvc = UIViewController.instantiateX(controllerType: vcType, .nib)
         self.navigationController?.pushViewController(pkvc, animated: true)
     }
     

@@ -26,6 +26,8 @@ target 'TopicDemos' do
 
   target 'TopicDemosUITests' do
     inherit! :search_paths
+
+  pod 'Firebase/Core'
     pod 'KIF', :configurations => ['Debug']
 #    pod 'KIF/IdentifierTests'
     # Pods for testing

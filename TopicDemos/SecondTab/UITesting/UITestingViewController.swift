@@ -16,8 +16,10 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tableView: UITableView!
     
     var tgr:UITapGestureRecognizer!
-    
+    var count: Int = 0
+    var timer: Timer!
     var animals = ["cat", "elephant", "snake", "mouse", "horse", "bull", "tiger", "rabbit", "dragon", "sheep", "monkey", "chicken", "dog", "pig"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.edgesForExtendedLayout = [];
@@ -36,24 +38,40 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.allowsSelection = true
         tableView.allowsSelectionDuringEditing = true
         tableView.isUserInteractionEnabled = true
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
+//        wait()
+    }
+    
+    // will blocking current thread, and time deferred correctly on main thread
+    // in uncomment global Queue, run loop will run creazy, until we add mytimer for it.
+    func wait() {
+        DispatchQueue.global().async {
+            let mytimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.backgroundTimerFired), userInfo: nil, repeats: true)
+            RunLoop.current.add(mytimer, forMode: .commonModes)
+            RunLoop.current.loopUntil(timeout: 20, pollingInterval: 0.5, condition: { () -> Bool in
+                self.label.text == "10"
+            })
+            print("found 5")
+        }
+    }
+    
+    func updateLabel() {
+        label.text = "\(count)"
+        label.accessibilityIdentifier = "id" + label.text!
+        count += 1
+    }
+    func backgroundTimerFired() {
+        print("backgroundTimerFired")
     }
 
- /*  //Not working
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        if gestureRecognizer == tgr {
-            if type(of: touch.view) == UITableViewCell.self {
-                return false
-            }
-        }
-        return true
-    }
-  */
     func editClicked() {
         tableView.setEditing(!tableView.isEditing, animated: true)
     }
     
     @IBAction func buttonClicked(_ sender: UIButton) {
         label.text = textField.text ?? "???";
+        timer.invalidate()
     }
     
     func tappedInView(_ sender: AnyObject) {

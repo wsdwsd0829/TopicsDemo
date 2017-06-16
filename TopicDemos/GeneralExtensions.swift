@@ -38,11 +38,11 @@ public enum InstantiateType {
 }
 public protocol ViewControllerInstantiable {
     //set id in storyboard, and call this
-    static func instantiate(controllerType type: UIViewController.Type, _ instantiateType: InstantiateType) -> UIViewController;
+    static func instantiateX(controllerType type: UIViewController.Type, _ instantiateType: InstantiateType) -> UIViewController;
 }
 
 extension UIViewController: ViewControllerInstantiable {
-    public static func instantiate(controllerType type: UIViewController.Type, _ instantiateType: InstantiateType = .storyboard) -> UIViewController {
+    public static func instantiateX(controllerType type: UIViewController.Type, _ instantiateType: InstantiateType = .storyboard) -> UIViewController {
         let controllerName = String(describing: type.self)
         guard let controllerEnum = Controllers.init(rawValue: controllerName) else {
             fatalError("Busted!!: no such controller defined")
@@ -88,6 +88,27 @@ public enum Controllers: String {
     }
 }
 
+public extension RunLoop {
+    /// This behaves like waitForExpectation, but gives us more control over performance
+    @discardableResult
+    func loopUntil(timeout: TimeInterval, pollingInterval: TimeInterval = 0.01, condition: () -> Bool) -> Bool {
+        let endDate = Date(timeIntervalSinceNow: timeout)
+        let punishTime:Double = 0.1
+        var interval = pollingInterval
+        while Date().compare(endDate) == .orderedAscending {
+            if condition() {
+                return true
+            }
+            if pollingInterval > 0 {
+                run(until: Date(timeIntervalSinceNow: interval))
+                interval += punishTime
+                print("interval: \(interval), pollingInterval: \(pollingInterval), punishTime: \(punishTime), data: \(Date())")
+            }
+        }
+        
+        return false
+    }
+}
 
 
 
