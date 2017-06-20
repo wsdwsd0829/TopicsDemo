@@ -52,7 +52,7 @@ class RunLoopTests: XCTestCase {
     func testExistHittable() {
         XCUIApplication().tables.cells.staticTexts["UITesting"].tap()
         let app = XCUIApplication()
-        var ex = app.staticTexts["id7"].exists
+        let ex = app.staticTexts["id7"].exists
         let id7 = app.staticTexts["id7"]
         print("-------" + id7.debugDescription)
         print("-------" + app.staticTexts["id1"].debugDescription)
@@ -60,6 +60,42 @@ class RunLoopTests: XCTestCase {
         if id7.isHittable { //this will cause an direct fail
             print("detected whether hittable")
         }
+    }
+    
+    
+    func testXCTWaiter() {
+        XCUIApplication().tables.cells.staticTexts["UITesting"].tap()
+        let app = XCUIApplication()
+        
+        var xctestExpectations = [XCTestExpectation]()
+        for i in stride(from: 0, to: 10, by: 3) {
+            let newCount = i
+            let newId = "id\(newCount)"
+            let elem = app.staticTexts[newId]
+            
+            let exists = NSPredicate(format: "exists == 1")
+            let expect = expectation(for: exists, evaluatedWith: elem, handler: nil)
+            xctestExpectations.append(expect)
+        }
+        let waiter = XCTWaiter(delegate: self)
+        
+        waiter.wait(for: xctestExpectations, timeout: 10, enforceOrder: true)
+        
+    }
+    
+    func testBoundByIndexAndBoundByAccessibility() {
+        XCUIApplication().tables.cells.staticTexts["UITesting"].tap()
+        let app = XCUIApplication()
+        let myButtonElem = app.buttons["MyButton"]
+        let zeroElem = app.buttons.allElementsBoundByIndex
+        let zeroSameElem = app.buttons.allElementsBoundByAccessibilityElement
+        
+        //address all different (meaning new elem created to represent what's found)
+        //??? still donot know different between boundByIndex and Accessibility
+        print(myButtonElem)
+        print(zeroElem)
+        print(zeroSameElem)
+        
     }
     
     func testFailBag() {
