@@ -45,7 +45,11 @@ class RunLoopTests: XCTestCase {
         }
         
         XCTAssertFalse(app.staticTexts["id100"].exists)
-        
+    }
+    
+    func testHiddenNotExist() {
+        XCUIApplication().tables.cells.staticTexts["UITesting"].tap()
+        XCTAssertTrue(XCUIApplication().buttons["MyButton"].exists, "")
     }
     
     //exist -> soft fail, isHittable -> hard fail
@@ -79,7 +83,8 @@ class RunLoopTests: XCTestCase {
         }
         let waiter = XCTWaiter(delegate: self)
         
-        waiter.wait(for: xctestExpectations, timeout: 10, enforceOrder: true)
+        let result = waiter.wait(for: xctestExpectations, timeout: 10, enforceOrder: true)
+        XCTAssertTrue(result == .completed)
         
     }
     
