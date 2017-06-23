@@ -67,7 +67,7 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
         let condition = true
         // you place these breakpoints in the user breakpoint (right click and select “Move Breakpoint To > User”) so that they are shared across all your projects.
         for i in 1...14 {
-            //print(i)
+            print("\(condition) \(i)")
         }
         testExceptionBreakPoint()
     }
