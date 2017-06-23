@@ -41,6 +41,8 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
 //        wait()
+        testConditionalBreakPoint()
+
     }
     
     // will blocking current thread, and time deferred correctly on main thread
@@ -53,6 +55,33 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
                 self.label.text == "10"
             })
             print("found 5")
+        }
+    }
+    
+    //MARK conditional break point
+    //http://jeffreysambells.com/2014/01/14/using-breakpoints-in-xcode
+    //http://www.fantageek.com/2016/01/15/symbolic-breakpoints-in-xcode/
+    //e.g. condition: ((i >= 5) && (condition == true))
+    //e.g. symbolic break point: UITestingViewController.updateLabel
+    func testConditionalBreakPoint() {
+        let condition = true
+        // you place these breakpoints in the user breakpoint (right click and select “Move Breakpoint To > User”) so that they are shared across all your projects.
+        for i in 1...14 {
+            //print(i)
+        }
+        testExceptionBreakPoint()
+    }
+    
+    func testExceptionBreakPoint()  {
+        enum CustomError: Error {
+            case error1
+        }
+        do {
+            throw CustomError.error1
+        } catch CustomError.error1 {
+            print("catch 1")  //will print
+        } catch {
+            print("catch 2")
         }
     }
     
@@ -107,7 +136,6 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .left)
 //            tableView.reloadData() //this will stop tableView animating delete row
-
             tableView.endUpdates()
         }
     }
