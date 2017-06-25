@@ -44,7 +44,7 @@ class PromiseKitViewController: UIViewController {
     func delay(sec: TimeInterval) -> Promise<Void> {
         return Promise { fulfill, reject in
             DispatchQueue.main.asyncAfter(deadline: .now() + sec) {
-                _ = fulfill()
+                _ = fulfill(Void())
             }
         }
     }
@@ -53,7 +53,7 @@ class PromiseKitViewController: UIViewController {
         Promise<Void> { fulfill, reject in
             print(" promise executed \(Date())")
             DispatchQueue.main.asyncAfter(deadline: .now() + sec) {
-                _ = fulfill()
+                _ = fulfill(Void())
                 print(" promise fulfill \(Date())")
             }
         }

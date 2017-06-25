@@ -94,7 +94,7 @@ class SecondTabViewController: UITableViewController {
     func config(cell: UITableViewCell, for indexPath: IndexPath) {
         if let title = Row.row(at: indexPath)?.title,
             let font = UIFont(name: "HelveticaNeue", size: 18){
-            cell.textLabel?.attributedText = NSAttributedString(string: title, attributes: [NSFontAttributeName: font])
+            cell.textLabel?.attributedText = NSAttributedString(string: title, attributes: [NSAttributedStringKey.font: font])
         }
     }
     

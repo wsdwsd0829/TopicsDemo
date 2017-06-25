@@ -13,8 +13,10 @@ target 'TopicDemos' do
   pod 'SwiftyJSON'
   pod 'SDWebImage', '~> 3.8.2'
   pod 'AFNetworking', '~> 3.0.4'
-  swift_version = "3.0"
-  pod "PromiseKit", "~> 4.0"
+#  swift_version = "3.0"
+#  pod "PromiseKit", "~> 4.0"
+  swift_version = "4.0"
+  pod "PromiseKit", :git => "https://github.com/mxcl/PromiseKit", branch: "swift4-beta1"
   # Pods for TopicDemos
 
   target 'TopicDemosTests' do
