@@ -15,3 +15,7 @@ func curryMultiply(val1: Int) -> (String) -> (Int) -> Int {
 }
 
 curryMultiply(val1: 2)("*")(3)
+
+for i in "string" {
+    print(i)
+}

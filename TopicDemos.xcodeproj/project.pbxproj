@@ -415,7 +415,7 @@
 		2861DD841ECBC217008B39AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2861DD8A1ECBC23D008B39AF /* KifTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KifTests.swift; sourceTree = "<group>"; };
 		286A729D1EF39427000C429F /* FailBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailBag.swift; sourceTree = "<group>"; };
-		2872DEB31EE707660040354A /* Functional.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Functional.playground; sourceTree = "<group>"; };
+		2872DEB31EE707660040354A /* Functional.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Functional.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2874D98A1EE0CD080055A701 /* markup.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = markup.playground; sourceTree = "<group>"; };
 		287E076D1E8307C500FFC19C /* Enums.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Enums.playground; sourceTree = "<group>"; };
 		288F01921E5EC535005D204E /* ContainerController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContainerController.storyboard; sourceTree = "<group>"; };
