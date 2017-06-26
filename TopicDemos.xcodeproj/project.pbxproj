@@ -57,6 +57,8 @@
 		0D806A201E541CF5007219F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D806A1F1E541CF5007219F2 /* Assets.xcassets */; };
 		0D806A241E541CF5007219F2 /* TopicDemosWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0D806A041E541CF5007219F2 /* TopicDemosWatchApp.app */; };
 		0D806A311E551F08007219F2 /* FirstPageInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D806A301E551F08007219F2 /* FirstPageInterfaceController.swift */; };
+		0D85ED011F00D0C0003C4E0F /* DispatchQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */; };
+		0D85ED021F00D0C0003C4E0F /* DispatchQueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */; };
 		0D86F3011E5A34F900EE3577 /* ApplePaySwagServer.py in Resources */ = {isa = PBXBuildFile; fileRef = 0D86F3001E5A34F900EE3577 /* ApplePaySwagServer.py */; };
 		0D86F3091E5AA7F100EE3577 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86F3081E5AA7F100EE3577 /* IntentHandler.swift */; };
 		0D86F3111E5AA7F200EE3577 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D86F3101E5AA7F200EE3577 /* IntentsUI.framework */; };
@@ -350,6 +352,8 @@
 		0D806A2E1E550B31007219F2 /* TopicDemos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TopicDemos.entitlements; sourceTree = "<group>"; };
 		0D806A2F1E550B62007219F2 /* TopicDemosWatchApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TopicDemosWatchApp.entitlements; sourceTree = "<group>"; };
 		0D806A301E551F08007219F2 /* FirstPageInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPageInterfaceController.swift; sourceTree = "<group>"; };
+		0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueViewController.swift; sourceTree = "<group>"; };
+		0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispatchQueueViewController.xib; sourceTree = "<group>"; };
 		0D86F3001E5A34F900EE3577 /* ApplePaySwagServer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ApplePaySwagServer.py; sourceTree = "<group>"; };
 		0D86F3061E5AA7F100EE3577 /* Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Siri.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D86F3081E5AA7F100EE3577 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -584,6 +588,7 @@
 		0D1409741E7637F600E4542A /* SecondTab */ = {
 			isa = PBXGroup;
 			children = (
+				0D19AF421F00B4C00039327D /* DispatchQueue */,
 				0D6E54151ECC082100725635 /* CoreData */,
 				0D0FA04F1EA3DBF500E3B3D0 /* TransitePresentStyle */,
 				0D0FA0441EA2ECF500E3B3D0 /* CustomPresentAnimate */,
@@ -612,6 +617,16 @@
 				0D77643A1E9AD37C00B73F13 /* BFSAndDFS.playground */,
 			);
 			name = Algs;
+			sourceTree = "<group>";
+		};
+		0D19AF421F00B4C00039327D /* DispatchQueue */ = {
+			isa = PBXGroup;
+			children = (
+				0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */,
+				0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */,
+			);
+			name = DispatchQueue;
+			path = SecondTab/DispatchQueue;
 			sourceTree = "<group>";
 		};
 		0D3C11751E635F6C00239684 /* Helpers */ = {
@@ -1473,6 +1488,7 @@
 				0DA305501E4B98980040CA45 /* Main.storyboard in Resources */,
 				0D0633CD1E634FD500D6A16A /* GoogleService-Info.plist in Resources */,
 				284C8E7C1E60EC2B00030009 /* portrait.jpg in Resources */,
+				0D85ED021F00D0C0003C4E0F /* DispatchQueueViewController.xib in Resources */,
 				284C8E801E60ED7500030009 /* test2.jpg in Resources */,
 				28C59A761E9BF870003172A0 /* AccessibilityViewController.xib in Resources */,
 				0DA305C01E4EBF5C0040CA45 /* Bluebooth.storyboard in Resources */,
@@ -1762,6 +1778,7 @@
 				2809C4061EAEE0C600320D19 /* FileHandle+ReadData.swift in Sources */,
 				0D0FA11C1EA47D1500E3B3D0 /* InteractiveObject.swift in Sources */,
 				288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */,
+				0D85ED011F00D0C0003C4E0F /* DispatchQueueViewController.swift in Sources */,
 				0D1409781E76382200E4542A /* SecondTabViewController.swift in Sources */,
 				0DA305BE1E4EBF520040CA45 /* BlueboothViewController.swift in Sources */,
 				0D0FA04A1EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.swift in Sources */,

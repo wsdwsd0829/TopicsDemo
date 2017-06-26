@@ -32,7 +32,7 @@ class AppDelegate: UIApplication, UIApplicationDelegate {  //change UIResponder 
         window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         window?.makeKeyAndVisible()
         
-        UIApplication.shared.keyWindow?.layer.speed = 1000
+        //UIApplication.shared.keyWindow?.layer.speed = 1000
         if ProcessInfo.processInfo.arguments.contains("UITests") {
 //            UIView.setAnimationsEnabled(false)
 //            UIApplication.shared.keyWindow?.layer.speed = 1000
