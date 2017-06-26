@@ -66,7 +66,7 @@ public enum Controllers: String {
     //Frist Tab
     case ProfileListViewController, EmailViewController, YouTubeViewController, CreateClipsViewController, DetailViewController, ViewController
     //Second Tab
-    case PromiseKitViewController, UITestingViewController, AccessibilityViewController, NavigationViewController, FileHandleViewController, TransitePresentStyleViewController, CustomPresentAnimateViewController, CoreDataViewController
+    case PromiseKitViewController, UITestingViewController, AccessibilityViewController, NavigationViewController, FileHandleViewController, TransitePresentStyleViewController, CustomPresentAnimateViewController, CoreDataViewController, DispatchQueueViewController
     var identifier: String {
         switch self {
         default: return self.rawValue
