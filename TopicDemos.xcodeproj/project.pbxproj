@@ -316,6 +316,7 @@
 		0D1409771E76382200E4542A /* SecondTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondTabViewController.swift; path = SecondTab/SecondTabViewController.swift; sourceTree = "<group>"; };
 		0D14097A1E7639D800E4542A /* PromiseKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromiseKitViewController.swift; path = SecondTab/PromiseKit/PromiseKitViewController.swift; sourceTree = "<group>"; };
 		0D14097B1E7639D800E4542A /* PromiseKitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PromiseKitViewController.xib; path = SecondTab/PromiseKit/PromiseKitViewController.xib; sourceTree = "<group>"; };
+		0D1A0DE51EFF7F750001A7A7 /* Swift4.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Swift4.playground; path = ../../../../wwdc2017temp/Swift4.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		0D343F871E557C3900739962 /* SampleVideo_360x240_2mb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleVideo_360x240_2mb.mp4; sourceTree = "<group>"; };
 		0D3FA22E1EE1271900C9095F /* GeneralExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralExtensions.swift; sourceTree = "<group>"; };
 		0D45FEC91E554A5000BF7C9C /* TableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableInterfaceController.swift; sourceTree = "<group>"; };
@@ -1031,6 +1032,7 @@
 		289065441E8989450039B328 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				0D1A0DE51EFF7F750001A7A7 /* Swift4.playground */,
 				2872DEB31EE707660040354A /* Functional.playground */,
 				2874D98A1EE0CD080055A701 /* markup.playground */,
 				28AFCD8A1E89EA100069F739 /* RandomNumbers.playground */,
