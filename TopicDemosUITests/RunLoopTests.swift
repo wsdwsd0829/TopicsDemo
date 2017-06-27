@@ -60,10 +60,15 @@ class RunLoopTests: XCTestCase {
         let id7 = app.staticTexts["id7"]
         print("-------" + id7.debugDescription)
         print("-------" + app.staticTexts["id1"].debugDescription)
-        
-        if id7.isHittable { //this will cause an direct fail
-            print("detected whether hittable")
+        if ex {
+            print("exist")
         }
+        if !id7.isHittable { //this will cause an direct fail
+            print("detected whether hittable: not")
+        } else {
+            print("detected whether hittable: yes")
+        }
+        
     }
     
     
@@ -113,6 +118,27 @@ class RunLoopTests: XCTestCase {
             return
         }
         super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: expected)
+    }
+}
+
+extension RunLoopTests {
+    func testStopRunLoop() {
+        let runloop = CFRunLoopGetCurrent()
+        var didFinish = false
+        DispatchQueue.global().async {
+            sleep(1)
+            print(1)
+            sleep(1)
+            print(2)
+            didFinish = true
+            CFRunLoopPerformBlock(runloop, CFRunLoopMode.commonModes.rawValue) {
+                CFRunLoopStop(runloop) //so CFRunLoopRun() will terminate
+            }
+            CFRunLoopWakeUp(runloop) //tell the perform block scheduled actually get called
+        }
+        while !didFinish {
+            CFRunLoopRun()
+        }
     }
 }
 

@@ -57,6 +57,8 @@
 		0D806A201E541CF5007219F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D806A1F1E541CF5007219F2 /* Assets.xcassets */; };
 		0D806A241E541CF5007219F2 /* TopicDemosWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0D806A041E541CF5007219F2 /* TopicDemosWatchApp.app */; };
 		0D806A311E551F08007219F2 /* FirstPageInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D806A301E551F08007219F2 /* FirstPageInterfaceController.swift */; };
+		0D85ED011F00D0C0003C4E0F /* DispatchQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */; };
+		0D85ED021F00D0C0003C4E0F /* DispatchQueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */; };
 		0D86F3011E5A34F900EE3577 /* ApplePaySwagServer.py in Resources */ = {isa = PBXBuildFile; fileRef = 0D86F3001E5A34F900EE3577 /* ApplePaySwagServer.py */; };
 		0D86F3091E5AA7F100EE3577 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86F3081E5AA7F100EE3577 /* IntentHandler.swift */; };
 		0D86F3111E5AA7F200EE3577 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D86F3101E5AA7F200EE3577 /* IntentsUI.framework */; };
@@ -350,6 +352,8 @@
 		0D806A2E1E550B31007219F2 /* TopicDemos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TopicDemos.entitlements; sourceTree = "<group>"; };
 		0D806A2F1E550B62007219F2 /* TopicDemosWatchApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TopicDemosWatchApp.entitlements; sourceTree = "<group>"; };
 		0D806A301E551F08007219F2 /* FirstPageInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPageInterfaceController.swift; sourceTree = "<group>"; };
+		0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueViewController.swift; sourceTree = "<group>"; };
+		0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispatchQueueViewController.xib; sourceTree = "<group>"; };
 		0D86F3001E5A34F900EE3577 /* ApplePaySwagServer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ApplePaySwagServer.py; sourceTree = "<group>"; };
 		0D86F3061E5AA7F100EE3577 /* Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Siri.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D86F3081E5AA7F100EE3577 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -385,6 +389,8 @@
 		0DA305C31E4EC0060040CA45 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		0DA305C61E4FF48D0040CA45 /* TextView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TextView.storyboard; sourceTree = "<group>"; };
 		0DA305C81E4FF4A20040CA45 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewController.swift; path = Layout/TextViewController.swift; sourceTree = "<group>"; };
+		0DC12A5C1EFF2935008AE708 /* TopicDemosUITestsShowDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDemosUITestsShowDebug.swift; sourceTree = "<group>"; };
+		0DC12A5E1EFF2935008AE708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DCD7CEB1E7DE53F00D7D951 /* CommandPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandPattern.swift; sourceTree = "<group>"; };
 		0DF3C3A71E63EC4E00588CFC /* Youtube.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Youtube.storyboard; sourceTree = "<group>"; };
 		0DF3C3A91E63EC6200588CFC /* YouTubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
@@ -582,6 +588,7 @@
 		0D1409741E7637F600E4542A /* SecondTab */ = {
 			isa = PBXGroup;
 			children = (
+				0D19AF421F00B4C00039327D /* DispatchQueue */,
 				0D6E54151ECC082100725635 /* CoreData */,
 				0D0FA04F1EA3DBF500E3B3D0 /* TransitePresentStyle */,
 				0D0FA0441EA2ECF500E3B3D0 /* CustomPresentAnimate */,
@@ -610,6 +617,16 @@
 				0D77643A1E9AD37C00B73F13 /* BFSAndDFS.playground */,
 			);
 			name = Algs;
+			sourceTree = "<group>";
+		};
+		0D19AF421F00B4C00039327D /* DispatchQueue */ = {
+			isa = PBXGroup;
+			children = (
+				0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */,
+				0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */,
+			);
+			name = DispatchQueue;
+			path = SecondTab/DispatchQueue;
 			sourceTree = "<group>";
 		};
 		0D3C11751E635F6C00239684 /* Helpers */ = {
@@ -754,6 +771,7 @@
 				280874651E66725400BC1D15 /* TopicDemosHelper */,
 				280874721E66725400BC1D15 /* TopicDemosHelperTests */,
 				2861DD811ECBC217008B39AF /* TopicDemosTests */,
+				0DC12A5B1EFF2935008AE708 /* TopicDemosUITestsShowDebug */,
 				0DA305481E4B98980040CA45 /* Products */,
 				0DA3057D1E4B9B250040CA45 /* Frameworks */,
 				13C7103579CF51FA066FB715 /* Pods */,
@@ -856,6 +874,15 @@
 				0DA305C81E4FF4A20040CA45 /* TextViewController.swift */,
 			);
 			name = Layout;
+			sourceTree = "<group>";
+		};
+		0DC12A5B1EFF2935008AE708 /* TopicDemosUITestsShowDebug */ = {
+			isa = PBXGroup;
+			children = (
+				0DC12A5C1EFF2935008AE708 /* TopicDemosUITestsShowDebug.swift */,
+				0DC12A5E1EFF2935008AE708 /* Info.plist */,
+			);
+			path = TopicDemosUITestsShowDebug;
 			sourceTree = "<group>";
 		};
 		0DCD7CE21E7DDE9900D7D951 /* CommandPattern */ = {
@@ -1461,6 +1488,7 @@
 				0DA305501E4B98980040CA45 /* Main.storyboard in Resources */,
 				0D0633CD1E634FD500D6A16A /* GoogleService-Info.plist in Resources */,
 				284C8E7C1E60EC2B00030009 /* portrait.jpg in Resources */,
+				0D85ED021F00D0C0003C4E0F /* DispatchQueueViewController.xib in Resources */,
 				284C8E801E60ED7500030009 /* test2.jpg in Resources */,
 				28C59A761E9BF870003172A0 /* AccessibilityViewController.xib in Resources */,
 				0DA305C01E4EBF5C0040CA45 /* Bluebooth.storyboard in Resources */,
@@ -1566,7 +1594,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		787DD23BD219ED825CD22000 /* [CP] Copy Pods Resources */ = {
@@ -1596,7 +1624,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8FC6CEA0649C4632C37C3B4E /* [CP] Check Pods Manifest.lock */ = {
@@ -1611,7 +1639,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9042FB265F44E93CF48BE6C3 /* [CP] Check Pods Manifest.lock */ = {
@@ -1626,7 +1654,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		92B6D22EF3830C59154FAF3B /* [CP] Embed Pods Frameworks */ = {
@@ -1701,7 +1729,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1750,6 +1778,7 @@
 				2809C4061EAEE0C600320D19 /* FileHandle+ReadData.swift in Sources */,
 				0D0FA11C1EA47D1500E3B3D0 /* InteractiveObject.swift in Sources */,
 				288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */,
+				0D85ED011F00D0C0003C4E0F /* DispatchQueueViewController.swift in Sources */,
 				0D1409781E76382200E4542A /* SecondTabViewController.swift in Sources */,
 				0DA305BE1E4EBF520040CA45 /* BlueboothViewController.swift in Sources */,
 				0D0FA04A1EA2ED3900E3B3D0 /* CustomPresentAnimateViewController.swift in Sources */,
@@ -2083,6 +2112,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2125,6 +2155,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
