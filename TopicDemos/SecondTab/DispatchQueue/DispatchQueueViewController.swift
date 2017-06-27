@@ -83,7 +83,7 @@ class DispatchQueueViewController: UIViewController {
         print("returned from ConcurrentSync") //called before count
     }
     /**
-        test combine sync & async
+    //MARK: test combine sync & async
     */
     func syncInAsync() {
         let q1 = DispatchQueue(label: "serial.async2")
@@ -123,8 +123,53 @@ class DispatchQueueViewController: UIViewController {
             }
         }
     }
-    ///////////////////////////////////////////////
+    /**
+     test access shared resource
+     */
+    var sharedArr = [Int]()
+    //print in order comparing to next method
+    func writeToArrFromSerial() {
+        let q1 = DispatchQueue(label: "serial.write")
+        let q2 =  DispatchQueue(label: "serial.read")
+        
+        for i in 0...10 {
+            q1.async {
+                sleep(1)
+                self.sharedArr.append(i)
+                q2.sync(execute: {
+                    print(self.sharedArr)
+                })
+            }
+        }
+    }
     
+    //may out of order comparing to prev method
+    func writeToArrFromConcurrent() {
+        let q1 = DispatchQueue(label: "concurrent.write", qos: .background, attributes: [.concurrent], autoreleaseFrequency: .inherit, target: DispatchQueue.global(qos: .background))
+        let q2 = DispatchQueue(label: "serial.read")
+        print(q2)
+        let arrayLock = NSLock()
+        for i in 0...10 {
+            q1.async {
+                //if no lock -> pointer being freed was not allocated, cannnot write async -> need lock
+                //another sol: put to serial q;
+                
+                //way 1
+                arrayLock.lock()
+                self.sharedArr.append(i)
+                print(self.sharedArr)
+                arrayLock.unlock()
+                //way 2
+                /*
+                q2.sync(execute: {
+                    self.sharedArr.append(i)
+                    print(self.sharedArr)
+                })
+                 */
+            }
+        }
+    }
+
     
     //MARK: Set view animation
     override func viewDidLoad() {
@@ -135,7 +180,8 @@ class DispatchQueueViewController: UIViewController {
         view.addSubview(moveView)
         animationBtn()
         //MARK: start test
-        asyncConcurrentInSync()
+        writeToArrFromSerial()
+        writeToArrFromConcurrent()
     }
     
     @IBAction func animationBtn() {
