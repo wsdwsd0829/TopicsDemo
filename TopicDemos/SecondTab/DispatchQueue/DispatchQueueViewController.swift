@@ -238,6 +238,47 @@ class DispatchQueueViewController: UIViewController {
      2. notify(...)
     */
     
+    //MARK: dispatch semaphore
+    func dispatchSemaphore() {
+        let semaphore = DispatchSemaphore(value: 5)
+        let q1 = DispatchQueue(label: "concurrent.write", qos: .background, attributes: [.concurrent], autoreleaseFrequency: .inherit, target: DispatchQueue.global(qos: .background))
+        let q2 = DispatchQueue(label: "serial.read")
+        print(q2)
+        let arrayLock = NSLock()
+        for i in 0..<10 {
+            q1.async {
+                //if no lock -> pointer being freed was not allocated, cannnot write async -> need lock
+                //another sol: put to serial q;
+                _ = semaphore.wait(wallTimeout: .distantFuture)
+                arrayLock.lock()
+                self.sharedArr.append(i)
+                print(self.sharedArr)
+                arrayLock.unlock()
+            }
+        }
+        q2.async {
+            sleep(1)
+            print("signaling")
+            semaphore.signal()
+            sleep(1)
+            print("signaling")
+            semaphore.signal()
+            sleep(1)
+            print("signaling")
+            semaphore.signal()
+            sleep(1)
+            print("signaling")
+            semaphore.signal()
+            sleep(1)
+            print("signaling")
+            semaphore.signal()
+            
+            for _ in 0...4 { // So you can't dispose of a semaphore when the current value is less than the value it was created with.
+                semaphore.signal()
+            }
+        }
+    }
+    
     
     //MARK: Set view animation
     override func viewDidLoad() {
@@ -250,7 +291,7 @@ class DispatchQueueViewController: UIViewController {
         //MARK: start test
         //writeToArrFromSerial()
         //writeToArrFromConcurrent()
-        dispatchGroupEnterNotify()
+        dispatchSemaphore()
     }
     
     @IBAction func animationBtn() {
