@@ -12,10 +12,8 @@ class DispatchQueueViewController: UIViewController {
     var moveView: UIView!
     var isAnimating: Bool = false
     
-    //MARK: GCD test
-    /**
-     test combine sync/async + serial/concurrent
-     */
+    //MARK: test combine sync/async + serial/concurrent
+    
     func serialSync() {
         let q = DispatchQueue(label: "serial.sync")
         //https://stackoverflow.com/questions/26020656/dispatch-sync-always-execute-block-in-main-thread
@@ -123,9 +121,8 @@ class DispatchQueueViewController: UIViewController {
             }
         }
     }
-    /**
-     test access shared resource
-     */
+    
+    //MARK: test access shared resource
     var sharedArr = [Int]()
     //print in order comparing to next method
     func writeToArrFromSerial() {
@@ -134,7 +131,7 @@ class DispatchQueueViewController: UIViewController {
         
         for i in 0...10 {
             q1.async {
-                sleep(1)
+                //sleep(1)
                 self.sharedArr.append(i)
                 q2.sync(execute: {
                     print(self.sharedArr)
@@ -170,6 +167,77 @@ class DispatchQueueViewController: UIViewController {
         }
     }
 
+    //MARK: Dispatch Group 
+    func dispatchGroupWait() {
+        let q0 = DispatchQueue(label: "serial.dispatchGroup.context")
+        q0.async {
+            let dg = DispatchGroup()
+            let q1 = DispatchQueue(label: "concurrent.dg1", qos: .background, attributes: [.concurrent], autoreleaseFrequency: .inherit, target: DispatchQueue.global(qos: .background))
+            let q2 = DispatchQueue(label: "concurrent.dg2", qos: .background, attributes: [.concurrent], autoreleaseFrequency: .inherit, target: DispatchQueue.global(qos: .background))
+            let workItem = DispatchWorkItem(qos: .background, flags: [], block: {
+                for i in 0...10 {
+                    sleep(1)
+                    print(i)
+                }
+            })
+            q1.async(group: dg, execute: workItem)
+            sleep(2)
+            q2.async(group: dg, execute: workItem)
+            _ = dg.wait(wallTimeout: .distantFuture)
+            
+            //will block current thread
+            print("finished counting in group")
+        }
+    }
+    func dispatchGroupEnterNotify() {
+        let q0 = DispatchQueue(label: "serial.dispatchGroup.context")
+        q0.async {
+            let dg = DispatchGroup()
+            let q1 = DispatchQueue(label: "concurrent.dg1", qos: .background, attributes: [.concurrent], autoreleaseFrequency: .inherit, target: DispatchQueue.global(qos: .background))
+            let q2 = DispatchQueue(label: "concurrent.dg2", qos: .background, attributes: [.concurrent], autoreleaseFrequency: .inherit, target: DispatchQueue.global(qos: .background))
+            
+            let workItem2 = DispatchWorkItem(qos: .background, flags: [], block: {
+                print("notified item")
+            })
+            
+            dg.enter()
+            q1.async(execute: {
+                for i in 0...10 {
+                    sleep(1)
+                    print(i)
+                }
+                dg.leave()
+            })
+            sleep(1)
+            
+            dg.enter()
+            q2.async(execute: {
+                for i in 0...10 {
+                    sleep(3)
+                    print(i)
+                }
+                dg.leave()
+            })
+            //will not block current thread
+            dg.notify(queue: q1, work: workItem2)
+            dg.notify(qos: .background, flags: [], queue: q2, execute: {
+                print("group notify execute")
+            })
+            
+            print("finished")
+        }
+    }
+    /** 
+     DispatchGroup: summary
+     blocking current thread:
+     1. enter/leave + q.async(group, exec: {})
+     2. wait() 
+     
+     non-blocking current thread:
+     1. enter/leave + q.async(exec: {})
+     2. notify(...)
+    */
+    
     
     //MARK: Set view animation
     override func viewDidLoad() {
@@ -180,8 +248,9 @@ class DispatchQueueViewController: UIViewController {
         view.addSubview(moveView)
         animationBtn()
         //MARK: start test
-        writeToArrFromSerial()
-        writeToArrFromConcurrent()
+        //writeToArrFromSerial()
+        //writeToArrFromConcurrent()
+        dispatchGroupEnterNotify()
     }
     
     @IBAction func animationBtn() {
