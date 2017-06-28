@@ -10,11 +10,12 @@ import XCTest
 
 @testable import TopicDemos
 class RunLoopTests: XCTestCase {
-        
+    var app: XCUIApplication!
     override func setUp() {
         super.setUp()
         continueAfterFailure = true
-        XCUIApplication().launch()
+        app = XCUIApplication()
+        app.launch()
     }
     
     override func tearDown() {
@@ -22,7 +23,6 @@ class RunLoopTests: XCTestCase {
     }
     
     func testElementQueryHaveAbout2SecondToWaitForElement() {
-        
         XCUIApplication().tables.cells.staticTexts["UITesting"].tap()
         let app = XCUIApplication()
         

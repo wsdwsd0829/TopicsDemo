@@ -8,13 +8,15 @@
 
 import UIKit
 import PromiseKit
-
+import CoreLocation
+import Helper
 class PromiseKitViewController: UIViewController {
    typealias VoidHandler = () -> ()
-    
+    var manager: CLLocationManager!
     override func viewDidLoad() {
         super.viewDidLoad()
         //e.g. of creating dispatch queue
+        edgesForExtendedLayout = []
         if #available(iOS 10.0, *) {
             let _ = DispatchQueue(label: "myq", qos: .background, attributes: [.concurrent], autoreleaseFrequency: .workItem, target: DispatchQueue.main)
         } else {
@@ -34,6 +36,7 @@ class PromiseKitViewController: UIViewController {
         }
         */
         // Do any additional setup after loading the view.
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,5 +60,19 @@ class PromiseKitViewController: UIViewController {
                 print(" promise fulfill \(Date())")
             }
         }
+    }
+    
+    @IBAction func tapLocatinRequest(_ sender: UIButton!) {
+        CLLocationManager.locationServicesEnabled()
+        manager = CLLocationManager()
+        //                if CLLocationManager.locationServicesEnabled() {
+        //                    manager.startUpdatingLocation()
+        //                }
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            manager.requestWhenInUseAuthorization()
+        }
+        Utils.showAlert(from: self)
+        sleep(1)
+        Utils.showAlert(from: self, title: "titile 2", message: "new msg")
     }
 }

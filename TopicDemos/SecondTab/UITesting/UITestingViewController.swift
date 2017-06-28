@@ -9,7 +9,6 @@
 import UIKit
 
 class UITestingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
-    
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var textField: UITextField!
@@ -42,7 +41,6 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
 //        wait()
         testConditionalBreakPoint()
-
     }
     
     // will blocking current thread, and time deferred correctly on main thread
