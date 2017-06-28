@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D85ED1C1F03761D003C4E0F /* Dispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D85ED1A1F03761D003C4E0F /* Dispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D85ED1D1F03761D003C4E0F /* Dispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D85ED1B1F03761D003C4E0F /* Dispatch.m */; };
 		280875141E6693B100BC1D15 /* ObjcHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2808750A1E6693B100BC1D15 /* ObjcHelper.framework */; };
 		280875191E6693B100BC1D15 /* ObjcHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280875181E6693B100BC1D15 /* ObjcHelperTests.m */; };
 		2808751B1E6693B100BC1D15 /* ObjcHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2808750D1E6693B100BC1D15 /* ObjcHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D85ED1A1F03761D003C4E0F /* Dispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dispatch.h; sourceTree = "<group>"; };
+		0D85ED1B1F03761D003C4E0F /* Dispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dispatch.m; sourceTree = "<group>"; };
 		2808750A1E6693B100BC1D15 /* ObjcHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjcHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2808750D1E6693B100BC1D15 /* ObjcHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcHelper.h; sourceTree = "<group>"; };
 		2808750E1E6693B100BC1D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D85ED191F0375C4003C4E0F /* DispatchQueue */ = {
+			isa = PBXGroup;
+			children = (
+				0D85ED1A1F03761D003C4E0F /* Dispatch.h */,
+				0D85ED1B1F03761D003C4E0F /* Dispatch.m */,
+			);
+			path = DispatchQueue;
+			sourceTree = "<group>";
+		};
 		280875001E6693B100BC1D15 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +88,7 @@
 		2808750C1E6693B100BC1D15 /* ObjcHelper */ = {
 			isa = PBXGroup;
 			children = (
+				0D85ED191F0375C4003C4E0F /* DispatchQueue */,
 				2808750D1E6693B100BC1D15 /* ObjcHelper.h */,
 				2808750E1E6693B100BC1D15 /* Info.plist */,
 				280875241E6693CE00BC1D15 /* NSString+Helper.h */,
@@ -101,6 +115,7 @@
 			files = (
 				280875261E6693CE00BC1D15 /* NSString+Helper.h in Headers */,
 				2808751B1E6693B100BC1D15 /* ObjcHelper.h in Headers */,
+				0D85ED1C1F03761D003C4E0F /* Dispatch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				280875271E6693CE00BC1D15 /* NSString+Helper.m in Sources */,
+				0D85ED1D1F03761D003C4E0F /* Dispatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

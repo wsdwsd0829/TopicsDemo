@@ -278,7 +278,11 @@ class DispatchQueueViewController: UIViewController {
             }
         }
     }
-    
+    //MARK: test objc block change & captuc
+    func testObjcChangeCapture() {
+        let dis = Dispatch()
+        dis.dispatchCapture()
+    }
     
     //MARK: Set view animation
     override func viewDidLoad() {
@@ -291,7 +295,7 @@ class DispatchQueueViewController: UIViewController {
         //MARK: start test
         //writeToArrFromSerial()
         //writeToArrFromConcurrent()
-        dispatchSemaphore()
+        testObjcChangeCapture()
     }
     
     @IBAction func animationBtn() {
