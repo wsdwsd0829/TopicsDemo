@@ -8,12 +8,17 @@
 
 import UIKit
 
+/**
+ sum priority: https://stackoverflow.com/questions/25052629/ios-gcd-difference-between-any-global-queue-and-the-one-with-background-priorit
+ objc: backgroudn - low - default - high
+ swift: back - utility - default - user initiated - user interact
+ // will be scheduled for execution after all higher priority queues have been scheduled
+ */
 class DispatchQueueViewController: UIViewController {
     var moveView: UIView!
     var isAnimating: Bool = false
     
     //MARK: test combine sync/async + serial/concurrent
-    
     func serialSync() {
         let q = DispatchQueue(label: "serial.sync")
         //https://stackoverflow.com/questions/26020656/dispatch-sync-always-execute-block-in-main-thread
@@ -21,7 +26,6 @@ class DispatchQueueViewController: UIViewController {
         q.sync { //Document Says:  As an optimization, this function invokes the block on the current thread when possible.
             //source code Says: It's preferred to execute synchronous blocks on the current thread due to thread-local side effects, garbage collection, etc. However, blocks submitted to the main thread MUST be run on the main thread.
             for i in 0..<5 { //!!! so: will block UI
-
                 sleep(1)
                 print(i)
             }
@@ -168,6 +172,16 @@ class DispatchQueueViewController: UIViewController {
     }
 
     //MARK: Dispatch Group 
+    /**
+     DispatchGroup: summary
+     blocking current thread:
+     1. enter/leave + q.async(group, exec: {})
+     2. wait()
+     
+     non-blocking current thread:
+     1. enter/leave + q.async(exec: {})
+     2. notify(...)
+     */
     func dispatchGroupWait() {
         let q0 = DispatchQueue(label: "serial.dispatchGroup.context")
         q0.async {
@@ -227,18 +241,11 @@ class DispatchQueueViewController: UIViewController {
             print("finished")
         }
     }
-    /** 
-     DispatchGroup: summary
-     blocking current thread:
-     1. enter/leave + q.async(group, exec: {})
-     2. wait() 
-     
-     non-blocking current thread:
-     1. enter/leave + q.async(exec: {})
-     2. notify(...)
-    */
     
     //MARK: dispatch semaphore
+    /**
+     trick: end count must same as initial
+     */
     func dispatchSemaphore() {
         let semaphore = DispatchSemaphore(value: 5)
         let q1 = DispatchQueue(label: "concurrent.write", qos: .background, attributes: [.concurrent], autoreleaseFrequency: .inherit, target: DispatchQueue.global(qos: .background))
@@ -278,10 +285,15 @@ class DispatchQueueViewController: UIViewController {
             }
         }
     }
-    //MARK: test objc block change & captuc
+    //MARK: test objc block change & capture
     func testObjcChangeCapture() {
         let dis = Dispatch()
         dis.dispatchCapture()
+    }
+    func testSwiftCapture() {
+        let swiftCapture = SwiftCapture()
+        //        swiftCapture.defaultEvaluatedOnExecutionForValue()
+        swiftCapture.exam()
     }
     
     //MARK: Set view animation
@@ -295,7 +307,9 @@ class DispatchQueueViewController: UIViewController {
         //MARK: start test
         //writeToArrFromSerial()
         //writeToArrFromConcurrent()
-        testObjcChangeCapture()
+        //testObjcChangeCapture()
+        //testSwiftCapture()
+        testSwiftCapture()
     }
     
     @IBAction func animationBtn() {
