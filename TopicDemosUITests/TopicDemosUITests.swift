@@ -28,7 +28,7 @@ class TopicDemosUITests: XCTestCase {
     }
     //"Application "com.maxsida.TopicDemos" is installing or uninstalling, and cannot be launched"
     func testExample0() {
-        measure {
+        //measure {
             let app = XCUIApplication()
             app.launchArguments = ["UITests"]
             app.launch()
@@ -40,7 +40,7 @@ class TopicDemosUITests: XCTestCase {
             tablesQuery.buttons["Delete"].tap()
             
             super.tearDown()
-        }
+        //}
     }
     
     func testExample1() {

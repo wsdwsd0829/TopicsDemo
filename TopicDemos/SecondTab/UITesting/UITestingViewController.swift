@@ -86,7 +86,7 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func updateLabel() {
-        label.text = "\(count)"
+        label.text = "id" + "\(count)"
         label.accessibilityIdentifier = "id" + label.text!
         count += 1
     }
@@ -123,6 +123,7 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
             cell = UITableViewCell(style: .default, reuseIdentifier: cellId)
             cell?.textLabel?.text = "\(animals[indexPath.row])"
         }
+        cell?.accessibilityIdentifier = "\(animals[indexPath.row])"
         return cell!
     }
     

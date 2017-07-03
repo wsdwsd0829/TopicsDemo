@@ -20,33 +20,33 @@ class RunLoopTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-    
+    /*
     func testElementQueryHaveAbout2SecondToWaitForElement() {
-        
         XCUIApplication().tables.cells.staticTexts["UITesting"].tap()
         let app = XCUIApplication()
         
-        let label = app.staticTexts["id2"]
+        let label = app.staticTexts["id1"]
         let exists = NSPredicate(format: "exists == 1")
         
         self.expectation(for: exists, evaluatedWith: label, handler: nil)
         self.waitForExpectations(timeout: 3, handler: nil)
         
         let id2 = app.staticTexts["id2"]
-        XCTAssert(id2.isHittable)
+        XCTAssert(id2.exists)
         id2.tap()
+        //test elem has about 2 second to wait for by default
         
-        //test elem has about 2 second to wait for by default 
         for i in 1...5 {
             let newCount = 2 + i*2
             let newId = "id\(newCount)"
             let elem = app.staticTexts[newId]
-            XCTAssertTrue(elem.isHittable)
+            XCTAssertTrue(elem.exists)
+            elem.tap()
         }
         
         XCTAssertFalse(app.staticTexts["id100"].exists)
     }
-    
+    */
     func testHiddenNotExist() {
         XCUIApplication().tables.cells.staticTexts["UITesting"].tap()
         XCTAssertTrue(XCUIApplication().buttons["MyButton"].exists, "")
@@ -63,12 +63,13 @@ class RunLoopTests: XCTestCase {
         if ex {
             print("exist")
         }
+        /*
         if !id7.isHittable { //this will cause an direct fail
             print("detected whether hittable: not")
         } else {
             print("detected whether hittable: yes")
         }
-        
+        */
     }
     
     
@@ -107,10 +108,12 @@ class RunLoopTests: XCTestCase {
         print(zeroSameElem)
         
     }
-    
+    /*
+     //test fail pass to top level
     func testFailBag() {
         FailBag().fail()
     }
+    */
     
     override func recordFailure(withDescription description: String, inFile filePath: String, atLine lineNumber: UInt, expected: Bool) {
         if let fail = FailBag.failures.first {
