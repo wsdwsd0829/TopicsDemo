@@ -356,6 +356,7 @@
 		0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueViewController.swift; sourceTree = "<group>"; };
 		0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispatchQueueViewController.xib; sourceTree = "<group>"; };
 		0D85ED201F04BB19003C4E0F /* SwiftCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftCapture.swift; sourceTree = "<group>"; };
+		0D85ED0C1F023232003C4E0F /* ToolsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ToolsPlayground.playground; sourceTree = "<group>"; };
 		0D86F3001E5A34F900EE3577 /* ApplePaySwagServer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ApplePaySwagServer.py; sourceTree = "<group>"; };
 		0D86F3061E5AA7F100EE3577 /* Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Siri.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D86F3081E5AA7F100EE3577 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -1049,6 +1050,7 @@
 		289065441E8989450039B328 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				0D85ED0C1F023232003C4E0F /* ToolsPlayground.playground */,
 				2872DEB31EE707660040354A /* Functional.playground */,
 				2874D98A1EE0CD080055A701 /* markup.playground */,
 				28AFCD8A1E89EA100069F739 /* RandomNumbers.playground */,
