@@ -297,6 +297,11 @@ class DispatchQueueViewController: UIViewController {
     }
     
     //MARK: Set view animation
+    var displayLink: CADisplayLink!
+    @IBOutlet weak var frameRateLabel: UILabel!
+    func display(_ link: CADisplayLink) {
+        frameRateLabel.text = "\(1/(link.targetTimestamp - link.timestamp))"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         edgesForExtendedLayout = []
@@ -304,6 +309,9 @@ class DispatchQueueViewController: UIViewController {
         moveView.backgroundColor = .blue
         view.addSubview(moveView)
         animationBtn()
+        displayLink = CADisplayLink(target: self, selector: #selector(display(_:)))
+
+        displayLink.add(to: RunLoop.current, forMode: .defaultRunLoopMode)
         //MARK: start test
         //writeToArrFromSerial()
         //writeToArrFromConcurrent()
