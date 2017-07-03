@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STF-Lw-Pgl">
-                    <rect key="frame" x="130.5" y="318.5" width="115" height="30"/>
+                    <rect key="frame" x="130" y="318.5" width="115" height="30"/>
                     <state key="normal" title="toggle animation"/>
                     <connections>
                         <action selector="animationBtn" destination="-1" eventType="touchUpInside" id="PgL-j8-arp"/>
