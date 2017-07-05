@@ -59,6 +59,7 @@
 		0D806A311E551F08007219F2 /* FirstPageInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D806A301E551F08007219F2 /* FirstPageInterfaceController.swift */; };
 		0D85ED011F00D0C0003C4E0F /* DispatchQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */; };
 		0D85ED021F00D0C0003C4E0F /* DispatchQueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */; };
+		0D85ED211F04BB19003C4E0F /* SwiftCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85ED201F04BB19003C4E0F /* SwiftCapture.swift */; };
 		0D86F3011E5A34F900EE3577 /* ApplePaySwagServer.py in Resources */ = {isa = PBXBuildFile; fileRef = 0D86F3001E5A34F900EE3577 /* ApplePaySwagServer.py */; };
 		0D86F3091E5AA7F100EE3577 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86F3081E5AA7F100EE3577 /* IntentHandler.swift */; };
 		0D86F3111E5AA7F200EE3577 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D86F3101E5AA7F200EE3577 /* IntentsUI.framework */; };
@@ -354,6 +355,8 @@
 		0D806A301E551F08007219F2 /* FirstPageInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPageInterfaceController.swift; sourceTree = "<group>"; };
 		0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueViewController.swift; sourceTree = "<group>"; };
 		0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispatchQueueViewController.xib; sourceTree = "<group>"; };
+		0D85ED0C1F023232003C4E0F /* ToolsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ToolsPlayground.playground; sourceTree = "<group>"; };
+		0D85ED201F04BB19003C4E0F /* SwiftCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftCapture.swift; sourceTree = "<group>"; };
 		0D86F3001E5A34F900EE3577 /* ApplePaySwagServer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ApplePaySwagServer.py; sourceTree = "<group>"; };
 		0D86F3061E5AA7F100EE3577 /* Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Siri.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D86F3081E5AA7F100EE3577 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -624,6 +627,7 @@
 			children = (
 				0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */,
 				0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */,
+				0D85ED201F04BB19003C4E0F /* SwiftCapture.swift */,
 			);
 			name = DispatchQueue;
 			path = SecondTab/DispatchQueue;
@@ -654,6 +658,14 @@
 				0D573D661E9DC82900002647 /* NavigationViewController.xib */,
 			);
 			name = Navigation;
+			sourceTree = "<group>";
+		};
+		0D6A723E1F0B027500D03C9E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				0D85ED0C1F023232003C4E0F /* ToolsPlayground.playground */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 		0D6ACCE01E7F81D100CDEC4F /* Products */ = {
@@ -1046,6 +1058,7 @@
 		289065441E8989450039B328 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				0D6A723E1F0B027500D03C9E /* Tools */,
 				2872DEB31EE707660040354A /* Functional.playground */,
 				2874D98A1EE0CD080055A701 /* markup.playground */,
 				28AFCD8A1E89EA100069F739 /* RandomNumbers.playground */,
@@ -1774,6 +1787,7 @@
 			files = (
 				0D0FA04E1EA3206800E3B3D0 /* CustomSegue.swift in Sources */,
 				0D0633C21E63323800D6A16A /* EmailViewController.m in Sources */,
+				0D85ED211F04BB19003C4E0F /* SwiftCapture.swift in Sources */,
 				28987DE71E78A724000B5976 /* main.swift in Sources */,
 				2809C4061EAEE0C600320D19 /* FileHandle+ReadData.swift in Sources */,
 				0D0FA11C1EA47D1500E3B3D0 /* InteractiveObject.swift in Sources */,

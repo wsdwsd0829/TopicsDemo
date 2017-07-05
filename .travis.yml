@@ -1,0 +1,10 @@
+os: osx
+language: swift
+osx_image: xcode8.3 #2
+xcode_project: TopicDemos.xcworkspace
+xcode_scheme: TopicDemos #4
+xcode_sdk: iphonesimulator10.3 #5
+before_install:
+- pod repo update
+cache: cocoapods
+

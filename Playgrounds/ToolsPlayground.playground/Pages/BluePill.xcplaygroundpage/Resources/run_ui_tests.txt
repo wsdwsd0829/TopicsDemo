@@ -1,0 +1,35 @@
+#!/bin/sh
+
+bluepillOutputDirectory="bluepill/output"
+
+numberOfRetries=1
+outputPath="$bluepillOutputDirectory/artifacts"
+parallel=4 # this should be a fairly small number, each sim has CPU overhead
+
+derivedDataPath="$bluepillOutputDirectory/build"
+
+echo "Resetting simulators..."
+xcrun simctl erase all
+
+echo "Removing previous output from $bluepillOutputDirectory..."
+rm -rf $bluepillOutputDirectory
+
+echo "Building UI automation tests to $derivedDataPath..."
+xcodebuild \
+      ARCHS='x86_64' VALID_ARCHS='x86_64' ONLY_ACTIVE_ARCH=YES \
+      -workspace Pandora.xcworkspace \
+      -scheme "PMUIAutomation" \
+      -sdk iphonesimulator \
+      -destination "name=iPhone 6,OS=latest" \
+      -derivedDataPath $derivedDataPath \
+      build-for-testing | xcpretty -r junit
+
+xctestrunFile=$(find $derivedDataPath -name *.xctestrun)
+
+echo "XCTestRun location: $xctestrunFile. Starting bluepill (https://github.com/linkedin/bluepill)..."
+bluepill \
+    --xctestrun-path $xctestrunFile \
+    -o $outputPath \
+    -f $numberOfRetries --only-retry-failed \
+    -n $parallel \
+    -H # headless mode
