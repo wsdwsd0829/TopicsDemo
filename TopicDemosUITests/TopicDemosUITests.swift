@@ -8,6 +8,25 @@
 
 import XCTest
 
+extension XCUIElement {
+    var outOfScreen: Bool {
+        guard isHittable == false && exists == true else {
+            return false
+        }
+        let topLeft = coordinate(withNormalizedOffset: CGVector(dx: 1, dy: 1)).screenPoint
+        let bottomRight = coordinate(withNormalizedOffset: CGVector(dx: 1, dy: 1)).screenPoint
+        let screenSize = UIScreen.main.bounds.size
+        return (bottomRight.x < 0 || bottomRight.y < 0) || (topLeft.x > screenSize.width || topLeft.y > screenSize.height)
+    }
+    
+    var beneathView: Bool {
+        guard isHittable == false && exists == true else {
+            return false
+        }
+        return !outOfScreen
+    }
+}
+
 class TopicDemosUITests: XCTestCase {
         
     override func setUp() {
@@ -43,7 +62,27 @@ class TopicDemosUITests: XCTestCase {
         }
     }
     
-    func testExample1() {
+    func testOffScreen() {  //same as below view
+        let app = XCUIApplication()
+        app.launch()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["UITesting"].tap()
+        let button = app.buttons["OffScreen"]
+        print(button.coordinate(withNormalizedOffset: CGVector(dx: 1, dy: 1)).screenPoint)
+        print(button.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 0)).screenPoint)
+        XCTAssertTrue(button.outOfScreen)
+    }
+    
+    func testBeneathView() {
+        let app = XCUIApplication()
+        app.launch()
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["UITesting"].tap()
+        let button = app.buttons["BeneathView"]
+        XCTAssertTrue(button.beneathView)
+    }
+
+    func testHidden() {
         let app = XCUIApplication()
         app.launch()
         

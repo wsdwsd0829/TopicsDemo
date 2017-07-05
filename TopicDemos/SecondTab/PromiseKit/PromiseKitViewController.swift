@@ -11,7 +11,7 @@ import PromiseKit
 import CoreLocation
 import Helper
 class PromiseKitViewController: UIViewController {
-   typealias VoidHandler = () -> ()
+    typealias VoidHandler = () -> ()
     var manager: CLLocationManager!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,6 @@ class PromiseKitViewController: UIViewController {
         }
         */
         // Do any additional setup after loading the view.
-
     }
     
     override func didReceiveMemoryWarning() {
