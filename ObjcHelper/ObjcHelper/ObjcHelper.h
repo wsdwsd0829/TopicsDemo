@@ -16,5 +16,6 @@ FOUNDATION_EXPORT const unsigned char ObjcHelperVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ObjcHelper/PublicHeader.h>
 
-
+//need make file public!!!
 #import "NSString+Helper.h"
+#import "Dispatch.h"
