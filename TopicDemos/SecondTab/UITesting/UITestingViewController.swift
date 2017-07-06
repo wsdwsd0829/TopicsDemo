@@ -9,7 +9,6 @@
 import UIKit
 
 class UITestingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
-    
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var textField: UITextField!
@@ -42,7 +41,6 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
 //        wait()
         testConditionalBreakPoint()
-
     }
     
     // will blocking current thread, and time deferred correctly on main thread
@@ -67,7 +65,7 @@ class UITestingViewController: UIViewController, UITableViewDataSource, UITableV
         let condition = true
         // you place these breakpoints in the user breakpoint (right click and select “Move Breakpoint To > User”) so that they are shared across all your projects.
         for i in 1...14 {
-            //print(i)
+            print("\(condition) \(i)")
         }
         testExceptionBreakPoint()
     }
