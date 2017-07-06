@@ -57,6 +57,8 @@
 		0D806A201E541CF5007219F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D806A1F1E541CF5007219F2 /* Assets.xcassets */; };
 		0D806A241E541CF5007219F2 /* TopicDemosWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0D806A041E541CF5007219F2 /* TopicDemosWatchApp.app */; };
 		0D806A311E551F08007219F2 /* FirstPageInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D806A301E551F08007219F2 /* FirstPageInterfaceController.swift */; };
+		0D83885D1F0BEEC40072A91E /* TextureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D83885B1F0BEEC40072A91E /* TextureViewController.swift */; };
+		0D83885E1F0BEEC40072A91E /* TextureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D83885C1F0BEEC40072A91E /* TextureViewController.xib */; };
 		0D85ED011F00D0C0003C4E0F /* DispatchQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */; };
 		0D85ED021F00D0C0003C4E0F /* DispatchQueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */; };
 		0D85ED211F04BB19003C4E0F /* SwiftCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85ED201F04BB19003C4E0F /* SwiftCapture.swift */; };
@@ -353,6 +355,8 @@
 		0D806A2E1E550B31007219F2 /* TopicDemos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TopicDemos.entitlements; sourceTree = "<group>"; };
 		0D806A2F1E550B62007219F2 /* TopicDemosWatchApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TopicDemosWatchApp.entitlements; sourceTree = "<group>"; };
 		0D806A301E551F08007219F2 /* FirstPageInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPageInterfaceController.swift; sourceTree = "<group>"; };
+		0D83885B1F0BEEC40072A91E /* TextureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextureViewController.swift; path = SecondTab/Texture/TextureViewController.swift; sourceTree = "<group>"; };
+		0D83885C1F0BEEC40072A91E /* TextureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextureViewController.xib; path = SecondTab/Texture/TextureViewController.xib; sourceTree = "<group>"; };
 		0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueViewController.swift; sourceTree = "<group>"; };
 		0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispatchQueueViewController.xib; sourceTree = "<group>"; };
 		0D85ED0C1F023232003C4E0F /* ToolsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ToolsPlayground.playground; sourceTree = "<group>"; };
@@ -591,6 +595,7 @@
 		0D1409741E7637F600E4542A /* SecondTab */ = {
 			isa = PBXGroup;
 			children = (
+				0D8388531F0BEE3B0072A91E /* Texture */,
 				0D19AF421F00B4C00039327D /* DispatchQueue */,
 				0D6E54151ECC082100725635 /* CoreData */,
 				0D0FA04F1EA3DBF500E3B3D0 /* TransitePresentStyle */,
@@ -736,6 +741,15 @@
 				0D806A161E541CF5007219F2 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0D8388531F0BEE3B0072A91E /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				0D83885B1F0BEEC40072A91E /* TextureViewController.swift */,
+				0D83885C1F0BEEC40072A91E /* TextureViewController.xib */,
+			);
+			name = Texture;
 			sourceTree = "<group>";
 		};
 		0D86F3071E5AA7F100EE3577 /* Siri */ = {
@@ -1490,6 +1504,7 @@
 				0DA305521E4B98980040CA45 /* Assets.xcassets in Resources */,
 				28987DE51E789E95000B5976 /* Readme.txt in Resources */,
 				0D0633BC1E63320900D6A16A /* Firebase.storyboard in Resources */,
+				0D83885E1F0BEEC40072A91E /* TextureViewController.xib in Resources */,
 				0DF3C3A81E63EC4E00588CFC /* Youtube.storyboard in Resources */,
 				0DA305C71E4FF48D0040CA45 /* TextView.storyboard in Resources */,
 				284C8E7E1E60EC3100030009 /* landscape.jpg in Resources */,
@@ -1789,6 +1804,7 @@
 				0D0633C21E63323800D6A16A /* EmailViewController.m in Sources */,
 				0D85ED211F04BB19003C4E0F /* SwiftCapture.swift in Sources */,
 				28987DE71E78A724000B5976 /* main.swift in Sources */,
+				0D83885D1F0BEEC40072A91E /* TextureViewController.swift in Sources */,
 				2809C4061EAEE0C600320D19 /* FileHandle+ReadData.swift in Sources */,
 				0D0FA11C1EA47D1500E3B3D0 /* InteractiveObject.swift in Sources */,
 				288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */,

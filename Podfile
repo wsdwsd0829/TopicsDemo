@@ -15,6 +15,7 @@ target 'TopicDemos' do
   pod 'AFNetworking', '~> 3.0.4'
   swift_version = "3.0"
   pod "PromiseKit", "~> 4.0"
+  pod "Texture"
   # Pods for TopicDemos
 
   target 'TopicDemosTests' do

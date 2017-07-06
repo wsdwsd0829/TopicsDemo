@@ -56,6 +56,21 @@ PODS:
   - KIF (3.5.1):
     - KIF/Core (= 3.5.1)
   - KIF/Core (3.5.1)
+  - PINCache (3.0.1-beta.4):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.4)
+    - PINCache/Core (= 3.0.1-beta.4)
+  - PINCache/Arc-exception-safe (3.0.1-beta.4):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.4):
+    - PINOperation (= 1.0.3)
+  - PINOperation (1.0.3)
+  - PINRemoteImage/Core (3.0.0-beta.9):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0-beta.9):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.9):
+    - PINCache (= 3.0.1-beta.4)
+    - PINRemoteImage/Core
   - PromiseKit (4.1.7):
     - PromiseKit/Foundation (= 4.1.7)
     - PromiseKit/QuartzCore (= 4.1.7)
@@ -74,6 +89,13 @@ PODS:
     - Stripe/Core
   - Stripe/Core (7.0.1)
   - SwiftyJSON (3.1.4)
+  - Texture (2.3.3):
+    - Texture/PINRemoteImage (= 2.3.3)
+  - Texture/Core (2.3.3)
+  - Texture/PINRemoteImage (2.3.3):
+    - PINRemoteImage/iOS (= 3.0.0-beta.9)
+    - PINRemoteImage/PINCache
+    - Texture/Core
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
@@ -86,6 +108,7 @@ DEPENDENCIES:
   - SDWebImage (~> 3.8.2)
   - Stripe/ApplePay
   - SwiftyJSON
+  - Texture
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
@@ -99,11 +122,15 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   KIF: '082eb65279e51c3092923802849eb796a04982ab'
+  PINCache: a89c8f609232afac77128557bd12c861844423d7
+  PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
+  PINRemoteImage: e4e02e15a6f96cedbcef2abf1c9c1228dc9897d7
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
   Stripe: b92298b31cf156fb23a029361b57e2fcb6583d57
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Texture: e01a363c2b6567e1ff27a878995e0d271fbb424c
 
-PODFILE CHECKSUM: e158d15505e340c8b80ec5e27d868d4be07dfaf9
+PODFILE CHECKSUM: a14f1e58708b10be69bcec7dc5df21b492c75ce4
 
 COCOAPODS: 1.2.1
