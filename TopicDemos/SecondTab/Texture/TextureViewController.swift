@@ -12,7 +12,7 @@ class TextureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         edgesForExtendedLayout = []
-        //create view at background thread; -> so far so good, Texture says cannot 
+        //create view at background thread; -> so far so good, Texture says cannot
         DispatchQueue.global().async {
             let newView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             newView.backgroundColor = UIColor.red
