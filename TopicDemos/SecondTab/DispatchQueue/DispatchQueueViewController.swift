@@ -290,11 +290,6 @@ class DispatchQueueViewController: UIViewController {
         let dis = Dispatch()
         dis.dispatchCapture()
     }
-    func testSwiftCapture() {
-        let swiftCapture = SwiftCapture()
-        //        swiftCapture.defaultEvaluatedOnExecutionForValue()
-        swiftCapture.exam()
-    }
     
     //MARK: Set view animation
     var displayLink: CADisplayLink!
@@ -316,8 +311,6 @@ class DispatchQueueViewController: UIViewController {
         //writeToArrFromSerial()
         //writeToArrFromConcurrent()
         //testObjcChangeCapture()
-        //testSwiftCapture()
-        testSwiftCapture()
     }
     
     @IBAction func animationBtn() {

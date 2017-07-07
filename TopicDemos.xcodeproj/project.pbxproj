@@ -61,7 +61,6 @@
 		0D83885E1F0BEEC40072A91E /* TextureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D83885C1F0BEEC40072A91E /* TextureViewController.xib */; };
 		0D85ED011F00D0C0003C4E0F /* DispatchQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */; };
 		0D85ED021F00D0C0003C4E0F /* DispatchQueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */; };
-		0D85ED211F04BB19003C4E0F /* SwiftCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85ED201F04BB19003C4E0F /* SwiftCapture.swift */; };
 		0D86F3011E5A34F900EE3577 /* ApplePaySwagServer.py in Resources */ = {isa = PBXBuildFile; fileRef = 0D86F3001E5A34F900EE3577 /* ApplePaySwagServer.py */; };
 		0D86F3091E5AA7F100EE3577 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86F3081E5AA7F100EE3577 /* IntentHandler.swift */; };
 		0D86F3111E5AA7F200EE3577 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D86F3101E5AA7F200EE3577 /* IntentsUI.framework */; };
@@ -98,6 +97,8 @@
 		0DF3C3AF1E63ED5D00588CFC /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF3C3AE1E63ED5D00588CFC /* TemplateViewController.swift */; };
 		0DFC58E71F0DFCD000889834 /* OperationQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFC58E51F0DFCD000889834 /* OperationQueueViewController.swift */; };
 		0DFC58E81F0DFCD000889834 /* OperationQueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DFC58E61F0DFCD000889834 /* OperationQueueViewController.xib */; };
+		0DFC58ED1F0E022E00889834 /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFC58EC1F0E022E00889834 /* ConcurrentOperation.swift */; };
+		0DFC58F31F0F55CE00889834 /* NonConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFC58F21F0F55CE00889834 /* NonConcurrentOperation.swift */; };
 		280874FC1E66933A00BC1D15 /* Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280874F91E66932B00BC1D15 /* Helper.framework */; };
 		280874FD1E66933A00BC1D15 /* Helper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 280874F91E66932B00BC1D15 /* Helper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		280875341E66943F00BC1D15 /* ObjcHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2808752E1E66940500BC1D15 /* ObjcHelper.framework */; };
@@ -363,7 +364,6 @@
 		0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueViewController.swift; sourceTree = "<group>"; };
 		0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispatchQueueViewController.xib; sourceTree = "<group>"; };
 		0D85ED0C1F023232003C4E0F /* ToolsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ToolsPlayground.playground; sourceTree = "<group>"; };
-		0D85ED201F04BB19003C4E0F /* SwiftCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftCapture.swift; sourceTree = "<group>"; };
 		0D86F3001E5A34F900EE3577 /* ApplePaySwagServer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ApplePaySwagServer.py; sourceTree = "<group>"; };
 		0D86F3061E5AA7F100EE3577 /* Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Siri.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D86F3081E5AA7F100EE3577 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -408,6 +408,9 @@
 		0DF3C3AE1E63ED5D00588CFC /* TemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TemplateViewController.swift; path = Template/TemplateViewController.swift; sourceTree = "<group>"; };
 		0DFC58E51F0DFCD000889834 /* OperationQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationQueueViewController.swift; path = OperationQueue/OperationQueueViewController.swift; sourceTree = "<group>"; };
 		0DFC58E61F0DFCD000889834 /* OperationQueueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OperationQueueViewController.xib; path = OperationQueue/OperationQueueViewController.xib; sourceTree = "<group>"; };
+		0DFC58EC1F0E022E00889834 /* ConcurrentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConcurrentOperation.swift; path = OperationQueue/ConcurrentOperation.swift; sourceTree = "<group>"; };
+		0DFC58F11F0F4F9B00889834 /* SwiftCapture.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftCapture.playground; sourceTree = "<group>"; };
+		0DFC58F21F0F55CE00889834 /* NonConcurrentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NonConcurrentOperation.swift; path = OperationQueue/NonConcurrentOperation.swift; sourceTree = "<group>"; };
 		13768A2D931DEF879E28421D /* Pods-TopicDemosWatchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopicDemosWatchApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopicDemosWatchApp/Pods-TopicDemosWatchApp.release.xcconfig"; sourceTree = "<group>"; };
 		149EF4EFC45C652030141334 /* Pods_TopicDemosWatchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopicDemosWatchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FA8D7D8D2552A0D80F09BD /* Pods-TopicDemosWatchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopicDemosWatchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopicDemosWatchApp/Pods-TopicDemosWatchApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -639,7 +642,6 @@
 			children = (
 				0D85ECFF1F00D0C0003C4E0F /* DispatchQueueViewController.swift */,
 				0D85ED001F00D0C0003C4E0F /* DispatchQueueViewController.xib */,
-				0D85ED201F04BB19003C4E0F /* SwiftCapture.swift */,
 			);
 			name = DispatchQueue;
 			path = SecondTab/DispatchQueue;
@@ -950,8 +952,11 @@
 			children = (
 				0DFC58E51F0DFCD000889834 /* OperationQueueViewController.swift */,
 				0DFC58E61F0DFCD000889834 /* OperationQueueViewController.xib */,
+				0DFC58EC1F0E022E00889834 /* ConcurrentOperation.swift */,
+				0DFC58F21F0F55CE00889834 /* NonConcurrentOperation.swift */,
 			);
 			name = OperationQueue;
+			path = SecondTab;
 			sourceTree = "<group>";
 		};
 		13C7103579CF51FA066FB715 /* Pods */ = {
@@ -1039,6 +1044,7 @@
 			isa = PBXGroup;
 			children = (
 				2837D9711EE0D10D0075AABA /* Collection.playground */,
+				0DFC58F11F0F4F9B00889834 /* SwiftCapture.playground */,
 			);
 			name = AdvancedSwift;
 			sourceTree = "<group>";
@@ -1820,10 +1826,10 @@
 			files = (
 				0D0FA04E1EA3206800E3B3D0 /* CustomSegue.swift in Sources */,
 				0D0633C21E63323800D6A16A /* EmailViewController.m in Sources */,
-				0D85ED211F04BB19003C4E0F /* SwiftCapture.swift in Sources */,
 				28987DE71E78A724000B5976 /* main.swift in Sources */,
 				0D83885D1F0BEEC40072A91E /* TextureViewController.swift in Sources */,
 				2809C4061EAEE0C600320D19 /* FileHandle+ReadData.swift in Sources */,
+				0DFC58ED1F0E022E00889834 /* ConcurrentOperation.swift in Sources */,
 				0D0FA11C1EA47D1500E3B3D0 /* InteractiveObject.swift in Sources */,
 				288F01971E5EC57E005D204E /* ChildViewController.swift in Sources */,
 				0D85ED011F00D0C0003C4E0F /* DispatchQueueViewController.swift in Sources */,
@@ -1863,6 +1869,7 @@
 				28B8A9E21E72165200DCAE12 /* ChildXibViewController.swift in Sources */,
 				0D0633CA1E63345D00D6A16A /* Clip.swift in Sources */,
 				28E66DA41EA15EFF00F8C1AE /* TabBarViewController.swift in Sources */,
+				0DFC58F31F0F55CE00889834 /* NonConcurrentOperation.swift in Sources */,
 				28987D9D1E7893E2000B5976 /* UITestingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

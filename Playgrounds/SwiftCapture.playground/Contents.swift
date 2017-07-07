@@ -1,3 +1,5 @@
+//: Playground - noun: a place where people can play
+
 //
 //  SwiftCapture.swift
 //  TopicDemos
@@ -7,14 +9,16 @@
 //
 
 import UIKit
+import PlaygroundSupport
+PlaygroundPage.current.needsIndefiniteExecution = true
 
 //http://alisoftware.github.io/swift/closures/2016/07/25/closure-capture-1/
 /**
  sum
- By default capture -> EE: Evaluate at Execution time, 
-                    -> and can change val in block to affect out side
+ By default capture -> EE: Evaluate at Execution time,
+ -> and can change val in block to affect out side
  By capture list -> CC: Capture at Creation time
-                 -> capture by Copy either value or ref (not affect outside)
+ -> capture by Copy either value or ref (not affect outside)
  
  */
 
@@ -119,6 +123,9 @@ class SwiftCapture: NSObject {
     
 }
 
+let swiftCapture = SwiftCapture()
+//        swiftCapture.defaultEvaluatedOnExecutionForValue()
+swiftCapture.exam()
 
 
 

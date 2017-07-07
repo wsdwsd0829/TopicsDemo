@@ -18,3 +18,11 @@ public class Utils {
         vc.present(alertVC, animated: true, completion: nil)
     }
 }
+
+public func delay(_ seconds: Int, closure: @escaping ()->()) {
+    let time = DispatchTime.now() + .seconds(seconds)
+    DispatchQueue.main.asyncAfter(deadline: time) {
+        print("🕑")
+        closure()
+    }
+}
