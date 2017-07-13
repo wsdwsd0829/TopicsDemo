@@ -13,7 +13,7 @@ extension XCUIElement {
         guard isHittable == false && exists == true else {
             return false
         }
-        let topLeft = coordinate(withNormalizedOffset: CGVector(dx: 1, dy: 1)).screenPoint
+        let topLeft = coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 0)).screenPoint
         let bottomRight = coordinate(withNormalizedOffset: CGVector(dx: 1, dy: 1)).screenPoint
         let screenSize = UIScreen.main.bounds.size
         return (bottomRight.x < 0 || bottomRight.y < 0) || (topLeft.x > screenSize.width || topLeft.y > screenSize.height)
