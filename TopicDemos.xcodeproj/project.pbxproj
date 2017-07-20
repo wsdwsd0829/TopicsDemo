@@ -101,6 +101,9 @@
 		280875341E66943F00BC1D15 /* ObjcHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2808752E1E66940500BC1D15 /* ObjcHelper.framework */; };
 		280875351E66943F00BC1D15 /* ObjcHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2808752E1E66940500BC1D15 /* ObjcHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2809C4061EAEE0C600320D19 /* FileHandle+ReadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2809C4051EAEE0C600320D19 /* FileHandle+ReadData.swift */; };
+		281B08E11F199B7F00CF86ED /* WebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B08E01F199B7F00CF86ED /* WebViewTests.swift */; };
+		281B08EF1F199C6500CF86ED /* UITesting2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B08ED1F199C6500CF86ED /* UITesting2ViewController.swift */; };
+		281B08F01F199C6500CF86ED /* UITesting2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 281B08EE1F199C6500CF86ED /* UITesting2ViewController.xib */; };
 		284C8E341E60C95600030009 /* ImageTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C8E331E60C95600030009 /* ImageTest.storyboard */; };
 		284C8E361E60C96C00030009 /* ImageTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C8E351E60C96C00030009 /* ImageTestViewController.swift */; };
 		284C8E381E60C9A300030009 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 284C8E371E60C9A300030009 /* test.jpg */; };
@@ -414,6 +417,9 @@
 		280874F31E66932B00BC1D15 /* Helper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Helper.xcodeproj; path = Helper/Helper.xcodeproj; sourceTree = "<group>"; };
 		280875281E66940500BC1D15 /* ObjcHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjcHelper.xcodeproj; path = ObjcHelper/ObjcHelper.xcodeproj; sourceTree = "<group>"; };
 		2809C4051EAEE0C600320D19 /* FileHandle+ReadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FileHandle+ReadData.swift"; path = "SecondTab/FileHandle/FileHandle+ReadData.swift"; sourceTree = "<group>"; };
+		281B08E01F199B7F00CF86ED /* WebViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewTests.swift; sourceTree = "<group>"; };
+		281B08ED1F199C6500CF86ED /* UITesting2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITesting2ViewController.swift; path = SecondTab/UITesting/UITesting2ViewController.swift; sourceTree = "<group>"; };
+		281B08EE1F199C6500CF86ED /* UITesting2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UITesting2ViewController.xib; path = SecondTab/UITesting/UITesting2ViewController.xib; sourceTree = "<group>"; };
 		2837D9711EE0D10D0075AABA /* Collection.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Collection.playground; sourceTree = "<group>"; };
 		284C8E331E60C95600030009 /* ImageTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageTest.storyboard; sourceTree = "<group>"; };
 		284C8E351E60C96C00030009 /* ImageTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTestViewController.swift; path = ImageTest/ImageTestViewController.swift; sourceTree = "<group>"; };
@@ -853,6 +859,7 @@
 				28D3BC871EF3259E00869617 /* RunLoopTests.swift */,
 				286A729D1EF39427000C429F /* FailBag.swift */,
 				2871D6D41F04239800AD53C4 /* InterruptionTest.swift */,
+				281B08E01F199B7F00CF86ED /* WebViewTests.swift */,
 			);
 			path = TopicDemosUITests;
 			sourceTree = "<group>";
@@ -1094,6 +1101,8 @@
 			children = (
 				28987D9B1E7893E2000B5976 /* UITestingViewController.swift */,
 				28987D9C1E7893E2000B5976 /* UITestingViewController.xib */,
+				281B08ED1F199C6500CF86ED /* UITesting2ViewController.swift */,
+				281B08EE1F199C6500CF86ED /* UITesting2ViewController.xib */,
 			);
 			name = UITesting;
 			sourceTree = "<group>";
@@ -1504,6 +1513,7 @@
 				0DF3C3AD1E63ED2300588CFC /* Template.storyboard in Resources */,
 				284C8E341E60C95600030009 /* ImageTest.storyboard in Resources */,
 				284C8E381E60C9A300030009 /* test.jpg in Resources */,
+				281B08F01F199C6500CF86ED /* UITesting2ViewController.xib in Resources */,
 				0DA305521E4B98980040CA45 /* Assets.xcassets in Resources */,
 				28987DE51E789E95000B5976 /* Readme.txt in Resources */,
 				0D0633BC1E63320900D6A16A /* Firebase.storyboard in Resources */,
@@ -1823,6 +1833,7 @@
 				28C59A751E9BF870003172A0 /* AccessibilityViewController.swift in Sources */,
 				0D6E54291ECC0D1E00725635 /* CoreDataStack.swift in Sources */,
 				0D6E54331ECC0F8300725635 /* Mood.swift in Sources */,
+				281B08EF1F199C6500CF86ED /* UITesting2ViewController.swift in Sources */,
 				0D0FA0971EA400CD00E3B3D0 /* AnimatedViewController.swift in Sources */,
 				0D0FA0561EA3DCDC00E3B3D0 /* TransitePresentStyleViewController.swift in Sources */,
 				0D0633CB1E63345D00D6A16A /* Montage.swift in Sources */,
@@ -1857,6 +1868,7 @@
 			files = (
 				2871D6D51F04239800AD53C4 /* InterruptionTest.swift in Sources */,
 				0DA3056B1E4B98980040CA45 /* TopicDemosUITests.swift in Sources */,
+				281B08E11F199B7F00CF86ED /* WebViewTests.swift in Sources */,
 				28D3BC881EF3259E00869617 /* RunLoopTests.swift in Sources */,
 				286A729E1EF39427000C429F /* FailBag.swift in Sources */,
 			);

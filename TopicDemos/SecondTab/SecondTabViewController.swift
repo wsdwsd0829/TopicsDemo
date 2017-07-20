@@ -15,11 +15,12 @@ class SecondTabViewController: UITableViewController {
     }
     /// To add a new Row:  add title, viewControllerType, allRows
     enum Row: Int {
-        case texture, dispatchQueue, promiseKit, uiTesting, accessibility, navigation, filehandle, transitePresentStyle, customPresentAnimate, coreData
+        case texture, dispatchQueue, promiseKit, uiTesting, uiTesting2, accessibility, navigation, filehandle, transitePresentStyle, customPresentAnimate, coreData
         var title:String {
             switch self {
             case .promiseKit: return "PromiseKit"
             case .uiTesting: return "UITesting"
+            case .uiTesting2: return "UITesting2"
             case .accessibility: return "Accessibility"
             case .navigation: return "Navigation"
             case .filehandle: return "FileHandle"
@@ -52,6 +53,7 @@ class SecondTabViewController: UITableViewController {
             case .coreData: return CoreDataViewController.self
             case .dispatchQueue: return DispatchQueueViewController.self
             case .texture: return TextureViewController.self
+            case .uiTesting2: return UITesting2ViewController.self
             }
         }
         
